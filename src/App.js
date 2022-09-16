@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      hello bhai
-    </div>
+    <>
+      <p>QR CODE BASED FEEDBACK SYSTEM FOR GUJARAT POLICE</p>
+    </>
   );
-}
+};
 
 export default App;
