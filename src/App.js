@@ -3,8 +3,8 @@ import React from "react";
 const App = () => {
   return (
     <>
-      <p>QR CODE BASED FEEDBACK SYSTEM FOR GUJARAT POLICE</p>
       <h1>hello</h1>
+      <p>hello my self hemant bhadarka now i am collaborator of this project</p>
     </>
   );
 };
