@@ -4,6 +4,7 @@ const App = () => {
   return (
     <>
       <p>QR CODE BASED FEEDBACK SYSTEM FOR GUJARAT POLICE</p>
+      <h1>hello</h1>
     </>
   );
 };
