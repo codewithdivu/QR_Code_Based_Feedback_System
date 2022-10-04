@@ -5,9 +5,11 @@
   box-sizing: border-box;
   background: #ececec;
 }
+
 body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;           
 }
+
 .police__img{
   width: 53px; 
   height: 61px; 
