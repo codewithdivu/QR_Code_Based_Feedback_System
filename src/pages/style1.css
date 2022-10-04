@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.police_logo_details_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 25vh;
+  width: 100vw;
+  /* background-color: pink; */
+}
+
+hr {
+  border-top: 3px solid orange;
+  margin: 10px 0;
+}
+
+.police_logo img {
+  margin-top: 10px;
+  object-fit: contain;
+  max-height: 15vh;
+  max-width: 25vw;
+}
+
+.data_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 60vh;
+  /* background-color: red; */
+}
+
+.data_container_wrap {
+  height: 60vh;
+  width: 75vw;
+  /* background-color: blue; */
+}
+
+.heading_auth {
+  display: flex;
+  height: 15vh;
+  flex-direction: column;
+  /* background-color: blueviolet; */
+
+  margin: 20px;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.heading_auth p {
+  margin-top: 7px;
+  font-size: 11px;
+}
+
+.form_data {
+  display: flex;
+  flex-direction: column;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mobile_num,
+.otp_label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px;
+  margin-top: 8px;
+}
+
+input {
+  min-width: 70vw;
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid gray;
+}
+
+.mobile_num ::-webkit-outer-spin-button,
+.mobile_num ::-webkit-inner-spin-button {
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  background: orange;
+  max-width: 70vw;
+}
+
+select {
+  min-width: 70vw;
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid gray;
+  margin: 15px 0px;
+
+}
