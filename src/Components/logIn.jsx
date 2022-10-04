@@ -1,18 +1,47 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useUserAuth } from "../Contexts/UserAuthContext";
 
 const LogIn = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [error, setError] = useState("");
+  const [flag, setFlag] = useState(false);
+  const [otp, setOtp] = useState("");
+  const [result, setResult] = useState("");
+  const { setUpRecaptha } = useUserAuth();
+  const navigate = useNavigate();
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  // OTP methods
 
-  const onSubmit = (data) => {
-    console.log(data);
-    setPhoneNumber(data.mobile_num);
+  const getOtp = async (e) => {
+    // console.log("phoneNumber", phoneNumber);
+    e.preventDefault();
+    console.log(phoneNumber);
+    setError("");
+    if (phoneNumber === "" || phoneNumber === undefined)
+      return setError("Please enter a valid phone number!");
+    try {
+      const response = await setUpRecaptha(phoneNumber);
+      console.log(response);
+      setResult(response);
+      setFlag(true);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const verifyOtp = async (e) => {
+    e.preventDefault();
+    setError("");
+    if (otp === "" || otp === null) return;
+    try {
+      await result.confirm(otp);
+      console.log("bhai tame authenticate thay gaya chho")
+      navigate("/station");
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
   return (
@@ -31,8 +60,8 @@ const LogIn = () => {
             <hr />
             <p>Kindly enter your mobile number to authenticate yourself.</p>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form_data">
+          <div className="form_data">
+            <form onSubmit={getOtp}>
               <div className="mobile_num_label">
                 <label for="mobile_num" className="mobile_num">
                   Enter mobile no :
@@ -40,32 +69,33 @@ const LogIn = () => {
               </div>
               <div className="mobile_num_input">
                 <input
-                  type="number"
+                  // type="number"
                   name="mobile_num"
+                  value={phoneNumber}
+                  onChange={(event) => setPhoneNumber(event.target.value)}
                   id=""
                   className="mobile_num"
-                  {...register("mobile_num", { required: true, maxLength: 10 })}
                 />
-                {errors.mobile_num && <p>Please check the Mobile Number</p>}
               </div>
+              <div id="recaptcha-container" />
+              <button className="sendOtp">Send OTP</button>
+            </form>
+            <form onSubmit={verifyOtp}>
               <div className="otp_label">Enter OTP :</div>
               <div className="otp_input">
                 <input
                   type="number"
                   className="otp"
                   name="otp"
-                  id=""
-                  {...register("otp", { required: true })}
+                  onChange={(event) => setOtp(event.target.value)}
                 />
-                {errors.otp && <p>Please check the OTP</p>}
               </div>
 
-              <button className="sendOtp">Send OTP</button>
               <button type="submit" className="submit_btn">
-                Next
+                Verify OTP
               </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
