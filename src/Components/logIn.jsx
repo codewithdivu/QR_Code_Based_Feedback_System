@@ -24,7 +24,7 @@ const LogIn = () => {
     if (phoneNumber === "" || phoneNumber === undefined)
       return setError("Please enter a valid phone number!");
     try {
-      const response = await setUpRecaptha(phoneNumber);
+      const response = await setUpRecaptha("+91"+phoneNumber);
       console.log(response);
       setResult(response);
       setFlag(true);
