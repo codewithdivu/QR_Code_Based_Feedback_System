@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useUserAuth } from "../Contexts/UserAuthContext";
+import "../css/newLoader.css";
 
 const LogIn = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -10,6 +11,7 @@ const LogIn = () => {
   const [otp, setOtp] = useState("");
   const [result, setResult] = useState("");
   const { setUpRecaptha } = useUserAuth();
+  const [loader, isLoading] = useState(false);
   const navigate = useNavigate();
 
   // OTP methods
@@ -26,6 +28,7 @@ const LogIn = () => {
       console.log(response);
       setResult(response);
       setFlag(true);
+      isLoading(true);
     } catch (err) {
       setError(err.message);
     }
@@ -37,7 +40,8 @@ const LogIn = () => {
     if (otp === "" || otp === null) return;
     try {
       await result.confirm(otp);
-      console.log("bhai tame authenticate thay gaya chho")
+      console.log("bhai tame authenticate thay gaya chho");
+      isLoading(false);
       navigate("/station");
     } catch (err) {
       setError(err.message);
@@ -61,7 +65,14 @@ const LogIn = () => {
             <p>Kindly enter your mobile number to authenticate yourself.</p>
           </div>
           <div className="form_data">
-            <form onSubmit={getOtp}>
+            {/* {isLoading ? (
+              <div className="spinner"></div>
+            ) : (
+              <> */}
+            <form
+              onSubmit={getOtp}
+              style={{ display: !flag ? "block" : "none" }}
+            >
               <div className="mobile_num_label">
                 <label for="mobile_num" className="mobile_num">
                   Enter mobile no :
@@ -80,7 +91,11 @@ const LogIn = () => {
               <div id="recaptcha-container" />
               <button className="sendOtp">Send OTP</button>
             </form>
-            <form onSubmit={verifyOtp}>
+
+            <form
+              onSubmit={verifyOtp}
+              style={{ display: flag ? "block" : "none" }}
+            >
               <div className="otp_label">Enter OTP :</div>
               <div className="otp_input">
                 <input
@@ -95,6 +110,8 @@ const LogIn = () => {
                 Verify OTP
               </button>
             </form>
+            {/* </>
+            )} */}
           </div>
         </div>
       </div>
