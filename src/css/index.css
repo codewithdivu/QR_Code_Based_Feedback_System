@@ -12,96 +12,13 @@ body {
 
 /* FOR CHOOSELANGUGE */
 
-.police__img {
-  width: 53px;
-  height: 61px;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  color: #281859;
-  margin-top: 0;
-}
-
-.police__feedback {
-  font-size: 7px;
-}
-
-.police__heading {
-  font-size: 12px;
-}
-
-.lang__heading {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 12px;
-}
-
-.district__1,
-.district__taluko1,
-.district__police1 {
-  width: 7rem;
-  height: 1rem;
-  border-radius: 7px;
-  font-size: 5px;
-  border: 1px solid #281859;
-  color: #281859;
-}
-
-.district,
-.district__taluko,
-.district__police {
-  padding-top: 0.5rem;
-}
-
-.option__forform {
-  color: #281859;
-}
-
-/* FOR TEXTAREA */
-.police__experience1 {
-  border: 1px solid black;
-  border-radius: 5px;
-  color: #281859;
-  padding-top: 0.5rem;
-  font-size: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding-left: 5px;
-  padding-top: -1rem;
-}
-
-.police__experience {
-  padding-top: 0.5rem;
-}
-
-.police__btn1 {
-  background: #281859;
-  color: #fff;
-  border-radius: 6px;
-  font-size: 8px;
-  width: 5rem;
-  height: 0.8rem;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.police__btn {
-  padding-top: 1rem;
-}
-
-/* FOR LOGIN PAGE */
 .main_container {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
 }
+
 .police_logo_details_container {
   display: flex;
   align-items: center;
@@ -116,12 +33,14 @@ hr {
   border-top: 3px solid orange;
   margin: 10px 0;
 }
+
 .police_logo img {
   margin-top: 10px;
   object-fit: contain;
   max-height: 15vh;
   max-width: 25vw;
 }
+
 .data_container {
   display: flex;
   justify-content: center;
@@ -131,11 +50,13 @@ hr {
   height: 60vh;
   /* background-color: red; */
 }
+
 .data_container_wrap {
   height: 60vh;
   width: 75vw;
   /* background-color: blue; */
 }
+
 .heading_auth {
   display: flex;
   height: 15vh;
@@ -147,19 +68,23 @@ hr {
   font-weight: bolder;
   text-transform: uppercase;
 }
+
 .heading_auth p {
   margin-top: 7px;
   font-size: 11px;
 }
+
 .form_data {
   display: flex;
   flex-direction: column;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 .mobile_num,
 .otp_label {
   display: block;
@@ -168,8 +93,8 @@ input::-webkit-inner-spin-button {
   padding: 5px;
   margin-top: 8px;
 }
-.mobile_num_input input,
-.otp_input input {
+
+input {
   min-width: 70vw;
   border: none;
   outline: none;
@@ -178,10 +103,15 @@ input::-webkit-inner-spin-button {
   border: 1px solid gray;
 }
 
-.mobile_num_input input ::-webkit-outer-spin-button,
-.mobile_num_input input ::-webkit-inner-spin-button {
+.mobile_num ::-webkit-outer-spin-button,
+.mobile_num ::-webkit-inner-spin-button {
   -moz-appearance: none;
   appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 button {
@@ -195,281 +125,16 @@ button {
   margin-top: 20px;
   border-radius: 8px;
   background: orange;
+  max-width: 70vw;
 }
 
-/* FOR SELECT STATION */
+select {
+  min-width: 70vw;
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid gray;
+  margin: 15px 0px;
 
-.police__img {
-  width: 53px; /*53*/
-  height: 61px; /*61*/
-}
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  color: #281859;
-  margin-top: 0;
-}
-.police__feedback {
-  font-size: 7px;
-}
-.police__heading {
-  font-size: 12px;
-}
-
-.district__1,
-.district__taluko1,
-.district__police1 {
-  width: 7rem;
-  height: 1rem;
-  border-radius: 7px;
-  font-size: 5px;
-  border: 1px solid #281859;
-  color: #281859;
-}
-.district,
-.district__taluko,
-.district__police {
-  padding-top: 0.8rem;
-}
-.option__forform {
-  color: #281859;
-}
-
-/* FOR TEXTAREA */
-.police__experience1 {
-  border: 1px solid black;
-  border-radius: 5px;
-  color: #281859;
-  padding-top: 0.5rem;
-  font-size: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding-left: 5px;
-  padding-top: -1rem;
-}
-.police__experience {
-  padding-top: 0.5rem;
-}
-.police__btn1 {
-  border-radius: 10px;
-  width: 5rem;
-  height: 1.5rem;
-  background-color: #281859;
-  color: #fff;
-  font-size: 8px;
-  cursor: pointer;
-}
-.police__btn {
-  padding-top: 2.8rem;
-}
-
-/* FOR FEEDBACKQUESTION1 */
-
-.police__img {
-  width: 53px;
-  height: 61px;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  color: #281859;
-  margin-top: 0;
-}
-
-.police__feedback {
-  font-size: 7px;
-}
-
-.police__heading {
-  font-size: 12px;
-}
-
-.lang__heading {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 12px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* FOR FORM */
-
-.district__1,
-.district__taluko1,
-.district__police1 {
-  width: 7rem;
-  height: 1rem;
-  border-radius: 7px;
-  font-size: 5px;
-  border: 1px solid #281859;
-  color: #281859;
-}
-
-.district,
-.district__taluko,
-.district__police {
-  padding-top: 0.5rem;
-}
-
-.option__forform {
-  color: #281859;
-}
-
-/* FOR TEXTAREA */
-.police__experience1 {
-  border: 1px solid black;
-  border-radius: 5px;
-  color: #281859;
-  padding-top: 0.5rem;
-  font-size: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding-left: 5px;
-  padding-top: -1rem;
-}
-
-.police__experience {
-  padding-top: 0.5rem;
-}
-
-.police__btn1 {
-  background: #281859;
-  color: #fff;
-  border-radius: 6px;
-  font-size: 8px;
-  width: 5rem;
-  height: 1.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.police__btn {
-  padding-top: 1rem;
-  height: 1.5rem;
-}
-
-form {
-  font-size: 10px;
-}
-
-.questions {
-  margin-bottom: 8px;
-}
-
-.questions p {
-  margin-bottom: 5px;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-/* FOR FEEDBACKQUESTION2 */
-
-.police__img {
-  width: 53px;
-  height: 61px;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #281859;
-  margin-top: 0;
-}
-.police__feedback {
-  font-size: 7px;
-}
-
-.police__heading {
-  font-size: 12px;
-}
-
-.lang__heading {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.district__1,
-.district__taluko1,
-.district__police1 {
-  width: 7rem;
-  height: 1rem;
-  border-radius: 7px;
-  font-size: 5px;
-  border: 1px solid #281859;
-  color: #281859;
-}
-
-.district,
-.district__taluko,
-.district__police {
-  padding-top: 0.5rem;
-}
-
-.option__forform {
-  color: #281859;
-}
-
-/* FOR TEXTAREA */
-.police__experience1 {
-  border: 1px solid black;
-  border-radius: 5px;
-  color: #281859;
-  padding-top: 0.5rem;
-  font-size: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding-left: 5px;
-  padding-top: -1rem;
-}
-
-.police__experience {
-  padding-top: 0.5rem;
-}
-
-.police__btn1 {
-  background: #281859;
-  color: #fff;
-  border-radius: 6px;
-  font-size: 8px;
-  width: 5rem;
-  height: 0.8rem;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.police__btn {
-  padding-top: 1rem;
-}
-
-form {
-  font-size: 10px;
-}
-
-.questions {
-  margin-bottom: 8px;
-}
-
-.questions p {
-  margin-bottom: 5px;
-  font-size: 11px;
-  font-weight: 600;
-}
-#textarea {
-  border: 1px solid #281859;
-  border-radius: 6px;
-  padding: 10px;
 }
