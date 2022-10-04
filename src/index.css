@@ -92,3 +92,76 @@ body{
   display: flex;
   justify-content: center;
 }
+
+
+/* FOR SELECT STATION */
+
+
+.police__img{
+  width: 53px; /*53*/
+  height: 61px; /*61*/
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+  color: #281859;
+  margin-top: 0;
+}
+.police__feedback{
+  font-size: 7px;
+}
+.police__heading{
+  font-size: 12px;
+}
+
+
+
+
+
+.district__1, .district__taluko1, .district__police1{
+  width: 7rem;
+  height: 1rem;
+  border-radius: 7px;
+  font-size: 5px;
+  border: 1px solid #281859 ;
+  color: #281859;
+  
+}
+.district, .district__taluko, .district__police{
+  padding-top: 0.8rem;
+
+  
+}
+.option__forform{
+  color: #281859;
+}
+
+/* FOR TEXTAREA */
+.police__experience1{
+  border: 1px solid black;
+  border-radius: 5px;
+  color: #281859;
+  padding-top: 0.5rem;
+  font-size: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 5px;
+  padding-top: -1rem;
+}
+.police__experience{
+  padding-top: 0.5rem;
+}
+.police__btn1{
+  border-radius: 10px;
+  width: 5rem;
+  height: 1.5rem;
+  background-color: #281859;
+  color: #fff;
+  font-size: 8px;
+  cursor: pointer;
+}
+.police__btn{
+      padding-top: 2.8rem;
+}
