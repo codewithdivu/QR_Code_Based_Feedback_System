@@ -1,20 +1,26 @@
 import React from "react";
-import GpLogo from "./gpLogo";
 
-const SelectStation = () => {
+const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
+  // Handlers Methods
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSelectStation({
+      district: "test",
+      taluka: "test",
+      police: "test",
+    });
+    onNext();
+  };
   return (
-    <div className="main_container">
-      <GpLogo />
-
-      <div className="data_container">
-        <div className="data_container_wrap">
-          <div className="heading_auth">
-            <h2>Select Your Police Station</h2>
-            <hr />
-            <p>Kindly select your police station.</p>
-          </div>
-
-          <form className="district">
+    <div className="data_container">
+      <div className="data_container_wrap">
+        <div className="heading_auth">
+          <h2>Select Your Police Station</h2>
+          <hr />
+          <p>Kindly select your police station.</p>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="district">
             <select className="district__1">
               <option value="0" className="option__forform" selected="">
                 Select District...
@@ -41,8 +47,8 @@ const SelectStation = () => {
                 AMRELI
               </option>
             </select>
-          </form>
-          <form className="district__taluko">
+          </div>
+          <div className="district__taluko">
             <select className="district__taluko1">
               <option value="0" className="option__forform" selected="">
                 Select Taluka...
@@ -60,8 +66,8 @@ const SelectStation = () => {
                 BHANVAD
               </option>
             </select>
-          </form>
-          <form className="district__police">
+          </div>
+          <div className="district__police">
             <select className="district__police1">
               <option value="0" className="option__forform" selected="">
                 Select Police Station...
@@ -79,12 +85,9 @@ const SelectStation = () => {
                 BHANVAD POLICE STATION
               </option>
             </select>
-          </form>
-
-          <a href="./3.html">
-            <button className="sendOtp">Next</button>
-          </a>
-        </div>
+          </div>
+          <button className="sendOtp">Next</button>
+        </form>
       </div>
     </div>
   );
