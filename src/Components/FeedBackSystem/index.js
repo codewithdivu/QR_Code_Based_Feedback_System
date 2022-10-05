@@ -6,6 +6,7 @@ import GreetingPage from "../greetingPage";
 import LogIn from "../logIn";
 import SelectLanguage from "../selectLanguage";
 import SelectStation from "../selectStation";
+import { addData } from "../../firebase/services";
 
 const FeedBackSystem = () => {
   const [step, setStep] = useState(0);
@@ -18,11 +19,15 @@ const FeedBackSystem = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [capthaResponse, setCapthaResponse] = useState("");
 
+  const [Questions, setQuestions] = useState([]);
+
+  // console.log("questionsyaar", Questions);
+
   const handleNext = () => {
     setStep(step + 1);
   };
 
-  const onFinalSubmit = (feedBackData) => {
+  const onFinalSubmit = async (feedBackData) => {
     // Store in fb
     handleNext();
     localStorage.clear();
@@ -58,7 +63,13 @@ const FeedBackSystem = () => {
           />
         );
       case 3:
-        return <Feedback onFinalSubmit={onFinalSubmit} />;
+        return (
+          <Feedback
+            onFinalSubmit={onFinalSubmit}
+            Questions={Questions}
+            setQuestions={setQuestions}
+          />
+        );
       case 4:
         return <GreetingPage />;
       default:

@@ -1,8 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-const Feedback = ({ onFinalSubmit }) => {
+const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
   const [step, setStep] = useState(0);
+
+  const [firstQ, setFirstQ] = useState("Good");
+  const [secondQ, setSecondQ] = useState("Bood");
+  const [thirdQ, setThirdQ] = useState("Bad");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +18,17 @@ const Feedback = ({ onFinalSubmit }) => {
       return;
     }
     setStep((step) => step + 1);
+    setQuestions({ ...Questions, firstQ, secondQ, thirdQ });
+  };
+
+  const handleChange1 = (event) => {
+    setFirstQ(event.target.value);
+  };
+  const handleChange2 = (event) => {
+    setSecondQ(event.target.value);
+  };
+  const handleChange3 = (event) => {
+    setThirdQ(event.target.value);
   };
 
   const renderCurrentFeedbackForm = (activeStep) => {
@@ -21,64 +36,64 @@ const Feedback = ({ onFinalSubmit }) => {
       case 0:
         return (
           <div class="questions_container">
-            <div class="question_container">
+            <div class="question_container" onChange={handleChange1}>
               <p>Q. How did you come to the police station?</p>
               <div class="option">
-                <input type="radio" name="ques1" id="ques" />
+                <input type="radio" name="ques1" id="ques" value={firstQ} />
                 <label for="ques">
                   Through a person known to a police officer{" "}
                 </label>
               </div>
               <div class="option">
-                <input type="radio" name="ques1" id="ques" />
+                <input type="radio" name="ques1" id="ques" value={firstQ} />
                 <label for="ques">Neighbour / local leader</label>
               </div>
               <div class="option">
-                <input type="radio" name="ques1" id="ques" />
+                <input type="radio" name="ques1" id="ques" value={firstQ} />
                 <label for="ques">Parent/Guardian/Sibling</label>
               </div>
               <div class="option">
-                <input type="radio" name="ques1" id="ques" />
+                <input type="radio" name="ques1" id="ques" value={firstQ} />
                 <label for="ques">On your own</label>
               </div>
             </div>
-            <div class="question_container">
+            <div class="question_container" onChange={handleChange2}>
               <p>Q. After how much time you were heard in PS ?</p>
               <div class="option">
-                <input type="radio" name="ques2" id="ques" />
+                <input type="radio" name="ques2" id="ques" value={secondQ} />
                 <label for="ques">More than 15 minutes</label>
               </div>
               <div class="option">
-                <input type="radio" name="ques2" id="ques" />
+                <input type="radio" name="ques2" id="ques" value={secondQ} />
                 <label for="ques">15 minutes</label>
               </div>
               <div class="option">
-                <input type="radio" name="ques2" id="ques" />
+                <input type="radio" name="ques2" id="ques" value={secondQ} />
                 <label for="ques">10 minutes</label>
               </div>
               <div class="option">
-                <input type="radio" name="ques2" id="ques" />
+                <input type="radio" name="ques2" id="ques" value={secondQ} />
                 <label for="ques">Immediately </label>
               </div>
             </div>
-            <div class="question_container">
+            <div class="question_container" onChange={handleChange3}>
               <p>Q. What was your problem ?</p>
               <div class="option">
-                <input type="radio" name="ques3" id="ques" />
+                <input type="radio" name="ques3" id="ques" value={thirdQ} />
                 <label for="ques">
                   Theft (mobile/vechile/electronic devices){" "}
                 </label>
               </div>
               <div class="option">
-                <input type="radio" name="ques3" id="ques" />
+                <input type="radio" name="ques3" id="ques" value={thirdQ} />
                 <label for="ques">Harassment/Humiliation</label>
               </div>
               <div class="option">
-                <input type="radio" name="ques3" id="ques" />
+                <input type="radio" name="ques3" id="ques" value={thirdQ} />
                 <label for="ques">Internal/External Conflict</label>
               </div>
               <div class="option">
-                <input type="radio" name="ques3" id="ques" />
+                <input type="radio" name="ques3" id="ques" value={thirdQ} />
                 <label for="ques">Other</label>
               </div>
             </div>
