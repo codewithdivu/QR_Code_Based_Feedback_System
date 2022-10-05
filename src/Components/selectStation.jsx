@@ -1,15 +1,10 @@
 import React from "react";
+import GpLogo from "./gpLogo";
 
 const SelectStation = () => {
   return (
     <div className="main_container">
-      <div className="police_logo_details_container">
-        <div className="police_logo">
-          <img src="./images/Logo.png" alt="GUJ_POLICE_LOGO" />
-        </div>
-        <div className="police_heading">GUJARAT POLICE</div>
-        <div className="police_feedback">(Feedback Portal)</div>
-      </div>
+      <GpLogo />
 
       <div className="data_container">
         <div className="data_container_wrap">
@@ -86,7 +81,7 @@ const SelectStation = () => {
             </select>
           </form>
 
-          <a href="./index1.html">
+          <a href="./3.html">
             <button className="sendOtp">Next</button>
           </a>
         </div>

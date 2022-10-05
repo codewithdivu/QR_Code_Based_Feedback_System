@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useUserAuth } from "../Contexts/UserAuthContext";
 import "../css/newLoader.css";
+import GpLogo from "./gpLogo";
 
 const LogIn = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -24,7 +25,7 @@ const LogIn = () => {
     if (phoneNumber === "" || phoneNumber === undefined)
       return setError("Please enter a valid phone number!");
     try {
-      const response = await setUpRecaptha("+91"+phoneNumber);
+      const response = await setUpRecaptha("+91" + phoneNumber);
       console.log(response);
       setResult(response);
       setFlag(true);
@@ -50,13 +51,7 @@ const LogIn = () => {
 
   return (
     <div className="main_container">
-      <div className="police_logo_details_container">
-        <div className="police_logo">
-          <img src="./images/Logo.png" alt="GUJ_POLICE_LOGO" />
-        </div>
-        <div className="police_heading">GUJARAT POLICE</div>
-        <div className="police_feedback">(Feedback Portal)</div>
-      </div>
+      <GpLogo />
       <div className="data_container">
         <div className="data_container_wrap">
           <div className="heading_auth">
