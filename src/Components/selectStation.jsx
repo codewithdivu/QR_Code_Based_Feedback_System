@@ -1,21 +1,22 @@
-import React from "react";
-import { districts } from "../constants/districts";
+import React, { useState } from "react";
+import { districts, newData } from "../constants/districts";
 
 const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
+  const [district, setDistrict] = useState("");
+  const [taluka, setTaluka] = useState("");
+
   // Handlers Methods
   const handleSubmit = (e) => {
     e.preventDefault();
     onSelectStation({
-      district: "test",
-      taluka: "test",
+      district: district,
+      taluka: taluka,
       police: "test",
     });
+    if (!district || !taluka) {
+      return alert("required...");
+    }
     onNext();
-  };
-
-  const handleDropDown = (event) => {
-    console.log(event)
-    console.log(event.target.value);
   };
 
   return (
@@ -28,56 +29,44 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="district">
-            <select className="district__1">
-              {districts.map((dist) => (
-                <option
-                  value={dist}
-                  onChange={handleDropDown}
-                  className="option__forform"
-                >
-                  {dist}
+            <select
+              className="district__1"
+              value={district}
+              onChange={(e) => setDistrict(e.target.value)}
+            >
+              {newData.map((dist) => (
+                <option value={dist.name} className="option__forform">
+                  {dist.name}
                 </option>
               ))}
             </select>
           </div>
           <div className="district__taluko">
-            <select className="district__taluko1">
-              <option value="0" className="option__forform" selected="">
-                Select Taluka...
-              </option>
-              <option value="1" className="option__forform">
-                KALYANPUR
-              </option>
-              <option value="2" className="option__forform">
-                OKHA
-              </option>
-              <option value="3" className="option__forform">
-                KHAMBHALIYA
-              </option>
-              <option value="4" className="option__forform">
-                BHANVAD
-              </option>
+            <select
+              className="district__taluko1"
+              onChange={(e) => setTaluka(e.target.value)}
+            >
+              {newData
+                ?.find((obj) => obj?.name === district)
+                ?.taluka?.map((taluko) => (
+                  <option value={taluko.name} className="option__forform">
+                    {taluko.name}
+                  </option>
+                ))}
             </select>
           </div>
-          <div className="district__police">
+          {/* <div className="district__police">
             <select className="district__police1">
-              <option value="0" className="option__forform" selected="">
-                Select Police Station...
-              </option>
-              <option value="1" className="option__forform">
-                KALYANPUR POLICE STATION
-              </option>
-              <option value="2" className="option__forform">
-                OKHA POLICE STATION
-              </option>
-              <option value="3" className="option__forform">
-                KHAMBHALIYA POLICE STATION
-              </option>
-              <option value="4" className="option__forform">
-                BHANVAD POLICE STATION
-              </option>
+              {newData
+                ?.find((obj) => obj?.name === district)
+                ?.find((obj) => obj?.name === taluka)
+                ?.police_stations?.map((police) => (
+                  <option value={police} className="option__forform">
+                    {police}
+                  </option>
+                ))}
             </select>
-          </div>
+          </div> */}
           <button className="sendOtp">Next</button>
         </form>
       </div>

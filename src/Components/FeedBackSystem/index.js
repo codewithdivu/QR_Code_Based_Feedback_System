@@ -9,19 +9,26 @@ import SelectStation from "../selectStation";
 import { addData } from "../../firebase/services";
 
 const FeedBackSystem = () => {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
+
+  // language
   const [selectedLanguage, setSelectedLanguage] = useState("en");
+  // phoneNumber
+  const [phoneNumber, setPhoneNumber] = useState("");
+  console.log("mobie", phoneNumber);
+  // captha details
+  const [capthaResponse, setCapthaResponse] = useState("");
+  // Questions
+  const [Questions, setQuestions] = useState([]);
+
+  console.log("queeee", Questions);
+
+  //selected police station object
   const [selectedPoliceStation, setSelectedPoliceStation] = useState({
     district: "",
     taluka: "",
     police: "",
   });
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [capthaResponse, setCapthaResponse] = useState("");
-
-  const [Questions, setQuestions] = useState([]);
-
-  // console.log("questionsyaar", Questions);
 
   const handleNext = () => {
     setStep(step + 1);
@@ -36,7 +43,7 @@ const FeedBackSystem = () => {
   // Render Methods
   const renderCurrentComponent = (activeStep) => {
     switch (activeStep) {
-      case 0:
+      case 1:
         return (
           <SelectLanguage
             onNext={handleNext}
@@ -44,16 +51,16 @@ const FeedBackSystem = () => {
             onSelectLanguage={setSelectedLanguage}
           />
         );
-      case 1:
-        return (
-          <LogIn
-            onNext={handleNext}
-            phoneNumber={phoneNumber}
-            setPhoneNumber={setPhoneNumber}
-            capthaResponse={capthaResponse}
-            setCapthaResponse={setCapthaResponse}
-          />
-        );
+      // case 1:
+      //   return (
+      //     <LogIn
+      //       onNext={handleNext}
+      //       phoneNumber={phoneNumber}
+      //       setPhoneNumber={setPhoneNumber}
+      //       capthaResponse={capthaResponse}
+      //       setCapthaResponse={setCapthaResponse}
+      //     />
+      //   );
       case 2:
         return (
           <SelectStation

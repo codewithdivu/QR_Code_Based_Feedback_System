@@ -44,11 +44,45 @@ export const newData = [
       },
       {
         name: "Kutiyana",
-        police_stations: ["diya", "bati"],
+        police_stations: ["diya", "liya"],
       },
       {
         name: "porbandar",
         police_stations: ["madhavpur", "balej"],
+      },
+    ],
+  },
+  {
+    name: "Ahmedabad",
+    taluka: [
+      {
+        name: "dhandhuka",
+        police_stations: ["shreya", "akshu"],
+      },
+      {
+        name: "live",
+        police_stations: ["dike", "bite"],
+      },
+      {
+        name: "khila",
+        police_stations: ["chandu", "hemant"],
+      },
+    ],
+  },
+  {
+    name: "Rajkot",
+    taluka: [
+      {
+        name: "Jasdan",
+        police_stations: ["bhuka", "jola"],
+      },
+      {
+        name: "Vichiya",
+        police_stations: ["hemnat", "sunil"],
+      },
+      {
+        name: "gaurav",
+        police_stations: ["paru", "sunu"],
       },
     ],
   },

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useUserAuth } from "../Contexts/UserAuthContext";
 import "../css/newLoader.css";
 
@@ -15,16 +16,27 @@ const LogIn = ({
   const [result, setResult] = useState("");
   const [loader, isLoading] = useState(false);
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
   // Hooks
   const { setUpRecaptha } = useUserAuth();
 
   // OTP methods
   const getOtp = async (e) => {
     e.preventDefault();
-    console.log(phoneNumber);
+    // console.log(phoneNumber);
     setError("");
-    if (phoneNumber === "" || phoneNumber === undefined)
-      return setError("Please enter a valid phone number!");
+    if (phoneNumber === "" || phoneNumber === undefined) {
+      // setError("Please enter a valid phone number!");
+      alert("mobile_num is required");
+      return;
+    }
+
+    // return
     try {
       const response = await setUpRecaptha("+91" + phoneNumber);
       // console.log(response);
@@ -40,7 +52,8 @@ const LogIn = ({
   const verifyOtp = async (e) => {
     e.preventDefault();
     setError("");
-    if (otp === "" || otp === null) return;
+    if (otp === "" || otp === null) return alert("otp must required");
+
     try {
       await result.confirm(otp);
       console.log("bhai tame authenticate thay gaya chho");
@@ -73,13 +86,16 @@ const LogIn = ({
                 placeholder="9999999999"
                 name="mobile_num"
                 value={phoneNumber}
+                {...register("mobile_num", { required: true })}
                 onChange={(event) => setPhoneNumber(event.target.value)}
                 id=""
                 className="mobile_num"
               />
             </div>
             <div id="recaptcha-container" />
-            <button className="sendOtp">Send OTP</button>
+            <button type="submit" className="sendOtp">
+              Send OTP
+            </button>
           </form>
 
           {/* Verify OTP */}

@@ -1,16 +1,16 @@
 import React from "react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { questions1, questions2 } from "../constants/questions1";
 
 const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
   const [step, setStep] = useState(0);
 
-  const [firstQ, setFirstQ] = useState("Good");
-  const [secondQ, setSecondQ] = useState("Bood");
-  const [thirdQ, setThirdQ] = useState("Bad");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const handleNext = () => {
     if (step === 2) {
@@ -18,17 +18,13 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
       return;
     }
     setStep((step) => step + 1);
-    setQuestions({ ...Questions, firstQ, secondQ, thirdQ });
+    // setQuestions({ ...Questions, firstQ, secondQ, thirdQ });
   };
 
-  const handleChange1 = (event) => {
-    setFirstQ(event.target.value);
-  };
-  const handleChange2 = (event) => {
-    setSecondQ(event.target.value);
-  };
-  const handleChange3 = (event) => {
-    setThirdQ(event.target.value);
+  const onRBSubmit = (res) => {
+    // console.log("dropdown bhai", res);
+    setQuestions({ ...Questions, res });
+    handleNext();
   };
 
   const renderCurrentFeedbackForm = (activeStep) => {
@@ -36,124 +32,52 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
       case 0:
         return (
           <div class="questions_container">
-            <div class="question_container" onChange={handleChange1}>
-              <p>Q. How did you come to the police station?</p>
-              <div class="option">
-                <input type="radio" name="ques1" id="ques" value={firstQ} />
-                <label for="ques">
-                  Through a person known to a police officer{" "}
-                </label>
+            {questions1.map((item) => (
+              <div class="question_container">
+                <p>{item.q}</p>
+                {item.options.map((option) => (
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name={item.name}
+                      id="ques"
+                      value={option.label}
+                      {...register(item.name, { required: true })}
+                    />
+                    <label for="ques">{option.label}</label>
+                  </div>
+                ))}
               </div>
-              <div class="option">
-                <input type="radio" name="ques1" id="ques" value={firstQ} />
-                <label for="ques">Neighbour / local leader</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="ques1" id="ques" value={firstQ} />
-                <label for="ques">Parent/Guardian/Sibling</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="ques1" id="ques" value={firstQ} />
-                <label for="ques">On your own</label>
-              </div>
-            </div>
-            <div class="question_container" onChange={handleChange2}>
-              <p>Q. After how much time you were heard in PS ?</p>
-              <div class="option">
-                <input type="radio" name="ques2" id="ques" value={secondQ} />
-                <label for="ques">More than 15 minutes</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="ques2" id="ques" value={secondQ} />
-                <label for="ques">15 minutes</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="ques2" id="ques" value={secondQ} />
-                <label for="ques">10 minutes</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="ques2" id="ques" value={secondQ} />
-                <label for="ques">Immediately </label>
-              </div>
-            </div>
-            <div class="question_container" onChange={handleChange3}>
-              <p>Q. What was your problem ?</p>
-              <div class="option">
-                <input type="radio" name="ques3" id="ques" value={thirdQ} />
-                <label for="ques">
-                  Theft (mobile/vechile/electronic devices){" "}
-                </label>
-              </div>
-              <div class="option">
-                <input type="radio" name="ques3" id="ques" value={thirdQ} />
-                <label for="ques">Harassment/Humiliation</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="ques3" id="ques" value={thirdQ} />
-                <label for="ques">Internal/External Conflict</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="ques3" id="ques" value={thirdQ} />
-                <label for="ques">Other</label>
-              </div>
-            </div>
+            ))}
           </div>
         );
       case 1:
         return (
           <div className="questions_container">
-            <div className="question_container">
-              <p>Q. What was stolen from you ?</p>
-              <div className="option">
-                <input type="radio" name="ques1" id="ques" />
-                <label for="ques">Mobile </label>
+            {questions2.map((item) => (
+              <div class="question_container">
+                <p>{item.q}</p>
+                {item.options.map((option) => (
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name={item.name}
+                      id="ques"
+                      value={option.label}
+                      {...register(item.name, { required: true })}
+                    />
+                    <label for="ques">{option.label}</label>
+                  </div>
+                ))}
               </div>
-              <div className="option">
-                <input type="radio" name="ques1" id="ques" />
-                <label for="ques">Vechile</label>
-              </div>
-              <div className="option">
-                <input type="radio" name="ques1" id="ques" />
-                <label for="ques">Electronic Device / Gadget</label>
-              </div>
-              <div className="option">
-                <input type="radio" name="ques1" id="ques" />
-                <label for="ques">Other</label>
-              </div>
-              <div className="option">
-                <input type="radio" name="ques1" id="ques" />
-                <label for="ques">NA </label>
-              </div>
-            </div>
-            <div className="question_container">
-              <p>Q. By whom you has been harrassed or humilated ?</p>
-              <div className="option">
-                <input type="radio" name="ques2" id="ques" />
-                <label for="ques">From blood realtion </label>
-              </div>
-              <div className="option">
-                <input type="radio" name="ques2" id="ques" />
-                <label for="ques">Someone from locality</label>
-              </div>
-              <div className="option">
-                <input type="radio" name="ques2" id="ques" />
-                <label for="ques">Stranger at public place</label>
-              </div>
-              <div className="option">
-                <input type="radio" name="ques2" id="ques" />
-                <label for="ques">Other </label>
-              </div>
-              <div className="option">
-                <input type="radio" name="ques2" id="ques" />
-                <label for="ques">NA </label>
-              </div>
-            </div>
+            ))}
             <div className="question_container">
               <p className="special">Q. What was your conflict ?</p>
               <input
                 type="text"
-                name=""
+                name="conflicts"
                 id=""
+                {...register("conflicts", { required: true })}
                 placeholder="Kindly explain your conflict in brief .."
               />
             </div>
@@ -227,9 +151,9 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
           <hr />
           <p>Kindly enter the required fields of the form.</p>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onRBSubmit)}>
           {renderCurrentFeedbackForm(step)}
-          <button class="next" onClick={handleNext}>
+          <button type="submit" class="next">
             Next
           </button>
         </form>
