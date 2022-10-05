@@ -15,9 +15,8 @@ const FeedBackSystem = () => {
     taluka: "",
     police: "",
   });
-
-  console.log("step :>> ", step);
-  // en gj hn
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [capthaResponse, setCapthaResponse] = useState("");
 
   const handleNext = () => {
     setStep(step + 1);
@@ -41,7 +40,15 @@ const FeedBackSystem = () => {
           />
         );
       case 1:
-        return <LogIn onNext={handleNext} />;
+        return (
+          <LogIn
+            onNext={handleNext}
+            phoneNumber={phoneNumber}
+            setPhoneNumber={setPhoneNumber}
+            capthaResponse={capthaResponse}
+            setCapthaResponse={setCapthaResponse}
+          />
+        );
       case 2:
         return (
           <SelectStation

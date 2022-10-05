@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import { useUserAuth } from "../Contexts/UserAuthContext";
 import "../css/newLoader.css";
-import GpLogo from "../Assets/Logos/gpLogo";
 
-const LogIn = ({ onNext }) => {
-  const [phoneNumber, setPhoneNumber] = useState("");
+const LogIn = ({
+  onNext,
+  phoneNumber,
+  setPhoneNumber,
+  capthaResponse,
+  setCapthaResponse,
+}) => {
   const [error, setError] = useState("");
   const [flag, setFlag] = useState(false);
   const [otp, setOtp] = useState("");
@@ -25,7 +27,8 @@ const LogIn = ({ onNext }) => {
       return setError("Please enter a valid phone number!");
     try {
       const response = await setUpRecaptha("+91" + phoneNumber);
-      console.log(response);
+      // console.log(response);
+      setCapthaResponse(response);
       setResult(response);
       setFlag(true);
       isLoading(true);

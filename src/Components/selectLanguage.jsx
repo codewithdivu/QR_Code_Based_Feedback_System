@@ -1,13 +1,18 @@
 import React from "react";
+import { languages } from "../constants/language";
 
 const SelectLanguage = ({ selectedLanguage, onSelectLanguage, onNext }) => {
   // Handler Methods
   const handleSaveSelectedLanguage = (e) => {
     e.preventDefault();
-    onSelectLanguage("en");
-    console.log("object :>> ", selectedLanguage);
+    // console.log("object :>> ", selectedLanguage);
     localStorage.setItem("language", "en");
     onNext();
+  };
+
+  const handleChange = (event) => {
+    // console.log("radio_button", event.target.value);
+    onSelectLanguage(event.target.value);
   };
 
   return (
@@ -19,36 +24,19 @@ const SelectLanguage = ({ selectedLanguage, onSelectLanguage, onNext }) => {
           <p>Kindly select your preferred language</p>
         </div>
         <div className="language_ops_wrap">
-          <div className="language_opts">
-            <div className="language_data">
-              <input
-                type="radio"
-                className="options language_input"
-                name="language_data"
-                id="language_input"
-              />
-              <label for="language_data">English</label>
-            </div>
-            <div className="language_data">
-              <span>
+          <div className="language_opts" onChange={handleChange}>
+            {languages.map((lang) => (
+              <div key={lang.id} className="language_data">
                 <input
                   type="radio"
                   className="options language_input"
-                  name="language_data"
+                  name="language"
                   id="language_input"
+                  value={lang.value}
                 />
-              </span>
-              <label for="language_data">हिन्दी</label>
-            </div>
-            <div className="language_data">
-              <input
-                type="radio"
-                className="options language_input"
-                name="language_data"
-                id="language_input"
-              />
-              <label for="language_data">ગુજરાતી</label>
-            </div>
+                <label for="language_data">{lang.label}</label>
+              </div>
+            ))}
           </div>
         </div>
         <button className="sendOtp" onClick={handleSaveSelectedLanguage}>

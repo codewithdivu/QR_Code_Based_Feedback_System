@@ -1,4 +1,5 @@
 import React from "react";
+import { districts } from "../constants/districts";
 
 const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
   // Handlers Methods
@@ -11,6 +12,12 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
     });
     onNext();
   };
+
+  const handleDropDown = (event) => {
+    console.log(event)
+    console.log(event.target.value);
+  };
+
   return (
     <div className="data_container">
       <div className="data_container_wrap">
@@ -22,30 +29,15 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
         <form onSubmit={handleSubmit}>
           <div className="district">
             <select className="district__1">
-              <option value="0" className="option__forform" selected="">
-                Select District...
-              </option>
-              <option value="1" className="option__forform">
-                DEVBHUMI DWARKA
-              </option>
-              <option value="2" className="option__forform">
-                SURAT
-              </option>
-              <option value="3" className="option__forform">
-                RAJKOT
-              </option>
-              <option value="4" className="option__forform">
-                PORBANDAR
-              </option>
-              <option value="5" className="option__forform">
-                JAMANAGAR
-              </option>
-              <option value="6" className="option__forform">
-                JUNAGADH
-              </option>
-              <option value="7" className="option__forform">
-                AMRELI
-              </option>
+              {districts.map((dist) => (
+                <option
+                  value={dist}
+                  onChange={handleDropDown}
+                  className="option__forform"
+                >
+                  {dist}
+                </option>
+              ))}
             </select>
           </div>
           <div className="district__taluko">

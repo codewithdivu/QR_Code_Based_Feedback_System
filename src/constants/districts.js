@@ -1,0 +1,55 @@
+export const districts = [
+  "Ahmedabad",
+  "Amreli",
+  "Anand",
+  "Aravalli",
+  "Banaskantha (Palanpur)",
+  "Bharuch",
+  "Bhavnagar",
+  "Botad",
+  "Chhota Udepur",
+  "Dahod",
+  "Dangs (Ahwa)",
+  "Devbhoomi Dwarka",
+  "Gandhinagar",
+  "Gir Somnath",
+  "Jamnagar",
+  "Junagadh",
+  "Kachchh",
+  "Kheda (Nadiad)",
+  "Mahisagar",
+  "Mehsana",
+  "Morbi",
+  "Narmada (Rajpipla)",
+  "Navsari",
+  "Panchmahal (Godhra)",
+  "Patan",
+  "Porbandar",
+  "Rajkot",
+  "Sabarkantha (Himmatnagar)",
+  "Surat",
+  "Surendranagar",
+  "Tapi (Vyara)",
+  "Vadodara",
+  "Valsad",
+];
+
+export const newData = [
+  {
+    name: "Porbandar",
+    taluka: [
+      {
+        name: "Ranavav",
+        police_stations: ["diya", "bati"],
+      },
+      {
+        name: "Kutiyana",
+        police_stations: ["diya", "bati"],
+      },
+      {
+        name: "porbandar",
+        police_stations: ["madhavpur", "balej"],
+      },
+    ],
+  },
+];
