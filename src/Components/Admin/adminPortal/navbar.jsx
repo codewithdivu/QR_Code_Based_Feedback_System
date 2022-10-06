@@ -1,17 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getUsers } from "../../../firebase/services";
 
 const Navbar = () => {
-  const handleService = () => {
-    // console.log("dataaaa", getAllUsers());
-    console.log("fufu", getUsers());
-  };
-
   return (
     <nav>
-      <button onClick={handleService}>Divyesh</button>
-
       <div class="logo-name">
         <div class="logo-image">
           <img src="./images/Logo.png" alt="" />
