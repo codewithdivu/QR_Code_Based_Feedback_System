@@ -1,9 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { getAllUsers, getUsers } from "../../../firebase/services";
 
 const MainAdminPortalHome = () => {
+  const handleService = () => {
+    // console.log("dataaaa", getAllUsers());
+    console.log("fufu", getUsers());
+  };
+
   return (
     <>
       <nav>
+        <button onClick={handleService}>Divyesh</button>
+
         <div class="logo-name">
           <div class="logo-image">
             <img src="./images/Logo.png" alt="" />
@@ -15,52 +24,52 @@ const MainAdminPortalHome = () => {
         <div class="menu-items">
           <ul class="nav-links">
             <li>
-              <a href="./index_main_portal.html">
+              <Link to="/admin">
                 <i class="fa-solid fa-house-user"></i>
                 <span class="link-name">Dahsboard</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./content.html">
+              <Link to="/admin/content">
                 <i class="fa-solid fa-server"></i>
                 <span class="link-name">Content</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./analysis.html">
+              <Link to="/admin/analysis">
                 <i class="fa fa-solid fa-magnifying-glass-chart"></i>
                 <span class="link-name">Analytics</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./report.html">
+              <Link to="/admin/report">
                 <i class="fa-solid fa-chart-pie"></i>
                 <span class="link-name">Report</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./generateQR.html">
+              <Link to="/admin/generateQR">
                 <i class=" fa fa-solid fa-qrcode"></i>
                 <span class="link-name">Generate QR</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="../admin panel/signup.html">
+              <Link to="/admin/signup">
                 <i class="fa-solid fa-user"></i>
                 <span class="link-name">Add User</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./change_password.html">
+              <Link to="/admin/changePassword">
                 <i class="fa fa-solid fa-lock"></i>
                 <span class="link-name">Change Password</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./police.jpg">
+              <Link to="./police.jpg">
                 <i class="fa fa-solid fa-right-from-bracket"></i>
                 <span class="link-name">Logout</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

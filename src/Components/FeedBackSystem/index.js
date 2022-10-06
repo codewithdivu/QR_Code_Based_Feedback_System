@@ -6,7 +6,7 @@ import GreetingPage from "../greetingPage";
 import LogIn from "../logIn";
 import SelectLanguage from "../selectLanguage";
 import SelectStation from "../selectStation";
-import { addData } from "../../firebase/services";
+import { addData, getAllUsers } from "../../firebase/services";
 import { auth } from "../../firebase/config";
 
 const FeedBackSystem = () => {
@@ -35,6 +35,7 @@ const FeedBackSystem = () => {
 
   const onFinalSubmit = async (feedBackData) => {
     // Store in fb
+
     handleNext();
     auth.signOut();
     localStorage.clear();
