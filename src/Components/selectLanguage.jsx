@@ -3,19 +3,6 @@ import { languages } from "../constants/language";
 import { useForm } from "react-hook-form";
 
 const SelectLanguage = ({ selectedLanguage, onSelectLanguage, onNext }) => {
-  // Handler Methods
-  // const handleSaveSelectedLanguage = (e) => {
-  //   e.preventDefault();
-  //   // console.log("object :>> ", selectedLanguage);
-  //   localStorage.setItem("language", "en");
-  //   onNext();
-  // };
-
-  // const handleChange = (event) => {
-  //   // console.log("radio_button", event.target.value);
-  //   onSelectLanguage(event.target.value);
-  // };
-
   const {
     register,
     handleSubmit,
@@ -23,7 +10,6 @@ const SelectLanguage = ({ selectedLanguage, onSelectLanguage, onNext }) => {
   } = useForm();
 
   const onRBSubmit = (res) => {
-    // console.log("res", res);
     onSelectLanguage(res.language);
     onNext();
   };

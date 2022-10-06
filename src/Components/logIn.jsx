@@ -21,13 +21,17 @@ const LogIn = ({
     handleSubmit,
     formState: { errors },
   } = useForm();
-
+  const {
+    register: register2,
+    handleSubmit: handleSubmit2,
+    formState: { errors: errors2 },
+  } = useForm();
+  console.log("errors", errors);
   // Hooks
   const { setUpRecaptha } = useUserAuth();
 
   // OTP methods
-  const getOtp = async (e) => {
-    e.preventDefault();
+  const getOtp = async ({ mobile_num: phoneNumber }) => {
     // console.log(phoneNumber);
     setError("");
     if (phoneNumber === "" || phoneNumber === undefined) {
@@ -37,29 +41,31 @@ const LogIn = ({
     }
 
     // return
+    isLoading(true);
     try {
       const response = await setUpRecaptha("+91" + phoneNumber);
       // console.log(response);
       setCapthaResponse(response);
       setResult(response);
       setFlag(true);
-      isLoading(true);
+      isLoading(false);
     } catch (err) {
       setError(err.message);
+      isLoading(false);
     }
   };
 
-  const verifyOtp = async (e) => {
-    e.preventDefault();
+  const verifyOtp = async ({ otp }) => {
     setError("");
     if (otp === "" || otp === null) return alert("otp must required");
-
+    isLoading(true);
     try {
       await result.confirm(otp);
       console.log("bhai tame authenticate thay gaya chho");
       isLoading(false);
       onNext();
     } catch (err) {
+      isLoading(false);
       setError(err.message);
     }
   };
@@ -74,7 +80,10 @@ const LogIn = ({
         </div>
         <div className="form_data">
           {/* Get Otp */}
-          <form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
+          <form
+            onSubmit={handleSubmit(getOtp)}
+            style={{ display: !flag ? "block" : "none" }}
+          >
             <div className="mobile_num_label">
               <label htmlFor="mobile_num" className="mobile_num">
                 Enter mobile no :
@@ -82,39 +91,72 @@ const LogIn = ({
             </div>
             <div className="mobile_num_input">
               <input
-                // type="number"
+                type="tel"
                 placeholder="9999999999"
                 name="mobile_num"
-                value={phoneNumber}
-                {...register("mobile_num", { required: true })}
-                onChange={(event) => setPhoneNumber(event.target.value)}
-                id=""
-                className="mobile_num"
+                {...register("mobile_num", {
+                  required: "Mobile number  is required.",
+                  minLength: {
+                    value: 10,
+                    message: "Phone number must be 10 digit only",
+                  },
+                  maxLength: {
+                    value: 10,
+                    message: "Phone number must be 10 digit only",
+                  },
+                })}
+                id="mobile_num"
+                className={`mobile_num ${
+                  errors?.mobile_num?.message ? "error-outline" : ""
+                }`}
               />
+              {errors?.mobile_num?.message ? (
+                <p className="error-message">{errors?.mobile_num?.message}</p>
+              ) : (
+                ""
+              )}
             </div>
             <div id="recaptcha-container" />
-            <button type="submit" className="sendOtp">
-              Send OTP
+            <button type="submit" className="sendOtp" disabled={loader}>
+              {loader ? "Sending...." : "Send OTP"}
             </button>
           </form>
 
           {/* Verify OTP */}
           <form
-            onSubmit={verifyOtp}
+            onSubmit={handleSubmit2(verifyOtp)}
             style={{ display: flag ? "block" : "none" }}
           >
             <div className="otp_label">Enter OTP :</div>
             <div className="otp_input">
               <input
                 type="number"
-                className="otp"
+                className={`otp ${
+                  errors2?.mobile_num?.message ? "error-outline" : ""
+                }`}
                 name="otp"
-                onChange={(event) => setOtp(event.target.value)}
+                id="otp"
+                {...register2("otp", {
+                  required: "otp is required.",
+                  minLength: {
+                    value: 6,
+                    message: "otp must be 6 digit only",
+                  },
+                  maxLength: {
+                    value: 6,
+                    message: "otp must be 6 digit only",
+                  },
+                })}
               />
+              {errors2?.otp?.message ? (
+                <p className="error-message">{errors2?.otp?.message}</p>
+              ) : (
+                ""
+              )}
             </div>
 
-            <button type="submit" className="submit_btn">
-              Verify OTP
+            <button type="submit" className="submit_btn" disabled={loader}>
+              {loader ? "Checking...." : "Verify OTP"}
             </button>
           </form>
         </div>

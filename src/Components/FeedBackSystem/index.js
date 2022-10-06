@@ -7,9 +7,10 @@ import LogIn from "../logIn";
 import SelectLanguage from "../selectLanguage";
 import SelectStation from "../selectStation";
 import { addData } from "../../firebase/services";
+import { auth } from "../../firebase/config";
 
 const FeedBackSystem = () => {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(0);
 
   // language
   const [selectedLanguage, setSelectedLanguage] = useState("en");
@@ -35,13 +36,14 @@ const FeedBackSystem = () => {
   const onFinalSubmit = async (feedBackData) => {
     // Store in fb
     handleNext();
+    auth.signOut();
     localStorage.clear();
   };
 
   // Render Methods
   const renderCurrentComponent = (activeStep) => {
     switch (activeStep) {
-      case 1:
+      case 0:
         return (
           <SelectLanguage
             onNext={handleNext}
@@ -49,16 +51,16 @@ const FeedBackSystem = () => {
             onSelectLanguage={setSelectedLanguage}
           />
         );
-      // case 1:
-      //   return (
-      //     <LogIn
-      //       onNext={handleNext}
-      //       phoneNumber={phoneNumber}
-      //       setPhoneNumber={setPhoneNumber}
-      //       capthaResponse={capthaResponse}
-      //       setCapthaResponse={setCapthaResponse}
-      //     />
-      //   );
+      case 1:
+        return (
+          <LogIn
+            onNext={handleNext}
+            phoneNumber={phoneNumber}
+            setPhoneNumber={setPhoneNumber}
+            capthaResponse={capthaResponse}
+            setCapthaResponse={setCapthaResponse}
+          />
+        );
       case 2:
         return (
           <SelectStation

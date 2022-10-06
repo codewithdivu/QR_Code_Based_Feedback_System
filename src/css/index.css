@@ -55,7 +55,6 @@ hr {
   min-height: 60vh;
   max-width: 75vw;
 
-
   /* background-color: blue; */
 }
 
@@ -112,11 +111,11 @@ input {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.next{
+.next {
   margin-bottom: 20px;
 }
 button {
@@ -132,7 +131,6 @@ button {
   background: orange;
   /* max-width: 70vw; */
   min-width: 70vw;
-
 }
 
 select {
@@ -143,9 +141,8 @@ select {
   border-radius: 9px;
   border: 1px solid gray;
   margin: 15px 0px;
-
 }
-#ques{
+#ques {
   min-width: 4vw;
   border: none;
   outline: none;
@@ -159,16 +156,16 @@ select {
   left: -1px;
   position: relative;
   background-color: #d1d3d1;
-  content: '';
+  content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
 }
-input[type=radio]#ques {
+input[type="radio"]#ques {
   accent-color: #ffa500;
   border: 3px solid black;
 }
-input[type=radio]#language_input {
+input[type="radio"]#language_input {
   accent-color: #ffa500;
   border: 3px solid black;
 }
@@ -181,34 +178,33 @@ input[type=radio]#language_input {
   left: -1px;
   position: relative;
   background-color: #ffa500;
-  content: '';
+  content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
 }
-.special{
+.special {
   padding-bottom: 20px;
 }
 
-.question_container p{
+.question_container p {
   font-size: 16px;
   font-weight: 550;
   padding-top: 20px;
   /* padding-bottom: 20px; */
 }
-.option{
+.option {
   font-size: 13px;
   padding-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   /* justify-content: center; */
-
 }
-#review_text{
+#review_text {
   height: 10vh;
 }
-.textarea{
+.textarea {
   display: flex;
   flex-direction: column;
   min-width: 70vw;
@@ -219,7 +215,7 @@ input[type=radio]#language_input {
   /* border-radius: 9px; */
   /* border: 1px solid gray; */
 }
-.textarea-input{
+.textarea-input {
   min-width: 70vw;
   border: none;
   outline: none;
@@ -228,7 +224,7 @@ input[type=radio]#language_input {
   border-radius: 9px;
   border: 1px solid gray;
 }
-.language_input{
+.language_input {
   min-width: 3vw;
   height: 3vh;
   border: none;
@@ -236,13 +232,12 @@ input[type=radio]#language_input {
   padding: 8px;
   border-radius: 9px;
   border: 1px solid gray;
-  
 }
-.language_data label{
+.language_data label {
   font-size: 26px;
   padding-left: 11px;
 }
-.language_data{
+.language_data {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -250,14 +245,13 @@ input[type=radio]#language_input {
   width: 40vw;
   margin-top: 10px;
 }
-.language_ops_wrap{
+.language_ops_wrap {
   display: flex;
-  align-items: flex-start ;
+  align-items: flex-start;
   justify-content: center;
   /* background-color: red; */
   width: 70vw;
   height: 20vh;
-
 }
 
 /* ================= */
@@ -319,7 +313,7 @@ input[type=radio]#language_input {
 }
 
 /* FOR EMOJI ANIMATION  */
-.containar{
+.containar {
   background-color: #ececec;
   border-radius: 1rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
@@ -336,28 +330,36 @@ input[type=radio]#language_input {
 .emoji1 {
   animation: anime 2s 10s forwards linear;
 }
-.emoji{
+.emoji {
   display: flex;
   flex-direction: row;
   padding-top: 20px;
   height: 20vh;
 }
 
+.error-message {
+  color: red;
+}
+
+.error-outline {
+  outline: 1px solid red;
+}
+
 @keyframes anime {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
 
   25% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   75% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -367,19 +369,19 @@ input[type=radio]#language_input {
 
 @keyframes anime2 {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
 
   25% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   75% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -389,19 +391,19 @@ input[type=radio]#language_input {
 
 @keyframes anime3 {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
 
   25% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   75% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -411,19 +413,19 @@ input[type=radio]#language_input {
 
 @keyframes anime4 {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
 
   25% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   75% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -433,18 +435,18 @@ input[type=radio]#language_input {
 
 @keyframes anime5 {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
 
   25% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   75% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
