@@ -9,7 +9,7 @@ import SelectStation from "../selectStation";
 import { addData } from "../../firebase/services";
 
 const FeedBackSystem = () => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(2);
 
   // language
   const [selectedLanguage, setSelectedLanguage] = useState("en");

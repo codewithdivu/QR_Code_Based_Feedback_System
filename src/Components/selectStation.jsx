@@ -4,18 +4,19 @@ import { districts, newData } from "../constants/districts";
 const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
   const [district, setDistrict] = useState("");
   const [taluka, setTaluka] = useState("");
+  const [station, setStation] = useState("");
 
   // Handlers Methods
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSelectStation({
-      district: district,
-      taluka: taluka,
-      police: "test",
-    });
     if (!district || !taluka) {
       return alert("required...");
     }
+    onSelectStation({
+      district: district,
+      taluka: taluka,
+      police: station,
+    });
     onNext();
   };
 
@@ -34,6 +35,7 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
               value={district}
               onChange={(e) => setDistrict(e.target.value)}
             >
+              <option value="">Select District</option>
               {newData.map((dist) => (
                 <option value={dist.name} className="option__forform">
                   {dist.name}
@@ -41,33 +43,44 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
               ))}
             </select>
           </div>
-          <div className="district__taluko">
-            <select
-              className="district__taluko1"
-              onChange={(e) => setTaluka(e.target.value)}
-            >
-              {newData
-                ?.find((obj) => obj?.name === district)
-                ?.taluka?.map((taluko) => (
-                  <option value={taluko.name} className="option__forform">
-                    {taluko.name}
-                  </option>
-                ))}
-            </select>
-          </div>
-          {/* <div className="district__police">
-            <select className="district__police1">
-              {newData
-                ?.find((obj) => obj?.name === district)
-                ?.find((obj) => obj?.name === taluka)
-                ?.police_stations?.map((police) => (
-                  <option value={police} className="option__forform">
-                    {police}
-                  </option>
-                ))}
-            </select>
-          </div> */}
-          <button className="sendOtp">Next</button>
+          {district && (
+            <div className="district__taluko">
+              <select
+                className="district__taluko1"
+                onChange={(e) => setTaluka(e.target.value)}
+              >
+                <option value="">Select Taluka</option>
+                {newData
+                  ?.find((obj) => obj?.name === district)
+                  ?.taluka?.map((taluko) => (
+                    <option value={taluko.name} className="option__forform">
+                      {taluko.name}
+                    </option>
+                  ))}
+              </select>
+            </div>
+          )}
+          {district && taluka && (
+            <div className="district__police">
+              <select
+                className="district__police1"
+                onChange={({ target }) => setStation(target.value)}
+              >
+                <option value="">Select Station</option>x
+                {newData
+                  ?.find((obj) => obj?.name === district)
+                  ?.taluka?.find((obj) => obj?.name === taluka)
+                  ?.police_stations?.map((police) => (
+                    <option value={police} className="option__forform">
+                      {police}
+                    </option>
+                  ))}
+              </select>
+            </div>
+          )}
+          <button className="sendOtp" disabled={!station}>
+            Next
+          </button>
         </form>
       </div>
     </div>
