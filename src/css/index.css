@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #ececec;
+  /* background: #ececec; */
 }
 
 body {
@@ -546,7 +546,7 @@ nav {
   max-width: 18vw;
   padding: 10px 14px;
   background-color: var(--panel-color);
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid orange;
   transition: var(--tran-05);
   background-color: var(--panel-color);
   background-color: rgba(227, 226, 226, 0.224);
@@ -559,6 +559,8 @@ nav.close {
 }
 nav .logo-name {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -570,6 +572,7 @@ nav .logo-image {
 nav .logo-image img {
   width: 60px;
   object-fit: cover;
+  margin-left: 4rem;
   /* border-radius: 50%; */
 }
 
@@ -1312,4 +1315,19 @@ input {
 }
 .login_details {
   margin-right: 10px;
+}
+
+
+
+.text1, .number1, .fa1{
+  background: pink;
+}
+
+.text2, .number2, .fa2{
+  background: var(--theme-color);
+
+}
+
+.text3, .number3, .fa3{
+  background: turquoise;
 }

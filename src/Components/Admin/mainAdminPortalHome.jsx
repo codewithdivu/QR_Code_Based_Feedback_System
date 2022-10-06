@@ -80,19 +80,19 @@ const MainAdminPortalHome = () => {
 
             <div class="boxes">
               <div class="box box1">
-                <i class="fa fa-solid fa-jet-fighter-up"></i>
-                <span class="text">Positive Reviews</span>
-                <span class="number">50,120</span>
+                <i class="fa fa-solid fa-jet-fighter-up  fa1"></i>
+                <span class="text text1">Positive Reviews</span>
+                <span class="number number1">50,120</span>
               </div>
               <div class="box box2">
-                <i class="fa fa-solid fa-bicycle"></i>
-                <span class="text">Negative Reviews</span>
-                <span class="number">20,120</span>
+                <i class="fa fa-solid fa-bicycle  fa2"></i>
+                <span class="text text2">Negative Reviews</span>
+                <span class="number number2">20,120</span>
               </div>
               <div class="box box3">
-                <i class="fa-solid fa-car"></i>
-                <span class="text">Average Reviews </span>
-                <span class="number">10,120</span>
+                <i class="fa-solid fa-car  fa3 "></i>
+                <span class="text text3">Average Reviews </span>
+                <span class="number number3">10,120</span>
               </div>
             </div>
           </div>
