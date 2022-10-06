@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import MainAdminPortalHome from "./Components/Admin/mainAdminPortalHome";
+import MainAdminPortalHome from "./Components/Admin/adminPortal/mainAdminPortalHome";
 import FeedBackSystem from "./Components/FeedBackSystem";
 import { UserAuthContextProvider } from "./Contexts/UserAuthContext";
 
