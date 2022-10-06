@@ -76,7 +76,7 @@ const LogIn = ({
           {/* Get Otp */}
           <form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
             <div className="mobile_num_label">
-              <label for="mobile_num" className="mobile_num">
+              <label htmlFor="mobile_num" className="mobile_num">
                 Enter mobile no :
               </label>
             </div>

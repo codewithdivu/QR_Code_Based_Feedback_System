@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Feedback from "../FeedbackForm";
-import GpLogo from "../../Assets/Logos/gpLogo";
+import GpLogo from "../../Assets/gpLogo";
 import GreetingPage from "../greetingPage";
 import LogIn from "../logIn";
 import SelectLanguage from "../selectLanguage";
@@ -15,13 +15,11 @@ const FeedBackSystem = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   // phoneNumber
   const [phoneNumber, setPhoneNumber] = useState("");
-  console.log("mobie", phoneNumber);
   // captha details
   const [capthaResponse, setCapthaResponse] = useState("");
   // Questions
   const [Questions, setQuestions] = useState([]);
-
-  console.log("queeee", Questions);
+  // rating;
 
   //selected police station object
   const [selectedPoliceStation, setSelectedPoliceStation] = useState({

@@ -52,7 +52,7 @@ const SelectLanguage = ({ selectedLanguage, onSelectLanguage, onNext }) => {
                     {...register("language", { required: true })}
                     value={lang.value}
                   />
-                  <label for="language_data">{lang.label}</label>
+                  <label htmlFor="language_data">{lang.label}</label>
                 </div>
               ))}
               {errors.language && alert("Language selection is required")}

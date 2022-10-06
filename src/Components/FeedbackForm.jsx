@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import StartRatings from "../Assets/startRatings";
 import { questions1, questions2 } from "../constants/questions1";
 
 const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
@@ -44,7 +45,7 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
                       value={option.label}
                       {...register(item.name, { required: true })}
                     />
-                    <label for="ques">{option.label}</label>
+                    <label htmlFor="ques">{option.label}</label>
                   </div>
                 ))}
               </div>
@@ -66,7 +67,7 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
                       value={option.label}
                       {...register(item.name, { required: true })}
                     />
-                    <label for="ques">{option.label}</label>
+                    <label htmlFor="ques">{option.label}</label>
                   </div>
                 ))}
               </div>
@@ -81,6 +82,7 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
                 placeholder="Kindly explain your conflict in brief .."
               />
             </div>
+            <StartRatings />
           </div>
         );
       case 2:
@@ -125,7 +127,7 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
               </div>
             </div>
             <div class="textarea">
-              <label for="">Review : </label>
+              <label htmlFor="">Review : </label>
               <textarea
                 id=""
                 name=""
@@ -151,6 +153,7 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
           <hr />
           <p>Kindly enter the required fields of the form.</p>
         </div>
+
         <form onSubmit={handleSubmit(onRBSubmit)}>
           {renderCurrentFeedbackForm(step)}
           <button type="submit" class="next">
