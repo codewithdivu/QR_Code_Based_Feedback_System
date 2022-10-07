@@ -24,7 +24,7 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
 
   const onRBSubmit = (res) => {
     // console.log("dropdown bhai", res);
-    setQuestions({ ...Questions, res });
+    setQuestions({ res });
     handleNext();
   };
 

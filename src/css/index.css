@@ -348,6 +348,10 @@ input[type="radio"]#language_input {
   outline: 1px solid red;
 }
 
+.active-menu {
+  color: var(--theme-color);
+}
+
 @keyframes anime {
   0% {
     transform: scale(1);
@@ -603,6 +607,7 @@ nav .menu-items {
   height: 50px;
   text-decoration: none;
   position: relative;
+  color: var(--black-light-color);
 }
 .nav-links li a:hover:before {
   content: "";
@@ -624,12 +629,10 @@ body.dark li a:hover:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--black-light-color);
 }
 .menu-items li a .link-name {
   font-size: 18px;
   font-weight: 400;
-  color: var(--black-light-color);
   transition: var(--tran-05);
 }
 nav.close li a .link-name {
@@ -1317,17 +1320,20 @@ input {
   margin-right: 10px;
 }
 
-
-
-.text1, .number1, .fa1{
+.text1,
+.number1,
+.fa1 {
   background: pink;
 }
 
-.text2, .number2, .fa2{
+.text2,
+.number2,
+.fa2 {
   background: var(--theme-color);
-
 }
 
-.text3, .number3, .fa3{
+.text3,
+.number3,
+.fa3 {
   background: turquoise;
 }
