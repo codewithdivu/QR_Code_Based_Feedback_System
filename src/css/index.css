@@ -322,10 +322,10 @@ input[type="radio"]#language_input {
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
-  max-width: 70vw;
-  width: 70vw;
+  max-width: 75vw;
+  width: 75vw;
   height: 15vh;
-  padding: 20px;
+  padding: 6px;
   display: flex;
   flex-direction: row;
   margin-top: 15px;
@@ -336,8 +336,9 @@ input[type="radio"]#language_input {
 .emoji {
   display: flex;
   flex-direction: row;
-  padding-top: 20px;
   height: 20vh;
+  justify-content: space-around;
+  font-size: 35px;
 }
 
 .error-message {
@@ -354,20 +355,20 @@ input[type="radio"]#language_input {
 
 @keyframes anime {
   0% {
-    transform: scale(1);
-  }
+    opacity: 10%;
+}
 
-  25% {
-    transform: scale(1.4);
-  }
+25% {
+    opacity: 25%;
+}
 
-  75% {
-    transform: scale(1.4);
-  }
+75% {
+   opacity: 50%;
+}
 
-  100% {
-    transform: scale(1);
-  }
+100% {
+    opacity: 100%;
+}
 }
 
 .emoji2 {
@@ -376,19 +377,19 @@ input[type="radio"]#language_input {
 
 @keyframes anime2 {
   0% {
-    transform: scale(1);
+      opacity: 10%;
   }
 
   25% {
-    transform: scale(1.4);
+      opacity: 25%;
   }
 
   75% {
-    transform: scale(1.4);
+     opacity: 50%;
   }
 
   100% {
-    transform: scale(1);
+      opacity: 100%;
   }
 }
 
@@ -398,20 +399,20 @@ input[type="radio"]#language_input {
 
 @keyframes anime3 {
   0% {
-    transform: scale(1);
-  }
+    opacity: 10%;
+}
 
-  25% {
-    transform: scale(1.4);
-  }
+25% {
+    opacity: 25%;
+}
 
-  75% {
-    transform: scale(1.4);
-  }
+75% {
+   opacity: 50%;
+}
 
-  100% {
-    transform: scale(1);
-  }
+100% {
+    opacity: 100%;
+}
 }
 
 .emoji4 {
@@ -420,20 +421,20 @@ input[type="radio"]#language_input {
 
 @keyframes anime4 {
   0% {
-    transform: scale(1);
-  }
+    opacity: 10%;
+}
 
-  25% {
-    transform: scale(1.4);
-  }
+25% {
+    opacity: 25%;
+}
 
-  75% {
-    transform: scale(1.4);
-  }
+75% {
+   opacity: 50%;
+}
 
-  100% {
-    transform: scale(1);
-  }
+100% {
+    opacity: 100%;
+}
 }
 
 .emoji5 {
@@ -442,20 +443,41 @@ input[type="radio"]#language_input {
 
 @keyframes anime5 {
   0% {
-    transform: scale(1);
-  }
+    opacity: 10%;
+}
 
-  25% {
-    transform: scale(1.4);
-  }
+25% {
+    opacity: 25%;
+}
 
-  75% {
-    transform: scale(1.4);
-  }
+75% {
+   opacity: 50%;
+}
 
-  100% {
-    transform: scale(1);
-  }
+100% {
+    opacity: 100%;
+}
+}
+
+
+
+.btn200{
+  /* !important */
+  /* width: 30px; */
+  /* height: 30px; */
+  min-width: 3vw;
+  /* opacity: 50%; */
+  /* min-height: 9vh; */
+  /* border-radius: 10px; */
+  background: #ececec;
+  width: 0px;
+}
+
+
+
+.hedemoji{
+  font-size: 25px;
+
 }
 
 /*
@@ -1336,4 +1358,9 @@ input {
 .number3,
 .fa3 {
   background: turquoise;
+}
+
+
+.star-rating{
+    display: flex;
 }

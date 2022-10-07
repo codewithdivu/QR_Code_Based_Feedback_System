@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import StartRatings from "../Assets/startRatings";
+import EmojiRating from "react-emoji-rating";
 import { questions1, questions2 } from "../constants/questions1";
 
 const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
@@ -27,6 +28,10 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
     setQuestions({ res });
     handleNext();
   };
+
+  // const handleEmoji = (res) => {
+  //   console.log("emoji...", res);
+  // };
 
   const renderCurrentFeedbackForm = (activeStep) => {
     switch (activeStep) {
@@ -88,45 +93,106 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
       case 2:
         return (
           <>
-            <div class="containar containar__1">
-              <div class="wrapper">
-                <p class="text">How was the behaviour of the attendee ?</p>
-                <div class="emoji">
-                  <div class="emoji1">😡</div>
-                  <div class="emoji2">😠</div>
-                  <div class="emoji3">🙂</div>
-                  <div class="emoji4">😃</div>
-                  <div class="emoji5">😍</div>
+            <div className="containar containar__1">
+              <div className="wrapper">
+                <p className="text">How was the behaviour of the attendee ?</p>
+                <div className="emoji">
+                  <div className="emoji1">
+                    <button className="btn200">
+                      <h1 className="hedemoji">😞</h1>
+                    </button>{" "}
+                  </div>
+                  <div className="emoji2">
+                    <button className="btn200">
+                      <h1 className="hedemoji">☹️</h1>
+                    </button>
+                  </div>
+                  <div className="emoji3">
+                    <button className="btn200">
+                      <h1 className="hedemoji">🙂</h1>
+                    </button>
+                  </div>
+                  <div className="emoji4">
+                    <button className="btn200">
+                      <h1 className="hedemoji">😃</h1>
+                    </button>
+                  </div>
+                  <div className="emoji5">
+                    <button className="btn200">
+                      <h1 className="hedemoji">😍</h1>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="containar containar__1">
-              <div class="wrapper">
-                <p class="text">How would you rate the police station !</p>
-                <div class="emoji">
-                  <div class="emoji1">😡</div>
-                  <div class="emoji2">😠</div>
-                  <div class="emoji3">🙂</div>
-                  <div class="emoji4">😃</div>
-                  <div class="emoji5">😍</div>
+            <div className="containar containar__1">
+              <div className="wrapper">
+                <p className="text">How would you rate the police station !</p>
+                <div className="emoji">
+                  <div className="emoji1">
+                    <button className="btn200">
+                      <h1 className="hedemoji">😞</h1>
+                    </button>
+                  </div>
+                  <div className="emoji2">
+                    <button className="btn200">
+                      <h1 className="hedemoji">☹️</h1>
+                    </button>
+                  </div>
+                  <div className="emoji3">
+                    <button className="btn200">
+                      <h1 className="hedemoji">🙂</h1>
+                    </button>
+                  </div>
+                  <div className="emoji4">
+                    <button className="btn200">
+                      <h1 className="hedemoji">😃</h1>
+                    </button>
+                  </div>
+                  <div className="emoji5">
+                    <button className="btn200">
+                      <h1 className="hedemoji">😍</h1>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="containar containar__1">
-              <div class="wrapper">
-                <p class="text">
+            <div className="containar containar__1">
+              <div className="wrapper">
+                <p className="text">
                   How would you explain the enviroment of police station ?
                 </p>
-                <div class="emoji">
-                  <div class="emoji1">😡</div>
-                  <div class="emoji2">😠</div>
-                  <div class="emoji3">🙂</div>
-                  <div class="emoji4">😃</div>
-                  <div class="emoji5">😍</div>
+                <div className="emoji">
+                  <div className="emoji1">
+                    <button className="btn200">
+                      <h1 className="hedemoji">☹️</h1>
+                    </button>
+                  </div>
+                  <div className="emoji2">
+                    <button className="btn200">
+                      <h1 className="hedemoji">😞</h1>
+                    </button>
+                  </div>
+                  <div className="emoji3">
+                    <button className="btn200">
+                      <h1 className="hedemoji">🙂</h1>
+                    </button>
+                  </div>
+                  <div className="emoji4">
+                    <button className="btn200">
+                      <h1 className="hedemoji">😃</h1>
+                    </button>
+                  </div>
+                  <div className="emoji5">
+                    <button className="btn200">
+                      <h1 className="hedemoji">😍</h1>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="textarea">
+            <div></div>
+            <div className="textarea">
               <label htmlFor="">Review : </label>
               <textarea
                 id=""
@@ -136,6 +202,7 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
                 class="textarea-input"
                 placeholder="Please review your experience in 300 characters.."
               ></textarea>
+              {/* <EmojiRating variant="classic" onChange={handleEmoji} /> */}
             </div>
           </>
         );

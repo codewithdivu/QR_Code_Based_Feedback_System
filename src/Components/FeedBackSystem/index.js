@@ -10,7 +10,7 @@ import { addData, getAllUsers, getNumberData } from "../../firebase/services";
 import { auth } from "../../firebase/config";
 
 const FeedBackSystem = () => {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
 
   // language
   const [selectedLanguage, setSelectedLanguage] = useState("en");
@@ -59,7 +59,7 @@ const FeedBackSystem = () => {
   // Render Methods
   const renderCurrentComponent = (activeStep) => {
     switch (activeStep) {
-      case 0:
+      case 1:
         return (
           <SelectLanguage
             onNext={handleNext}
@@ -67,16 +67,16 @@ const FeedBackSystem = () => {
             onSelectLanguage={setSelectedLanguage}
           />
         );
-      case 1:
-        return (
-          <LogIn
-            onNext={handleNext}
-            phoneNumber={phoneNumber}
-            setPhoneNumber={setPhoneNumber}
-            capthaResponse={capthaResponse}
-            setCapthaResponse={setCapthaResponse}
-          />
-        );
+      // case 1:
+      //   return (
+      //     <LogIn
+      //       onNext={handleNext}
+      //       phoneNumber={phoneNumber}
+      //       setPhoneNumber={setPhoneNumber}
+      //       capthaResponse={capthaResponse}
+      //       setCapthaResponse={setCapthaResponse}
+      //     />
+      //   );
       case 2:
         return (
           <SelectStation
