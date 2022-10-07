@@ -12,7 +12,7 @@ const GenerateQRcode = () => {
         <div class="dash-content">
           <div class="qr_image_container">
             <div class="qr_image">
-              <img src="./images/police.jpg" alt="" />
+              <img src="/images/police.jpg" alt="" />
             </div>
             <div class="download_btn btn">
               <button>Download QR</button>

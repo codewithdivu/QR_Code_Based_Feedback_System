@@ -35,7 +35,7 @@ export const sideBarMenuItems = [
     id: 5,
     label: "Add User",
     icon: "fa-solid fa-user",
-    path: "/signup",
+    path: "/auth/signup",
   },
   {
     id: 6,

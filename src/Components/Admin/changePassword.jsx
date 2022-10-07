@@ -7,7 +7,7 @@ const ChangePassword = () => {
         <div className="container">
           <div className="login_container">
             <div className="logos">
-              <img src="./images/Logo.png" alt="police_logo" />
+              <img src="/images/logo.png" alt="police_logo" />
             </div>
             <div className="heading">
               <p>Admin Portal</p>
