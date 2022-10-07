@@ -4,7 +4,6 @@ import Navbar from "./adminPortal/navbar";
 const GenerateQRcode = () => {
   return (
     <>
-      <Navbar />
       <section class="dashboard">
         <div class="dash-title">
           <p>Feedback Management System</p>

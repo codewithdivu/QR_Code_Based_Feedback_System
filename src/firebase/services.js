@@ -49,27 +49,25 @@ export const getAllUsers = async () =>
       });
   });
 
-// const querySnapshot = await getDocs(collection(db, "cities"));
-// querySnapshot.forEach((doc) => {
-//   // doc.data() is never undefined for query doc snapshots
-//   console.log(doc.id, " => ", doc.data());
-// });
-export const getUsers = async () => {
-  try {
-    const docsSnap = await getDocs(collection(db, "user"));
-    if (docsSnap.docs.length > 0) {
-      const arr = [];
-      docsSnap.forEach((doc) => {
-        arr.push({
-          ...doc.data(),
-          id: doc.id,
-        });
-        // console.log(doc.data());
-        // console.log(doc.id);
-      });
-      return arr;
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+// export const getNumberData = async (phoneNumber) =>
+//   new Promise((resolve) => {
+//     const getNumberQuery = query(
+//       collection(db, "user"),
+//       where("phoneNumber", "==", phoneNumber)
+//     );
+//     getDocs(getNumberQuery)
+//       .then((response) => {
+//         const arr = [];
+//         response.docs.forEach((doc) => {
+//           arr.push({
+//             ...doc.data(),
+//             id: doc.id,
+//           });
+//         });
+//         if (arr.length > 0) resolve(arr[0]);
+//         else resolve(null);
+//       })
+//       .catch(() => {
+//         resolve(null);
+//       });
+//   });

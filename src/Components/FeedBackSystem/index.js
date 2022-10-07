@@ -6,7 +6,7 @@ import GreetingPage from "../greetingPage";
 import LogIn from "../logIn";
 import SelectLanguage from "../selectLanguage";
 import SelectStation from "../selectStation";
-import { addData, getAllUsers } from "../../firebase/services";
+import { addData, getAllUsers, getNumberData } from "../../firebase/services";
 import { auth } from "../../firebase/config";
 
 const FeedBackSystem = () => {
@@ -29,13 +29,26 @@ const FeedBackSystem = () => {
     police: "",
   });
 
+  console.log("datadata", {
+    phoneNumber,
+    selectedLanguage,
+    selectedPoliceStation,
+    Questions,
+  });
+
   const handleNext = () => {
     setStep(step + 1);
   };
 
   const onFinalSubmit = async (feedBackData) => {
     // Store in fb
-
+    const dudu = await addData({
+      selectedLanguage,
+      phoneNumber,
+      selectedPoliceStation,
+      Questions,
+    });
+    console.log("dudu", dudu);
     handleNext();
     auth.signOut();
     localStorage.clear();

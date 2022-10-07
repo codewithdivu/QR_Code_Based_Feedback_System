@@ -10,6 +10,7 @@ import GenerateQRcode from "./Components/Admin/generateQRcode";
 import Report from "./Components/Admin/report";
 import FeedBackSystem from "./Components/FeedBackSystem";
 import { UserAuthContextProvider } from "./Contexts/UserAuthContext";
+import { AdminDashboardLayout, AuthLayout } from "./layouts";
 
 const App = () => (
   <UserAuthContextProvider>
@@ -21,16 +22,24 @@ const App = () => (
       />
       <Route
         path="/admin"
-        element={<MainAdminPortalHome />}
+        element={<AdminDashboardLayout />}
         errorElement={<p>something went Wrong!</p>}
-      />
-      <Route path="/admin/login" element={<AdminLogIn />} />
-      <Route path="/admin/signup" element={<AdminSignUp />} />
-      <Route path="/admin/analysis" element={<Analysis />} />
-      <Route path="/admin/changePassword" element={<ChangePassword />} />
-      <Route path="/admin/content" element={<Content />} />
-      <Route path="/admin/generateQR" element={<GenerateQRcode />} />
-      <Route path="/admin/report" element={<Report />} />
+      >
+        <Route index element={<MainAdminPortalHome />} />
+        <Route path="analysis" element={<Analysis />} />
+        <Route path="changePassword" element={<ChangePassword />} />
+        <Route path="content" element={<Content />} />
+        <Route path="generateQR" element={<GenerateQRcode />} />
+        <Route path="report" element={<Report />} />
+      </Route>
+      <Route
+        path="/auth"
+        element={<AuthLayout />}
+        errorElement={<p>something went Wrong!</p>}
+      >
+        <Route path="login" element={<AdminLogIn />} />
+        <Route path="signup" element={<AdminSignUp />} />
+      </Route>
     </Routes>
   </UserAuthContextProvider>
 );

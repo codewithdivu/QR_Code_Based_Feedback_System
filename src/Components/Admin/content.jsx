@@ -4,7 +4,6 @@ import Navbar from "./adminPortal/navbar";
 const Content = () => {
   return (
     <>
-      <Navbar />
       <section class="dashboard" id="12">
         <div class="dash-title">
           <p>Feedback Management System</p>

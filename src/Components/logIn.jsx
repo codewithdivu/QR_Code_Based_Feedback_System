@@ -21,11 +21,13 @@ const LogIn = ({
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const {
     register: register2,
     handleSubmit: handleSubmit2,
     formState: { errors: errors2 },
   } = useForm();
+
   console.log("errors", errors);
   // Hooks
   const { setUpRecaptha } = useUserAuth();
@@ -44,6 +46,7 @@ const LogIn = ({
     isLoading(true);
     try {
       const response = await setUpRecaptha("+91" + phoneNumber);
+      setPhoneNumber(phoneNumber);
       // console.log(response);
       setCapthaResponse(response);
       setResult(response);

@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { collections } from "../../../firebase/collections";
 import { getAllUsers, getUsers } from "../../../firebase/services";
+import { useFireStore } from "../../../hooks";
 import Navbar from "./navbar";
 
 const MainAdminPortalHome = () => {
+  const { data, isLoading } = useFireStore(collections.USERS);
+
+  console.log("data,isLoading", data, isLoading);
   return (
     <>
-      <Navbar />
       <section class="dashboard" id="12">
         <div class="dash-title">
           <p>Feedback Management System</p>
