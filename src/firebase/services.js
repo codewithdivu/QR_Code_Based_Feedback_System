@@ -6,6 +6,7 @@ import {
   setDoc,
   where,
 } from "firebase/firestore";
+import { collections } from "./collections";
 import { auth, db } from "./config";
 
 // ADDING DATA of FEEDBACKS IN FIREBASE
@@ -71,3 +72,19 @@ export const getAllUsers = async () =>
 //         resolve(null);
 //       });
 //   });
+
+export const addQrCode = async (payLoad) =>
+  new Promise((resolve) => {
+    // console.log("userData", userData);
+    const documentReference = doc(collection(db, collections.QR_CODES));
+    setDoc(documentReference, {
+      ...payLoad,
+      createdBy: auth?.currentUser?.uid,
+      createdAt: new Date(),
+      id: documentReference.id,
+    })
+      .then(() => resolve(true))
+      .catch(() => {
+        resolve(false);
+      });
+  });

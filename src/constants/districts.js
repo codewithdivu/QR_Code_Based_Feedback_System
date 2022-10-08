@@ -483,3 +483,150 @@ export const newData = [
     ],
   },
 ];
+
+export const dk = [
+  {
+    label: "District1",
+    value: "d1",
+    talukas: [
+      {
+        label: "Taluka1",
+        value: "t1",
+        stations: [
+          {
+            label: "Police station1",
+            value: "ps1",
+          },
+          {
+            label: "Police station2",
+            value: "ps2",
+          },
+          {
+            label: "Police station3",
+            value: "ps3",
+          },
+        ],
+      },
+      {
+        label: "Taluka2",
+        value: "t2",
+        stations: [
+          {
+            label: "Police station11",
+            value: "ps11",
+          },
+          {
+            label: "Police station22",
+            value: "ps22",
+          },
+        ],
+      },
+      {
+        label: "Taluka3",
+        value: "t3",
+        stations: [
+          {
+            label: "Police station13",
+            value: "ps13",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "District2",
+    value: "d2",
+    talukas: [
+      {
+        label: "Taluka21",
+        value: "t21",
+        stations: [
+          {
+            label: "Police station21",
+            value: "ps21",
+          },
+          {
+            label: "Police station22",
+            value: "ps22",
+          },
+          {
+            label: "Police station23",
+            value: "ps23",
+          },
+        ],
+      },
+      {
+        label: "Taluka22",
+        value: "t22",
+        stations: [
+          {
+            label: "Police station211",
+            value: "ps211",
+          },
+          {
+            label: "Police station222",
+            value: "ps222",
+          },
+        ],
+      },
+      {
+        label: "Taluka23",
+        value: "t23",
+        stations: [
+          {
+            label: "Police station213",
+            value: "ps213",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "District3",
+    value: "d3",
+    talukas: [
+      {
+        label: "Taluka31",
+        value: "t31",
+        stations: [
+          {
+            label: "Police station31",
+            value: "ps31",
+          },
+          {
+            label: "Police station32",
+            value: "ps32",
+          },
+          {
+            label: "Police station33",
+            value: "ps33",
+          },
+        ],
+      },
+      {
+        label: "Taluka32",
+        value: "t32",
+        stations: [
+          {
+            label: "Police station311",
+            value: "ps311",
+          },
+          {
+            label: "Police station322",
+            value: "ps322",
+          },
+        ],
+      },
+      {
+        label: "Taluka33",
+        value: "t33",
+        stations: [
+          {
+            label: "Police station133",
+            value: "ps313",
+          },
+        ],
+      },
+    ],
+  },
+];
