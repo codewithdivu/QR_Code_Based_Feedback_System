@@ -33,6 +33,10 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
   //   console.log("emoji...", res);
   // };
 
+  const handleEmoji1 = (event) => {
+    console.log("emoji", event.target.value);
+  };
+
   const renderCurrentFeedbackForm = (activeStep) => {
     switch (activeStep) {
       case 0:
@@ -98,7 +102,11 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
                 <p className="text">How was the behaviour of the attendee ?</p>
                 <div className="emoji">
                   <div className="emoji1">
-                    <button className="btn200">
+                    <button
+                      className="btn200"
+                      value="sad"
+                      onClick={handleEmoji1}
+                    >
                       <h1 className="hedemoji">😞</h1>
                     </button>{" "}
                   </div>
