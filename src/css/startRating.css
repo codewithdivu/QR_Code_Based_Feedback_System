@@ -1,0 +1,17 @@
+#start {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: #000;
+}
+.off {
+  color: #ccc;
+}
+
+.star-rating{
+  /* display: flex; */
+  flex-direction: row;
+}
