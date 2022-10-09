@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Feedback from "../FeedbackForm";
 import GpLogo from "../../Assets/gpLogo";
@@ -8,6 +8,7 @@ import SelectLanguage from "../selectLanguage";
 import SelectStation from "../selectStation";
 import { addData, getAllUsers, getNumberData } from "../../firebase/services";
 import { auth } from "../../firebase/config";
+import { useSearchParams } from "react-router-dom";
 
 const FeedBackSystem = () => {
   const [step, setStep] = useState(0);
@@ -29,16 +30,23 @@ const FeedBackSystem = () => {
     police: "",
   });
 
-  console.log("datadata", {
-    phoneNumber,
-    selectedLanguage,
-    selectedPoliceStation,
-    Questions,
-  });
+  const [searchParams] = useSearchParams();
 
-  const handleNext = () => {
-    setStep(step + 1);
-  };
+  useEffect(() => {
+    const district = searchParams.get("district");
+    const taluka = searchParams.get("taluka");
+    const police = searchParams.get("police");
+    district &&
+      taluka &&
+      police &&
+      setSelectedPoliceStation({
+        district,
+        taluka,
+        police,
+      });
+  }, [searchParams]);
+
+  const handleNext = () => setStep(step + 1);
 
   const onFinalSubmit = async (feedBackData) => {
     // Store in fb

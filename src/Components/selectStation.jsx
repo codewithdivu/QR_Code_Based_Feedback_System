@@ -1,10 +1,20 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { districts, newData } from "../constants/districts";
 
 const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
   const [district, setDistrict] = useState("");
   const [taluka, setTaluka] = useState("");
   const [station, setStation] = useState("");
+
+  useEffect(() => {
+    if (selectedStation) {
+      const { district, police, taluka } = selectedStation;
+      district && setDistrict(district);
+      taluka && setTaluka(taluka);
+      police && setStation(police);
+    }
+  }, [selectedStation]);
 
   // Handlers Methods
   const handleSubmit = (e) => {
@@ -34,6 +44,7 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
               className="district__1"
               value={district}
               onChange={(e) => setDistrict(e.target.value)}
+              disabled={selectedStation}
             >
               <option value="">Select District</option>
               {newData.map((dist) => (
@@ -48,6 +59,7 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
               <select
                 className="district__taluko1"
                 onChange={(e) => setTaluka(e.target.value)}
+                disabled={selectedStation}
               >
                 <option value="">Select Taluka</option>
                 {newData
@@ -65,6 +77,7 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
               <select
                 className="district__police1"
                 onChange={({ target }) => setStation(target.value)}
+                disabled={selectedStation}
               >
                 <option value="">Select Station</option>x
                 {newData
