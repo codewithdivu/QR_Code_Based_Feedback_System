@@ -14,7 +14,7 @@ const getAppUrl = () => {
     case "development":
       return "http://localhost:3000/user/feedback";
     case "production":
-      return "http://localhost:3000/user/feedback";
+      return "https://feedback-system-webapp.vercel.app/user/feedback";
     default:
       return "http://localhost:3000/user/feedback";
   }
