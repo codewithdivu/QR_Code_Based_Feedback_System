@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { districts, newData } from "../constants/districts";
+import { districts, dk, newData } from "../constants/districts";
+import { useSearchParams } from "react-router-dom";
 
 const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
-  const [district, setDistrict] = useState("");
-  const [taluka, setTaluka] = useState("");
-  const [station, setStation] = useState("");
+  // params value
+
+  const [searchParams] = useSearchParams();
+
+  const [district, setDistrict] = useState(searchParams.get("district"));
+  const [taluka, setTaluka] = useState(searchParams.get("taluka"));
+  const [station, setStation] = useState(searchParams.get("station"));
 
   useEffect(() => {
     if (selectedStation) {
@@ -47,9 +52,9 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
               disabled={selectedStation}
             >
               <option value="">Select District</option>
-              {newData.map((dist) => (
-                <option value={dist.name} className="option__forform">
-                  {dist.name}
+              {dk.map((dist) => (
+                <option value={dist.value} className="option__forform">
+                  {dist.label}
                 </option>
               ))}
             </select>
@@ -62,11 +67,11 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
                 disabled={selectedStation}
               >
                 <option value="">Select Taluka</option>
-                {newData
-                  ?.find((obj) => obj?.name === district)
-                  ?.taluka?.map((taluko) => (
-                    <option value={taluko.name} className="option__forform">
-                      {taluko.name}
+                {dk
+                  ?.find((obj) => obj?.value === district)
+                  ?.talukas?.map((taluko) => (
+                    <option value={taluko.value} className="option__forform">
+                      {taluko.label}
                     </option>
                   ))}
               </select>
@@ -80,12 +85,12 @@ const SelectStation = ({ onNext, onSelectStation, selectedStation }) => {
                 disabled={selectedStation}
               >
                 <option value="">Select Station</option>x
-                {newData
-                  ?.find((obj) => obj?.name === district)
-                  ?.taluka?.find((obj) => obj?.name === taluka)
-                  ?.police_stations?.map((police) => (
-                    <option value={police} className="option__forform">
-                      {police}
+                {dk
+                  ?.find((obj) => obj?.value === district)
+                  ?.talukas?.find((obj) => obj?.value === taluka)
+                  ?.stations?.map((police) => (
+                    <option value={police.value} className="option__forform">
+                      {police.label}
                     </option>
                   ))}
               </select>
