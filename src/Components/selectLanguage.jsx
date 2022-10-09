@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { languages } from "../constants/language";
 import { useForm } from "react-hook-form";
+import { useSearchParams } from "react-router-dom";
 
-const SelectLanguage = ({ selectedLanguage, onSelectLanguage, onNext }) => {
+const SelectLanguage = ({
+  selectedLanguage,
+  onSelectLanguage,
+  onNext,
+  onSelectStation,
+  selectedStation,
+}) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const [searchParams] = useSearchParams();
+
+  const [district, setDistrict] = useState(searchParams.get("district"));
+  const [taluka, setTaluka] = useState(searchParams.get("taluka"));
+  const [station, setStation] = useState(searchParams.get("station"));
+
   const onRBSubmit = (res) => {
+    onSelectStation({
+      district: district,
+      taluka: taluka,
+      police: station,
+    });
     onSelectLanguage(res.language);
     onNext();
   };

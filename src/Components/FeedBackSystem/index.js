@@ -73,6 +73,8 @@ const FeedBackSystem = () => {
             onNext={handleNext}
             selectedLanguage={selectedLanguage}
             onSelectLanguage={setSelectedLanguage}
+            onSelectStation={setSelectedPoliceStation}
+            selectedStation={selectedPoliceStation}
           />
         );
       case 1:
@@ -85,15 +87,15 @@ const FeedBackSystem = () => {
             setCapthaResponse={setCapthaResponse}
           />
         );
+      // case 2:
+      //   return (
+      //     <SelectStation
+      //       onNext={handleNext}
+      //       onSelectStation={setSelectedPoliceStation}
+      //       selectedStation={selectedPoliceStation}
+      //     />
+      //   );
       case 2:
-        return (
-          <SelectStation
-            onNext={handleNext}
-            onSelectStation={setSelectedPoliceStation}
-            selectedStation={selectedPoliceStation}
-          />
-        );
-      case 3:
         return (
           <Feedback
             onFinalSubmit={onFinalSubmit}
@@ -101,7 +103,7 @@ const FeedBackSystem = () => {
             setQuestions={setQuestions}
           />
         );
-      case 4:
+      case 3:
         return <GreetingPage />;
       default:
         return null;
