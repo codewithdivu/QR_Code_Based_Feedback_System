@@ -44,7 +44,7 @@ const AdminLogIn = () => {
               <div class="input_field">
                 <input
                   type="email"
-                  placeholder="Enter Phone No"
+                  placeholder="Enter Admin Email"
                   name="email"
                   {...register("email", {
                     required: "Email is required",
@@ -63,7 +63,7 @@ const AdminLogIn = () => {
                   })}
                   id=""
                   name="password"
-                  placeholder="Passcode"
+                  placeholder="Password"
                   className={errors?.password?.message ? "error-outline" : ""}
                 />
                 {errors?.password?.message && (

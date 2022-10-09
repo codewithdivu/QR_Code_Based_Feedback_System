@@ -232,7 +232,7 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
         <form onSubmit={handleSubmit(onRBSubmit)}>
           {renderCurrentFeedbackForm(step)}
           <button type="submit" class="next">
-            Next
+            {step === 2 ? "Final Submit" : "Next"}
           </button>
         </form>
       </div>

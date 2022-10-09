@@ -46,6 +46,8 @@ const FeedBackSystem = () => {
       });
   }, [searchParams]);
 
+  console.log("selectedPoliceStation", selectedPoliceStation);
+
   const handleNext = () => setStep(step + 1);
 
   const onFinalSubmit = async (feedBackData) => {
@@ -71,6 +73,8 @@ const FeedBackSystem = () => {
             onNext={handleNext}
             selectedLanguage={selectedLanguage}
             onSelectLanguage={setSelectedLanguage}
+            onSelectStation={setSelectedPoliceStation}
+            selectedStation={selectedPoliceStation}
           />
         );
       case 1:

@@ -5,6 +5,7 @@ import QRCode from "qrcode.react";
 import { addQrCode } from "../../firebase/services";
 import useFireStore from "../../hooks/use-firestore";
 import { collections } from "../../firebase/collections";
+import Table2 from "../../Assets/table2";
 
 const GenerateQRcode = () => {
   const [district, setDistrict] = useState("");
@@ -84,6 +85,9 @@ const GenerateQRcode = () => {
               <button>Download QR</button>
             </div> */}
           </div>
+
+          {/* // fetching qr codes  */}
+          <Table2 dataFile={data} />
           <form onSubmit={handleSubmit}>
             <div className="district">
               <select
