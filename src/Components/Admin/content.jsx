@@ -58,7 +58,7 @@ const Content = () => {
               </div>
             </div>
           </div>
-
+          {/* return array.filter((v) => v === value).length */}
           <div className="activity">
             <div className="title">
               <i className="fa fa-solid fa-people-group"></i>

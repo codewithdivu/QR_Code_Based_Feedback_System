@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../css/startRating.css";
 
-const StartRatings = () => {
-  const [rating, setRating] = useState(0);
+const StartRatings = ({ rating, setRating }) => {
+  // const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
 
   console.log("ratings", rating);

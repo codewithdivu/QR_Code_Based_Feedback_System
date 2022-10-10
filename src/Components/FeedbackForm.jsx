@@ -5,9 +5,16 @@ import StartRatings from "../Assets/startRatings";
 import EmojiRating from "react-emoji-rating";
 import { questions1, questions2 } from "../constants/questions1";
 
-const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
+const Feedback = ({
+  onFinalSubmit,
+  Questions,
+  setQuestions,
+  rating,
+  setRating,
+  review,
+  setReview,
+}) => {
   const [step, setStep] = useState(0);
-
   const {
     register,
     handleSubmit,
@@ -91,7 +98,7 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
                 placeholder="Kindly explain your conflict in brief .."
               />
             </div>
-            <StartRatings />
+            <StartRatings rating={rating} setRating={setRating} />
           </div>
         );
       case 2:
@@ -204,10 +211,12 @@ const Feedback = ({ onFinalSubmit, Questions, setQuestions }) => {
               <label htmlFor="">Review : </label>
               <textarea
                 id=""
-                name=""
-                rows="4"
+                name="review"
+                rows="8"
                 cols="50"
                 class="textarea-input"
+                // {...register("review", { required: true })}
+                onChange={(e) => setReview(e.target.value)}
                 placeholder="Please review your experience in 300 characters.."
               ></textarea>
               {/* <EmojiRating variant="classic" onChange={handleEmoji} /> */}

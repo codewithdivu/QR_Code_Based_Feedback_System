@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Table from "../../../Assets/table";
 import { collections } from "../../../firebase/collections";
@@ -8,6 +8,7 @@ import Navbar from "./navbar";
 
 const MainAdminPortalHome = () => {
   const { data, isLoading } = useFireStore(collections.USERS);
+  const { negative, setNegative } = useState(0);
 
   console.log("data,isLoading", data, isLoading);
   return (
@@ -23,22 +24,26 @@ const MainAdminPortalHome = () => {
               <i className="fa fa-solid fa-gauge"></i>
               <span className="text">Dashboard</span>
             </div>
-
+            {/* return array.filter((v) => v === value).length */}
             <div className="boxes">
               <div className="box box1">
                 <i className="fa fa-solid fa-jet-fighter-up  fa1"></i>
                 <span className="text text1">Positive Reviews</span>
-                <span className="number number1">{data?.length}</span>
+                <span className="number number1">
+                  {data?.filter((item) => item?.starRatings >= 4)?.length}
+                </span>
               </div>
               <div className="box box2">
                 <i className="fa fa-solid fa-bicycle  fa2"></i>
                 <span className="text text2">Negative Reviews</span>
-                <span className="number number2">20,120</span>
+                <span className="number number2">
+                  {data?.filter((item) => item?.starRatings <= 2)?.length}
+                </span>
               </div>
               <div className="box box3">
                 <i className="fa-solid fa-car  fa3 "></i>
                 <span className="text text3">Average Reviews </span>
-                <span className="number number3">10,120</span>
+                <span className="number number3">{data?.length}</span>
               </div>
             </div>
           </div>
