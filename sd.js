@@ -497,6 +497,7 @@ export const dk = [
             label: "DETROJ POLICE STATION, NEAR MAMLATDAR KACHERI, DETROJ",
             value: "DETROJ_POLICE_STATION_NEAR_MAMLATDAR_KACHERI_DETROJ",
           },
+          
         ],
       },
       {
@@ -525,6 +526,8 @@ export const dk = [
             label: "DHANDHUKA POLICE STATION, TOWER HOWK, DHANDHUKA",
             value: "DHANDHUKA_POLICE_STATION_TOWER_HOWK_DHANDHUKA",
           },
+
+
         ],
       },
       {
@@ -532,10 +535,8 @@ export const dk = [
         value: "DHOLKA",
         stations: [
           {
-            label:
-              "BAVLA POLICE STATION, BAVLA-DHOLKA ROAD, NEAR RAILWAY FATAK, BAVLA",
-            value:
-              "BAVLA_POLICE_STATION_BAVLA_DHOLKA_ROAD_NEAR_RAILWAY_FATAK_BAVLA",
+            label: "BAVLA POLICE STATION, BAVLA-DHOLKA ROAD, NEAR RAILWAY FATAK, BAVLA",
+            value: "BAVLA_POLICE_STATION_BAVLA_DHOLKA_ROAD_NEAR_RAILWAY_FATAK_BAVLA",
           },
           {
             label: "DHOLKA POLICE STATION, MAMLATDAR KACHERI COMPOUND, DHOLKA",
@@ -545,6 +546,7 @@ export const dk = [
             label: "DHOLERA POLICE STATION, DHOLERA",
             value: "DHOLERA_POLICE_STATION_DHOLERA",
           },
+
         ],
       },
       {
@@ -555,6 +557,8 @@ export const dk = [
             label: "BARVALA POLICE STATION, BARVAL",
             value: "BARVALA_POLICE_STATION_BARVAL",
           },
+          
+
         ],
       },
       {
@@ -565,6 +569,8 @@ export const dk = [
             label: "MANDAL POLICE STATION, MANDAL",
             value: "MANDAL_POLICE_STATION_MANDAL",
           },
+          
+
         ],
       },
       {
@@ -575,6 +581,8 @@ export const dk = [
             label: "RANPUR POLICE STATION, RANPUR",
             value: "RANPUR_POLICE_STATION_RANPUR",
           },
+          
+
         ],
       },
       {
@@ -582,10 +590,8 @@ export const dk = [
         value: "VIRAMGAM",
         stations: [
           {
-            label:
-              "SANAND POLICE STATION, VIRAMGAM HIHGWAY ROAD, NEAR MAMLATDAR NI KACHERI",
-            value:
-              "SANAND_POLICE_STATIO_VIRAMGA_HIHGWAY_ROAD_NEA_MAMLATDAR_NI_KACHERI",
+            label: "SANAND POLICE STATION, VIRAMGAM HIHGWAY ROAD, NEAR MAMLATDAR NI KACHERI",
+            value: "SANAND_POLICE_STATIO_VIRAMGA_HIHGWAY_ROAD_NEA_MAMLATDAR_NI_KACHERI",
           },
           {
             label: "VIRAMGAM POLICE STATION, NEAR TOWER, VIRAMGAM",
@@ -595,6 +601,7 @@ export const dk = [
             label: "VIRAMGAM RURAL POLICE STATION, NEAR TOWER,VIRAMGAM",
             value: "VIRAMGAM_RURAL_POLICE_STATION_NEAR_TOWER_VIRAMGAM",
           },
+
         ],
       },
       {
@@ -609,8 +616,11 @@ export const dk = [
             label: "KOTH POLICE STATION, NEAR POST OFFICE, KOTH",
             value: "KOTH_POLICE_STATION_NEAR_POST_OFFICE_KOTH",
           },
+          
+
         ],
       },
+      
     ],
   },
   {
@@ -642,20 +652,16 @@ export const dk = [
             value: "SHAR_KOTDA_POLICE_STATION_SARSPUR_AHMEDABAD",
           },
           {
-            label:
-              "BAPUNAGAR POLICE STATION, OPP.GANESH MANDIR, LALBAHADUR SHASTRI ROAD",
-            value:
-              "BAPUNAGAR_POLICE_STATION_OPP_GANESH_MANDIR_LALBAHADUR_SHASTRI_ROAD",
+            label: "BAPUNAGAR POLICE STATION, OPP.GANESH MANDIR, LALBAHADUR SHASTRI ROAD",
+            value: "BAPUNAGAR_POLICE_STATION_OPP_GANESH_MANDIR_LALBAHADUR_SHASTRI_ROAD",
           },
           {
             label: "CHANDKHEDA POLICE STATION, I.O.C. ROAD",
             value: "CHANDKHEDA_POLICE_STATION_I_O_C_ROAD",
           },
           {
-            label:
-              "KAGDAPITH POLICE STATION, NEAR NEWCLOTH MARCKET, RAIPUR DARWAJA",
-            value:
-              "KAGDAPITH_POLICE_STATION_NEAR_NEWCLOTH_MARCKET_RAIPUR_DARWAJA",
+            label: "KAGDAPITH POLICE STATION, NEAR NEWCLOTH MARCKET, RAIPUR DARWAJA",
+            value: "KAGDAPITH_POLICE_STATION_NEAR_NEWCLOTH_MARCKET_RAIPUR_DARWAJA",
           },
           {
             label: "KARANJ POLICE STATION, KARANJ BHAVAN, LALDARWAJA",
@@ -663,7 +669,7 @@ export const dk = [
           },
           {
             label: "KHADIYA POLICE STATION, NEAR RAIPUR DARAWAJA",
-            value: "KHADIYA_POLICE_STATION_NEAR_RAIPUR_DARAWAJA",
+            value: "KHADIYA_POLICE_STATION_NEAR_RAIPUR_DARAWAJA",           
           },
           {
             label: "MAHILA POLICE STATION, JUNA KARANJ, BHADRA",
@@ -691,6 +697,7 @@ export const dk = [
             label: "CRIME BRANCH, GAYAKWADI HAVELI, GAYAKWAD",
             value: "CRIME_BRANCH_GAYAKWADI_HAVELI_GAYAKWAD",
           },
+         
         ],
       },
       {
@@ -722,14 +729,11 @@ export const dk = [
         value: "VASTRAPUR",
         stations: [
           {
-            label:
-              "VASTRAPUR POLICE STATION, NR, SAL HOSPITAL, DRIVION ROAD, VASTRAPUR ROAD",
-            value:
-              "VASTRAPUR_POLICE_STATION_NR_SAL_HOSPITAL_DRIVION_ROAD_VASTRAPUR_ROAD",
+            label: "VASTRAPUR POLICE STATION, NR, SAL HOSPITAL, DRIVION ROAD, VASTRAPUR ROAD",
+            value: "VASTRAPUR_POLICE_STATION_NR_SAL_HOSPITAL_DRIVION_ROAD_VASTRAPUR_ROAD",
           },
           {
-            label:
-              "VAJALPUR POLICE STATION, NR APMC MARKET, PALDI-SARKHEJ ROAD",
+            label: "VAJALPUR POLICE STATION, NR APMC MARKET, PALDI-SARKHEJ ROAD",
             value: "VAJALPUR_POLICE_STATION_NR_APMC_MARKET_PALDI_SARKHEJ_ROAD",
           },
         ],
@@ -759,8 +763,7 @@ export const dk = [
         value: "KAGDAPITHA_BAHERAMPUR_GITAMANDIR",
         stations: [
           {
-            label:
-              "DANILIMBDA POLICE STATION, NEAR BABUNAGARSABARMATI POLICE STATION, RAMNAGAR",
+            label: "DANILIMBDA POLICE STATION, NEAR BABUNAGARSABARMATI POLICE STATION, RAMNAGAR",
             value: "DANILIMBDA_POLICE_STATION_NEAR_BABUNAGAR",
           },
         ],
@@ -770,8 +773,7 @@ export const dk = [
         value: "KALUPUR_PACHKUVA_JAVERIVAD_DHINKVA",
         stations: [
           {
-            label:
-              "KALUPUR POLICE STATION, DHANASUTHAR CHAR RASTA, RELIEF ROAD",
+            label: "KALUPUR POLICE STATION, DHANASUTHAR CHAR RASTA, RELIEF ROAD",
             value: "KALUPUR_POLICE_STATION_DHANASUTHAR_CHAR_RASTA_RELIEF_ROAD",
           },
         ],
@@ -844,102 +846,17 @@ export const dk = [
           },
         ],
       },
-    ],
-  },
-  {
-    label: "District1",
-    value: "d1",
-    talukas: [
-      {
-        label: "Taluka1",
-        value: "t1",
-        stations: [
-          {
-            label: "Police station1",
-            value: "ps1",
-          },
-          {
-            label: "Police station2",
-            value: "ps2",
-          },
-          {
-            label: "Police station3",
-            value: "ps3",
-          },
-        ],
-      },
-      {
-        label: "Taluka2",
-        value: "t2",
-        stations: [
-          {
-            label: "Police station11",
-            value: "ps11",
-          },
-          {
-            label: "Police station22",
-            value: "ps22",
-          },
-        ],
-      },
-      {
-        label: "Taluka3",
-        value: "t3",
-        stations: [
-          {
-            label: "Police station13",
-            value: "ps13",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: "District2",
-    value: "d2",
-    talukas: [
-      {
-        label: "Taluka21",
-        value: "t21",
-        stations: [
-          {
-            label: "Police station21",
-            value: "ps21",
-          },
-          {
-            label: "Police station22",
-            value: "ps22",
-          },
-          {
-            label: "Police station23",
-            value: "ps23",
-          },
-        ],
-      },
-      {
-        label: "Taluka22",
-        value: "t22",
-        stations: [
-          {
-            label: "Police station211",
-            value: "ps211",
-          },
-          {
-            label: "Police station222",
-            value: "ps222",
-          },
-        ],
-      },
-      {
-        label: "Taluka23",
-        value: "t23",
-        stations: [
-          {
-            label: "Police station213",
-            value: "ps213",
-          },
-        ],
-      },
+
+
+
+
+
+
+
+
+
+
+
     ],
   },
   {
