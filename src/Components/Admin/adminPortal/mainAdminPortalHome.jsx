@@ -30,20 +30,22 @@ const MainAdminPortalHome = () => {
                 <i className="fa fa-solid fa-jet-fighter-up  fa1"></i>
                 <span className="text text1">Positive Reviews</span>
                 <span className="number number1">
-                  {data?.filter((item) => item?.starRatings >= 4)?.length}
+                  {data?.filter((item) => item?.rating >= 4)?.length}
                 </span>
               </div>
               <div className="box box2">
                 <i className="fa fa-solid fa-bicycle  fa2"></i>
                 <span className="text text2">Negative Reviews</span>
                 <span className="number number2">
-                  {data?.filter((item) => item?.starRatings <= 2)?.length}
+                  {data?.filter((item) => item?.rating <= 2)?.length}
                 </span>
               </div>
               <div className="box box3">
                 <i className="fa-solid fa-car  fa3 "></i>
                 <span className="text text3">Average Reviews </span>
-                <span className="number number3">{data?.length}</span>
+                <span className="number number3">
+                  {data?.filter((item) => item?.rating === 3)?.length}
+                </span>
               </div>
             </div>
           </div>
