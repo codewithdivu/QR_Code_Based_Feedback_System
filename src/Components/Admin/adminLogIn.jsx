@@ -29,7 +29,7 @@ const AdminLogIn = () => {
         <div class="container">
           <div class="login_container">
             <div class="logos">
-              <img src="/images/logo.png" alt="police_logo" />
+              <img src="/images/Logo.png" alt="police_logo" />
             </div>
             <div class="heading">
               <p>Admin LogIn</p>
