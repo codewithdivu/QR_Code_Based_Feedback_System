@@ -22,6 +22,10 @@ const FeedBackSystem = () => {
   // Questions
   const [Questions, setQuestions] = useState([]);
   // rating;
+  const [rating, setRating] = useState(0);
+  //textReview
+  const [review, setReview] = useState("");
+  console.log("weigtht_review", review);
 
   //selected police station object
   const [selectedPoliceStation, setSelectedPoliceStation] = useState({
@@ -52,11 +56,21 @@ const FeedBackSystem = () => {
 
   const onFinalSubmit = async (feedBackData) => {
     // Store in fb
+    console.log("whole data", {
+      selectedLanguage,
+      phoneNumber,
+      selectedPoliceStation,
+      Questions,
+      rating,
+      review,
+    });
     const dudu = await addData({
       selectedLanguage,
       phoneNumber,
       selectedPoliceStation,
       Questions,
+      rating,
+      review,
     });
     console.log("dudu", dudu);
     handleNext();
@@ -101,6 +115,10 @@ const FeedBackSystem = () => {
             onFinalSubmit={onFinalSubmit}
             Questions={Questions}
             setQuestions={setQuestions}
+            rating={rating}
+            setRating={setRating}
+            review={review}
+            setReview={setReview}
           />
         );
       case 3:

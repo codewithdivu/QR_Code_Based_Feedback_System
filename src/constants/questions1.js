@@ -1,7 +1,7 @@
 export const questions1 = [
   {
     q: "Q1. How did you come to the police station?",
-    name: "ques1",
+    name: "ques1_1",
     options: [
       {
         id: 1,
@@ -23,7 +23,7 @@ export const questions1 = [
   },
   {
     q: "Q2. After how much time you were heard in PS ?",
-    name: "ques2",
+    name: "ques1_2",
     options: [
       {
         id: 1,
@@ -45,7 +45,7 @@ export const questions1 = [
   },
   {
     q: "Q3. What was your problem ?",
-    name: "ques3",
+    name: "ques1_3",
     options: [
       {
         id: 1,
@@ -70,7 +70,7 @@ export const questions1 = [
 export const questions2 = [
   {
     q: "Q1. What was stolen from you ?",
-    name: "ques1",
+    name: "ques2_1",
     options: [
       {
         id: 1,
@@ -96,7 +96,7 @@ export const questions2 = [
   },
   {
     q: "Q2. By whom you has been harrassed or humilated ?",
-    name: "ques2",
+    name: "ques2_2",
     options: [
       {
         id: 1,
