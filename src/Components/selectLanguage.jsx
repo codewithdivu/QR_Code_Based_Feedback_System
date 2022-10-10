@@ -2,6 +2,7 @@ import React from "react";
 import { languages } from "../constants/language";
 import { useForm } from "react-hook-form";
 import { useSearchParams } from "react-router-dom";
+import EmojiSlider from "../Assets/emojiSlider";
 
 const SelectLanguage = ({
   selectedLanguage,
@@ -75,6 +76,7 @@ const SelectLanguage = ({
             Next
           </button>
         </form>
+          {/* <EmojiSlider /> */}
       </div>
     </div>
   );

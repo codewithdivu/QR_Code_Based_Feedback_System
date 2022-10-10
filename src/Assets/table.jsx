@@ -6,8 +6,11 @@ const Table = ({ dataFile }) => {
       <thead>
         <tr>
           <th>Mobile Number</th>
-          <th>Language</th>
-          <th>Id</th>
+          <th>Ratings</th>
+          <th>District</th>
+          <th>Taluka</th>
+          <th>Police_Station</th>
+          <th>Date</th>
         </tr>
       </thead>
       <tbody>
@@ -15,8 +18,11 @@ const Table = ({ dataFile }) => {
           <tr>
             {/* <tr className="active-row"> */}
             <td>{item?.phoneNumber}</td>
-            <td>{item?.selectedLanguage}</td>
-            <td>{item?.id}</td>
+            <td>{item?.rating}</td>
+            <td>{item?.selectedPoliceStation?.district}</td>
+            <td>{item?.selectedPoliceStation?.taluka}</td>
+            <td>{item?.selectedPoliceStation?.police}</td>
+            <td>{item?.createdAt?.toDate().toDateString()}</td>
           </tr>
         ))}
       </tbody>

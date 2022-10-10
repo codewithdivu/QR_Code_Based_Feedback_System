@@ -31,18 +31,18 @@ export const sideBarMenuItems = [
     icon: "fa fa-solid fa-qrcode",
     path: "/admin/generateQR",
   },
-  {
-    id: 5,
-    label: "Add User",
-    icon: "fa-solid fa-user",
-    path: "/auth/signup",
-  },
-  {
-    id: 6,
-    label: "Change Password",
-    icon: "fa fa-solid fa-lock",
-    path: "/admin/changePassword",
-  },
+  // {
+  //   id: 5,
+  //   label: "Add User",
+  //   icon: "fa-solid fa-user",
+  //   path: "/auth/signup",
+  // },
+  // {
+  //   id: 6,
+  //   label: "Change Password",
+  //   icon: "fa fa-solid fa-lock",
+  //   path: "/admin/changePassword",
+  // },
   {
     id: 7,
     label: "Logout",

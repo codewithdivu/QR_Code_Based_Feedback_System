@@ -87,7 +87,7 @@ const GenerateQRcode = () => {
           </div>
 
           {/* // fetching qr codes  */}
-          <Table2 dataFile={data} />
+          {/* <Table2 dataFile={data} /> */}
           <form onSubmit={handleSubmit}>
             <div className="district">
               <select

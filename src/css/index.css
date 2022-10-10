@@ -356,19 +356,19 @@ input[type="radio"]#language_input {
 @keyframes anime {
   0% {
     opacity: 10%;
-}
+  }
 
-25% {
+  25% {
     opacity: 25%;
-}
+  }
 
-75% {
-   opacity: 50%;
-}
+  75% {
+    opacity: 50%;
+  }
 
-100% {
+  100% {
     opacity: 100%;
-}
+  }
 }
 
 .emoji2 {
@@ -377,19 +377,19 @@ input[type="radio"]#language_input {
 
 @keyframes anime2 {
   0% {
-      opacity: 10%;
+    opacity: 10%;
   }
 
   25% {
-      opacity: 25%;
+    opacity: 25%;
   }
 
   75% {
-     opacity: 50%;
+    opacity: 50%;
   }
 
   100% {
-      opacity: 100%;
+    opacity: 100%;
   }
 }
 
@@ -400,19 +400,19 @@ input[type="radio"]#language_input {
 @keyframes anime3 {
   0% {
     opacity: 10%;
-}
+  }
 
-25% {
+  25% {
     opacity: 25%;
-}
+  }
 
-75% {
-   opacity: 50%;
-}
+  75% {
+    opacity: 50%;
+  }
 
-100% {
+  100% {
     opacity: 100%;
-}
+  }
 }
 
 .emoji4 {
@@ -422,19 +422,19 @@ input[type="radio"]#language_input {
 @keyframes anime4 {
   0% {
     opacity: 10%;
-}
+  }
 
-25% {
+  25% {
     opacity: 25%;
-}
+  }
 
-75% {
-   opacity: 50%;
-}
+  75% {
+    opacity: 50%;
+  }
 
-100% {
+  100% {
     opacity: 100%;
-}
+  }
 }
 
 .emoji5 {
@@ -444,24 +444,22 @@ input[type="radio"]#language_input {
 @keyframes anime5 {
   0% {
     opacity: 10%;
-}
+  }
 
-25% {
+  25% {
     opacity: 25%;
-}
+  }
 
-75% {
-   opacity: 50%;
-}
+  75% {
+    opacity: 50%;
+  }
 
-100% {
+  100% {
     opacity: 100%;
+  }
 }
-}
 
-
-
-.btn200{
+.btn200 {
   /* !important */
   /* width: 30px; */
   /* height: 30px; */
@@ -473,11 +471,8 @@ input[type="radio"]#language_input {
   width: 0px;
 }
 
-
-
-.hedemoji{
+.hedemoji {
   font-size: 25px;
-
 }
 
 /*
@@ -1360,12 +1355,9 @@ input {
   background: turquoise;
 }
 
-
-.star-rating{
-    display: flex;
+.star-rating {
+  display: flex;
 }
-
-
 
 /* // TABLE  */
 
@@ -1386,7 +1378,7 @@ input {
 
 .styled-table th,
 .styled-table td {
-    padding: 12px 15px;
+  padding: 12px 15px;
 }
 
 .styled-table tbody tr {
@@ -1406,4 +1398,60 @@ input {
   color: #009879;
 }
 
+/* GREETING PAGE  */
 
+
+.thanku__box {
+  /* background: linear-gradient(); */
+  /* background: linear-gradient(to bottom, #f1a979 -4%, #ffffff 100%); */
+  width: 100vw;
+  height: 100vh;
+}
+
+.police_logo_details_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 25vh;
+  width: 100vw;
+  padding-top: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.police_logo img {
+  margin-top: 10px;
+  object-fit: contain;
+  max-height: 15vh;
+  max-width: 25vw;
+}
+
+.thanku__span {
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 7vh;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.thanku__aa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thanku__num {
+  font-size: 20px;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.thanku__link {
+  font-size: 25px;
+  padding-top: 1rem;
+}
+.thanku__hello {
+  display: flex;
+  justify-content: center;
+}
+.thanku__tamaro {
+  padding-top: 3rem;
+}
