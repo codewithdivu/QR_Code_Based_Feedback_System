@@ -36,12 +36,14 @@ const Feedback = ({
     handleNext();
   };
 
-  // const handleEmoji = (res) => {
-  //   console.log("emoji...", res);
-  // };
-
-  const handleEmoji1 = (event) => {
-    console.log("emoji", event.target.value);
+  const handleRating1 = (emojiRating) => {
+    console.log("emo1", emojiRating);
+  };
+  const handleRating2 = (emojiRating) => {
+    console.log("emo2", emojiRating);
+  };
+  const handleRating3 = (emojiRating) => {
+    console.log("emo3", emojiRating);
   };
 
   const renderCurrentFeedbackForm = (activeStep) => {
@@ -107,13 +109,9 @@ const Feedback = ({
             <div className="containar containar__1">
               <div className="wrapper">
                 <p className="text">How was the behaviour of the attendee ?</p>
-                <div className="emoji">
+                {/* <div className="emoji">
                   <div className="emoji1">
-                    <button
-                      className="btn200"
-                      value="sad"
-                      onClick={handleEmoji1}
-                    >
+                    <button className="btn200">
                       <h1 className="hedemoji">😞</h1>
                     </button>{" "}
                   </div>
@@ -137,13 +135,16 @@ const Feedback = ({
                       <h1 className="hedemoji">😍</h1>
                     </button>
                   </div>
+                </div> */}
+                <div className="emoji">
+                  <EmojiRating variant="classic" onChange={handleRating1} />
                 </div>
               </div>
             </div>
             <div className="containar containar__1">
               <div className="wrapper">
                 <p className="text">How would you rate the police station !</p>
-                <div className="emoji">
+                {/* <div className="emoji">
                   <div className="emoji1">
                     <button className="btn200">
                       <h1 className="hedemoji">😞</h1>
@@ -169,6 +170,9 @@ const Feedback = ({
                       <h1 className="hedemoji">😍</h1>
                     </button>
                   </div>
+                </div> */}
+                <div className="emoji">
+                  <EmojiRating variant="classic" onChange={handleRating2} />
                 </div>
               </div>
             </div>
@@ -177,7 +181,7 @@ const Feedback = ({
                 <p className="text">
                   How would you explain the enviroment of police station ?
                 </p>
-                <div className="emoji">
+                {/* <div className="emoji">
                   <div className="emoji1">
                     <button className="btn200">
                       <h1 className="hedemoji">☹️</h1>
@@ -203,6 +207,9 @@ const Feedback = ({
                       <h1 className="hedemoji">😍</h1>
                     </button>
                   </div>
+                </div> */}
+                <div className="emoji">
+                  <EmojiRating variant="classic" onChange={handleRating3} />
                 </div>
               </div>
             </div>

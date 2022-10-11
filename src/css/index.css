@@ -293,6 +293,7 @@ input[type="radio"]#language_input {
 
 .containar__1 {
   margin-top: 1rem;
+  /* height: 18vh; */
 }
 
 .text100 {
@@ -324,7 +325,7 @@ input[type="radio"]#language_input {
   position: relative;
   max-width: 75vw;
   width: 75vw;
-  height: 15vh;
+  height: 18vh;
   padding: 6px;
   display: flex;
   flex-direction: row;
