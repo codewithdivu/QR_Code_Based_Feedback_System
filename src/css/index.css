@@ -1400,14 +1400,12 @@ input {
 }
 
 /* GREETING PAGE  */
-
-
-.thanku__box {
-  /* background: linear-gradient(); */
-  /* background: linear-gradient(to bottom, #f1a979 -4%, #ffffff 100%); */
+.thanku__box{
+  background: linear-gradient(to bottom, #f1a979 -4%, #ffffff 100%);
   width: 100vw;
   height: 100vh;
 }
+
 
 .police_logo_details_container {
   display: flex;
@@ -1417,42 +1415,58 @@ input {
   height: 25vh;
   width: 100vw;
   padding-top: 1rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .police_logo img {
   margin-top: 10px;
   object-fit: contain;
   max-height: 15vh;
   max-width: 25vw;
-}
+  }
 
-.thanku__span {
-  font-size: 40px;
-  display: flex;
-  flex-direction: column;
-  padding-top: 7vh;
-  /* justify-content: center; */
-  /* align-items: center; */
-}
-.thanku__aa {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.thanku__num {
-  font-size: 20px;
-  padding-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-.thanku__link {
-  font-size: 25px;
-  padding-top: 1rem;
-}
-.thanku__hello {
-  display: flex;
-  justify-content: center;
-}
-.thanku__tamaro {
-  padding-top: 3rem;
-}
+  .thanku__span{
+      font-size: 40px;   
+      display: flex;
+      flex-direction: column;
+      padding-top: 7vh;
+
+  }
+  .thanku__aa{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .thanku__num{
+      font-size: 20px;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: center;
+  }
+  .thanku__link{
+      font-size: 23px;
+      padding-top: 1rem;
+  }
+  .thanku__hello{
+      display: flex;
+      justify-content: center;
+  }
+  .thanku__tamaro{
+      padding-top: 3rem;
+  }
+
+
+
+  /* // thankyou page 
+   */
+   .poppers{
+    height: 40vh;
+    width: 60vw;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: space-between;
+   }
+   .popper{
+    object-fit: contain;
+    width: 20vw;
+
+   }
