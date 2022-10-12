@@ -1400,11 +1400,8 @@ input {
 }
 
 /* GREETING PAGE  */
-
-
 .thanku__box {
-  /* background: linear-gradient(); */
-  /* background: linear-gradient(to bottom, #f1a979 -4%, #ffffff 100%); */
+  background: linear-gradient(to bottom, #f1a979 -4%, #ffffff 100%);
   width: 100vw;
   height: 100vh;
 }
@@ -1431,8 +1428,6 @@ input {
   display: flex;
   flex-direction: column;
   padding-top: 7vh;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 .thanku__aa {
   display: flex;
@@ -1446,7 +1441,7 @@ input {
   justify-content: center;
 }
 .thanku__link {
-  font-size: 25px;
+  font-size: 23px;
   padding-top: 1rem;
 }
 .thanku__hello {
@@ -1455,4 +1450,90 @@ input {
 }
 .thanku__tamaro {
   padding-top: 3rem;
+}
+
+/* // thankyou page 
+   */
+.poppers {
+  height: 40vh;
+  width: 60vw;
+  /* background-color: cadetblue; */
+  display: flex;
+  justify-content: space-between;
+}
+.popper {
+  object-fit: contain;
+  width: 20vw;
+}
+
+/* ANALYTICS  */
+
+.analytics {
+  position: relative;
+  left: 250px;
+  background-color: var(--panel-color);
+  min-height: 100vh;
+  max-width: 81.8vw;
+  padding: 10px 14px;
+  transition: var(--tran-05);
+  margin: 0;
+}
+
+nav.close ~ .analytics {
+  left: 73px;
+  width: calc(100% - 73px);
+}
+
+.analytics .dash-title {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+hr {
+  border-top: 3px solid orange;
+  margin: 10px 0;
+  width: 70vw;
+}
+.analytics .dash-title p {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* reports  */
+
+.reports {
+  position: relative;
+  left: 250px;
+  background-color: var(--panel-color);
+  min-height: 100vh;
+  max-width: 81.8vw;
+  padding: 10px 14px;
+  transition: var(--tran-05);
+  margin: 0;
+}
+
+nav.close ~ .reports {
+  left: 73px;
+  width: calc(100% - 73px);
+}
+
+.reports .dash-title {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+hr {
+  border-top: 3px solid orange;
+  margin: 10px 0;
+  width: 70vw;
+}
+.reports .dash-title p {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-color);
 }

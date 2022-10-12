@@ -57,56 +57,6 @@ const MainAdminPortalHome = () => {
             </div>
 
             <div className="activity-data">
-              {/* <div className="data mobile_num_data">
-                <span className="data-title">Mobile no</span>
-                <span className="data-list">9428532632</span>
-                <span className="data-list">9428532632</span>
-                <span className="data-list">9428532632</span>
-                <span className="data-list">9428532632</span>
-                <span className="data-list">9428532632</span>
-                <span className="data-list">9428532632</span>
-                <span className="data-list">9428532632</span>
-              </div>
-              <div className="data Environment">
-                <span className="data-title">Environment Rating</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-              </div>
-              <div className="data experience">
-                <span className="data-title">Experience</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-                <span className="data-list">2 star</span>
-              </div>
-              <div className="data ratings">
-                <span className="data-title"> Overall Ratings</span>
-                <span className="data-list">3 star</span>
-                <span className="data-list">3 star</span>
-                <span className="data-list">3 star</span>
-                <span className="data-list">3 star</span>
-                <span className="data-list">3 star</span>
-                <span className="data-list">3 star</span>
-                <span className="data-list">3 star</span>
-              </div>
-              <div className="data review">
-                <span className="data-title">Review</span>
-                <span className="data-list">Good</span>
-                <span className="data-list">Good</span>
-                <span className="data-list">Good</span>
-                <span className="data-list">Good</span>
-                <span className="data-list">Good</span>
-                <span className="data-list">Good</span>
-                <span className="data-list">Good</span>
-              </div> */}
               <Table dataFile={data} />
             </div>
           </div>
