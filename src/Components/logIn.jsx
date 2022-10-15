@@ -113,7 +113,7 @@ const LogIn = ({
       <div className="data_container_wrap">
         <div className="heading_auth">
           <h2>{t("Authentication")}</h2>
-          <hr />
+          <hr/>
           <p>
             {t("Kindly enter your mobile number to authenticate yourself.")}
           </p>
