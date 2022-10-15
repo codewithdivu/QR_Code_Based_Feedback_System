@@ -1628,37 +1628,179 @@ th {
 }
 
 /* // THANK YOU PAGE  */
-.thankyou_data_detail{
+.thankyou_data_detail {
   display: flex;
   height: 20vh;
   /* background-color: red; */
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
-
 }
-.bold{
+.bold {
   font-weight: 600;
 }
-.thanks_data{
-font-weight: 600;
-font-size: 27px;
-margin-bottom: 20px;
+.thanks_data {
+  font-weight: 600;
+  font-size: 27px;
+  margin-bottom: 20px;
 }
-.minor{
-font-size: 20px;
-padding-bottom: 10px;
+.minor {
+  font-size: 20px;
+  padding-bottom: 10px;
 }
-.citizen_app{
+.citizen_app {
   margin-top: 20px;
   font-size: 20px;
- }
+}
 
- .input_field>input{
+.input_field > input {
   max-width: 28vw;
- }
- .input_sex{
+}
+.input_sex {
   min-width: none;
   max-width: none;
   width: 10vh;
- }
+}
+
+/* /// admin login page new css  */
+
+.container-wrap {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  /* background-image: url(./police.jpg); */
+  /* background-repeat: no-repeat; */
+  /* position: relative; */
+}
+
+.container {
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+  /* background-color: pink; */
+  justify-content: center;
+  align-items: center;
+}
+
+.login_container {
+  display: flex;
+  flex-direction: column;
+  height: 78vh;
+  width: 27vw;
+  border-radius: 30px;
+  /* background-color: red; */
+  background-color: rgb(242, 231, 218);
+  padding: 10px;
+  align-items: center;
+}
+.logos {
+  height: 13vh;
+  /* background-color: red; */
+}
+.logos img {
+  width: 65px;
+}
+.heading {
+  height: 18vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading > p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 550;
+}
+
+.details > p {
+  font-size: 13px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.input_field {
+  padding: 10px 0;
+}
+.login_details a {
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 8px;
+  color: white;
+  background-color: orange;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  min-width: 8vw;
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"] ::-webkit-outer-spin-button,
+input[type="number"] ::-webkit-inner-spin-button {
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input {
+  min-width: 20vw;
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid gray;
+}
+
+.login_details {
+  display: flex;
+  height: 5vh;
+  /* background-color: black; */
+  min-width: 21vw;
+  justify-content: flex-start;
+  font-size: 13px;
+  align-items: center;
+}
+
+.lastline {
+  margin: 30px 0 30px 0;
+  width: 18vw;
+  color: white;
+}
+
+.signUp_details {
+  display: flex;
+  font-size: 13px;
+  width: 21vw;
+  /* background-color: blue; */
+  margin-left: 25px;
+}
+
+.signUp_details a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+.btns {
+  display: flex;
+  align-items: center;
+}
+.hr {
+  border-top: 3px solid orange;
+  margin: 10px 20px;
+  width: 20vw;
+  border-radius: 1px;
+}
+.login_details {
+  margin-right: 10px;
+}
