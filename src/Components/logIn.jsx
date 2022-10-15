@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useUserAuth } from "../Contexts/UserAuthContext";
 import "../css/newLoader.css";
+import hin from "../transalation/hin.json";
+import guj from "../transalation/hin.json";
+
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
 
 const LogIn = ({
   onNext,
@@ -15,12 +20,14 @@ const LogIn = ({
   const [otp, setOtp] = useState("");
   const [result, setResult] = useState("");
   const [loader, isLoading] = useState(false);
-
+  const langu = localStorage.getItem("lang");
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const { t } = useTranslation();
 
   const {
     register: register2,
@@ -80,13 +87,36 @@ const LogIn = ({
     }
   };
 
+  // if (langu) {
+  //   i18n
+  //     .use(initReactI18next) // passes i18n down to react-i18next
+  //     .init({
+  //       // the translations
+  //       // (tip move them in a JSON file and import them,
+  //       // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
+  //       resources: {
+  //         en: {
+  //           translation: hin,
+  //         },
+  //       },
+  //       lng: "en", // if you're using a language detector, do not define the lng option
+  //       fallbackLng: "en",
+
+  //       interpolation: {
+  //         escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+  //       },
+  //     });
+  // }
+
   return (
     <div className="data_container">
       <div className="data_container_wrap">
         <div className="heading_auth">
-          <h2>Authentication</h2>
+          <h2>{t("Authentication")}</h2>
           <hr />
-          <p>Kindly enter your mobile number to authenticate yourself.</p>
+          <p>
+            {t("Kindly enter your mobile number to authenticate yourself.")}
+          </p>
         </div>
         <div className="form_data">
           {/* Get Otp */}
@@ -96,7 +126,7 @@ const LogIn = ({
           >
             <div className="mobile_num_label">
               <label htmlFor="mobile_num" className="mobile_num">
-                Enter mobile no :
+                {t("Enter mobile no :")}
               </label>
             </div>
             <div className="mobile_num_input">
@@ -128,7 +158,7 @@ const LogIn = ({
             </div>
             <div id="recaptcha-container" />
             <button type="submit" className="sendOtp" disabled={loader}>
-              {loader ? "Sending...." : "Send OTP"}
+              {loader ? t("Sending....") : t("Send OTP")}
             </button>
           </form>
 
@@ -137,7 +167,7 @@ const LogIn = ({
             onSubmit={handleSubmit2(verifyOtp)}
             style={{ display: flag ? "block" : "none" }}
           >
-            <div className="otp_label">Enter OTP :</div>
+            <div className="otp_label">{t("Enter OTP :")}</div>
             <div className="otp_input">
               <input
                 type="number"
@@ -166,7 +196,7 @@ const LogIn = ({
             </div>
 
             <button type="submit" className="submit_btn" disabled={loader}>
-              {loader ? "Checking...." : "Verify OTP"}
+              {loader ? t("Checking....") : t("Verify OTP")}
             </button>
           </form>
         </div>

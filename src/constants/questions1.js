@@ -1,6 +1,6 @@
 export const questions1 = [
   {
-    q: "Q1. How did you come to the police station?",
+    q: "How did you come to the police station?",
     name: "ques1_1",
     options: [
       {
@@ -22,7 +22,7 @@ export const questions1 = [
     ],
   },
   {
-    q: "Q2. After how much time you were heard in PS ?",
+    q: "After how much time you were heard in PS ?",
     name: "ques1_2",
     options: [
       {
@@ -44,7 +44,7 @@ export const questions1 = [
     ],
   },
   {
-    q: "Q3. What was your problem ?",
+    q: "What was your problem ?",
     name: "ques1_3",
     options: [
       {
