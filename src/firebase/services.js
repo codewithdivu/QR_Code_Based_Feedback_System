@@ -88,3 +88,7 @@ export const addQrCode = async (payLoad) =>
         resolve(false);
       });
   });
+
+
+
+  
