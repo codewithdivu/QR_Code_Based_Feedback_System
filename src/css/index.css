@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  /* justify-content: center; */
 }
 
 .police_logo_details_container {
@@ -27,12 +28,12 @@ body {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  height: 25vh;
+  height: 28vh;
   width: 100vw;
   /* background-color: pink; */
 }
 
-hr{
+hr {
   border-top: 3px solid orange;
   margin: 10px 0;
 }
@@ -50,15 +51,15 @@ hr{
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 60vh;
+  max-height: 160vh;
   /* background-color: red; */
 }
 
 .data_container_wrap {
-  min-height: 60vh;
-  max-width: 75vw;
+  min-height: 40vh;
+  /* max-width: 75vw; */
   display: flex;
-  flex-direction : column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -103,8 +104,9 @@ input::-webkit-inner-spin-button {
   margin-top: 8px;
 }
 
-input{
+input {
   min-width: 72vw;
+  /* max-width: 72vw; */
   border: none;
   outline: none;
   padding: 8px;
@@ -137,7 +139,7 @@ button {
   margin-top: 20px;
   border-radius: 8px;
   background: orange;
-  background : pink;
+  background: pink;
   /* max-width: 70vw; */
   min-width: 40vw;
 }
@@ -261,6 +263,14 @@ input[type="radio"]#language_input {
   /* background-color: red; */
   width: 70vw;
   height: 20vh;
+}
+.questions_container {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* padding-left: 20px; */
+  margin: 20px;
 }
 
 /* ================= */
@@ -740,7 +750,7 @@ nav.close ~ .dashboard {
   justify-content: center;
   align-items: center;
 }
-hr{
+hr {
   border-top: 3px solid orange;
   margin: 10px 0;
   width: 70vw;
@@ -1161,8 +1171,9 @@ input[type="number"] ::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input{
+input {
   min-width: 72vw;
+  /* max-width: 72vw; */
   border: none;
   outline: none;
   padding: 8px;
@@ -1294,8 +1305,9 @@ input[type="number"] ::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input{
+input {
   min-width: 72vw;
+  /* max-width: 72vw; */
   border: none;
   outline: none;
   padding: 8px;
@@ -1419,9 +1431,9 @@ input{
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  height: 25vh;
+  height: 28vh;
   width: 100vw;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .police_logo img {
@@ -1535,7 +1547,7 @@ nav.close ~ .reports {
   justify-content: center;
   align-items: center;
 }
-hr{
+hr {
   border-top: 3px solid orange;
   margin: 10px 0;
   width: 70vw;
@@ -1591,3 +1603,56 @@ th {
   padding: 0 30px;
   font-size: 12px;
 }
+
+#start {
+  /* display: flex; */
+  max-width: 0;
+  margin: 0px;
+  min-width: 1vw;
+  padding-right: 25px;
+
+  /* border: none;
+  outline: none;
+  padding: 8px;
+  color: white;
+  background-color: orange;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  min-width: 8vw;
+  max-width: 70vw;
+  min-width: 72vw;
+  margin-right: 10px; */
+}
+
+.temp {
+  margin-left: 42px;
+}
+
+/* // THANK YOU PAGE  */
+.thankyou_data_detail{
+  display: flex;
+  height: 20vh;
+  /* background-color: red; */
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+
+}
+.bold{
+  font-weight: 600;
+}
+.thanks_data{
+font-weight: 600;
+font-size: 27px;
+margin-bottom: 20px;
+}
+.minor{
+font-size: 20px;
+padding-bottom: 10px;
+}
+.citizen_app{
+  margin-top: 20px;
+  font-size: 20px;
+ }

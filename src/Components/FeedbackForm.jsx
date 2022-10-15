@@ -72,166 +72,86 @@ const Feedback = ({
             ))}
           </div>
         );
-      // case 1:
-      //   return (
-      //     <div className="questions_container">
-      //       {questions2.map((item) => (
-      //         <div class="question_container">
-      //           <p>{item.q}</p>
-      //           {item.options.map((option) => (
-      //             <div class="option">
-      //               <input
-      //                 type="radio"
-      //                 name={item.name}
-      //                 id="ques"
-      //                 value={option.label}
-      //                 {...register(item.name, { required: true })}
-      //               />
-      //               <label htmlFor="ques">{option.label}</label>
-      //             </div>
-      //           ))}
-      //         </div>
-      //       ))}
-      //       <div className="question_container">
-      //         <p className="special">Q. What was your conflict ?</p>
-      //         <input
-      //           type="text"
-      //           name="conflicts"
-      //           id=""
-      //           {...register("conflicts", { required: true })}
-      //           placeholder="Kindly explain your conflict in brief .."
-      //         />
-      //       </div>
-      //       <StartRatings rating={rating} setRating={setRating} />
-      //     </div>
-      //   );
-      // case 2:
-      //   return (
-      //     <>
-      //       <div className="containar containar__1">
-      //         <div className="wrapper">
-      //           <p className="text">How was the behaviour of the attendee ?</p>
-      //           {/* <div className="emoji">
-      //             <div className="emoji1">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">😞</h1>
-      //               </button>{" "}
-      //             </div>
-      //             <div className="emoji2">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">☹️</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji3">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">🙂</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji4">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">😃</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji5">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">😍</h1>
-      //               </button>
-      //             </div>
-      //           </div> */}
-      //           <div className="emoji">
-      //             <EmojiRating variant="classic" onChange={handleRating1} />
-      //           </div>
-      //         </div>
-      //       </div>
-      //       <div className="containar containar__1">
-      //         <div className="wrapper">
-      //           <p className="text">How would you rate the police station !</p>
-      //           {/* <div className="emoji">
-      //             <div className="emoji1">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">😞</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji2">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">☹️</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji3">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">🙂</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji4">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">😃</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji5">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">😍</h1>
-      //               </button>
-      //             </div>
-      //           </div> */}
-      //           <div className="emoji">
-      //             <EmojiRating variant="classic" onChange={handleRating2} />
-      //           </div>
-      //         </div>
-      //       </div>
-      //       <div className="containar containar__1">
-      //         <div className="wrapper">
-      //           <p className="text">
-      //             How would you explain the enviroment of police station ?
-      //           </p>
-      //           {/* <div className="emoji">
-      //             <div className="emoji1">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">☹️</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji2">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">😞</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji3">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">🙂</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji4">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">😃</h1>
-      //               </button>
-      //             </div>
-      //             <div className="emoji5">
-      //               <button className="btn200">
-      //                 <h1 className="hedemoji">😍</h1>
-      //               </button>
-      //             </div>
-      //           </div> */}
-      //           <div className="emoji">
-      //             <EmojiRating variant="classic" onChange={handleRating3} />
-      //           </div>
-      //         </div>
-      //       </div>
-      //       <div></div>
-      //       <div className="textarea">
-      //         <label htmlFor="">Review : </label>
-      //         <textarea
-      //           id=""
-      //           name="review"
-      //           rows="8"
-      //           cols="50"
-      //           class="textarea-input"
-      //           // {...register("review", { required: true })}
-      //           onChange={(e) => setReview(e.target.value)}
-      //           placeholder="Please review your experience in 300 characters.."
-      //         ></textarea>
-      //         {/* <EmojiRating variant="classic" onChange={handleEmoji} /> */}
-      //       </div>
-      //     </>
-      //   );
+      case 1:
+        return (
+          <div className="questions_container">
+            {questions2.map((item) => (
+              <div class="question_container">
+                <p>{item.q}</p>
+                {item.options.map((option) => (
+                  <div class="option">
+                    <input
+                      type="radio"
+                      name={item.name}
+                      id="ques"
+                      value={option.label}
+                      {...register(item.name, { required: true })}
+                    />
+                    <label htmlFor="ques">{option.label}</label>
+                  </div>
+                ))}
+              </div>
+            ))}
+            <div className="question_container">
+              <p className="special">Q. What was your conflict ?</p>
+              <input
+                type="text"
+                name="conflicts"
+                id=""
+                {...register("conflicts", { required: true })}
+                placeholder="Kindly explain your conflict in brief .."
+              />
+            </div>
+            <div className="question_container">
+              <StartRatings rating={rating} setRating={setRating} />
+            </div>
+          </div>
+        );
+      case 2:
+        return (
+          <>
+            {/* <div className="containar containar__1">
+              <div className="wrapper">
+                <p className="text">How was the behaviour of the attendee ?</p>
+
+                <div className="emoji">
+                  <EmojiRating variant="classic" onChange={handleRating1} />
+                </div>
+              </div>
+            </div>
+            <div className="containar containar__1">
+              <div className="wrapper">
+                <p className="text">How would you rate the police station !</p>
+              </div>
+            </div>
+            <div className="containar containar__1">
+              <div className="wrapper">
+                <p className="text">
+                  How would you explain the enviroment of police station ?
+                </p>
+
+                <div className="emoji">
+                  <EmojiRating variant="classic" onChange={handleRating3} />
+                </div>
+              </div>
+            </div> */}
+
+            <div className="textarea">
+              <label htmlFor="">Review : </label>
+              <textarea
+                id=""
+                name="review"
+                rows="8"
+                cols="50"
+                class="textarea-input"
+                // {...register("review", { required: true })}
+                onChange={(e) => setReview(e.target.value)}
+                placeholder="Please review your experience in 300 characters.."
+              ></textarea>
+              {/* <EmojiRating variant="classic" onChange={handleEmoji} /> */}
+            </div>
+          </>
+        );
 
       default:
         return null;
@@ -249,8 +169,8 @@ const Feedback = ({
 
         <form onSubmit={handleSubmit(onRBSubmit)}>
           {renderCurrentFeedbackForm(step)}
-          <button type="submit" class="next">
-            {step === 2 ? "Final Submit" : t("Next")}
+          <button type="submit" class="next temp">
+            {step === 2 ? "Final Submit" : "Next"}
           </button>
         </form>
       </div>

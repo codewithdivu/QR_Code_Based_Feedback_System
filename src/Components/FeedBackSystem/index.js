@@ -121,8 +121,8 @@ const FeedBackSystem = () => {
             setReview={setReview}
           />
         );
-      // case 3:
-      //   return <GreetingPage />;
+      case 3:
+        return <GreetingPage />;
       default:
         return null;
     }
