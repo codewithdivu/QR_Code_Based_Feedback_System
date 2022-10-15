@@ -149,7 +149,7 @@ select {
   min-width: 4vw;
   border: none;
   outline: none;
-  padding-right: 10px;
+  margin-right: 10px;
 }
 #ques:after {
   width: 15px;
