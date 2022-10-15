@@ -103,10 +103,10 @@ input::-webkit-inner-spin-button {
   padding: 5px;
   margin-top: 10px;
 }
-.mobile_label{
+.mobile_label {
   margin-top: 7vh;
 }
-.otp_label{
+.otp_label {
   margin-top: 7vh;
 }
 
@@ -316,11 +316,12 @@ input[type="radio"]#language_input {
 /* ================= */
 
 .containar__1 {
- display: flex;
- max-width: 70vw;
- min-width: 70vw;
- margin-top: 1rem;
- /* background-color: pink; */
+  display: flex;
+  max-width: 70vw;
+  min-width: 70vw;
+  margin-top: 1rem;
+  min-height: 14vh;
+  /* background-color: pink; */
 }
 
 .text100 {
@@ -344,15 +345,14 @@ input[type="radio"]#language_input {
 }
 
 /* FOR EMOJI ANIMATION  */
-.emojis_container_for_css{
+.emojis_container_for_css {
   display: flex;
   flex-direction: column;
   width: 100vw;
   align-items: center;
   margin-top: 4vh;
-
 }
-.emojis_container_for_css .textarea{
+.emojis_container_for_css .textarea {
   width: 50vw;
 }
 .containar {
@@ -360,6 +360,7 @@ input[type="radio"]#language_input {
   background-color: #ececec;
   border-radius: 1rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  min-height: 20vh;
   overflow: hidden;
   position: relative;
   max-width: 70vw;
@@ -1607,7 +1608,7 @@ th {
 .temp {
   margin-left: 49px;
 }
-.temp_btns{
+.temp_btns {
   display: flex;
   width: 100vw;
   align-items: center;
@@ -1731,7 +1732,7 @@ button {
   margin-right: 10px;
 }
 
-.sendOtp{
+.sendOtp {
   border: none;
   outline: none;
   padding: 8px;
@@ -1745,7 +1746,7 @@ button {
   max-width: 72vw;
   margin-right: 10px;
 }
-.submit_btn{
+.submit_btn {
   border: none;
   outline: none;
   padding: 8px;
@@ -1758,9 +1759,8 @@ button {
   min-width: 8vw;
   max-width: 72vw;
   margin-right: 10px;
-
 }
-.mobile_num_input>input{
+.mobile_num_input > input {
   max-width: 70vw;
   min-width: 70vw;
 }
@@ -1782,7 +1782,7 @@ input {
   border-radius: 9px;
   border: 1px solid gray;
 }
-.otp_input>input{
+.otp_input > input {
   min-width: 72vw;
 }
 
