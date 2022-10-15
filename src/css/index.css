@@ -99,7 +99,7 @@ input::-webkit-inner-spin-button {
 }
 
 input {
-  min-width: 70vw;
+  min-width: 80vw;
   border: none;
   outline: none;
   padding: 8px;
@@ -132,8 +132,9 @@ button {
   margin-top: 20px;
   border-radius: 8px;
   background: orange;
+  background : pink;
   /* max-width: 70vw; */
-  min-width: 70vw;
+  min-width: 40vw;
 }
 
 select {
@@ -1273,6 +1274,7 @@ button {
   margin-top: 20px;
   border-radius: 8px;
   min-width: 8vw;
+  max-width: 72vw;
   margin-right: 10px;
 }
 
@@ -1287,7 +1289,7 @@ input[type="number"] ::-webkit-inner-spin-button {
 }
 
 input {
-  min-width: 20vw;
+  min-width: 72vw;
   border: none;
   outline: none;
   padding: 8px;

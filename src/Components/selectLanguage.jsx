@@ -3,6 +3,11 @@ import { languages } from "../constants/language";
 import { useForm } from "react-hook-form";
 import { useSearchParams } from "react-router-dom";
 import EmojiSlider from "../Assets/emojiSlider";
+import hin from "../transalation/hin.json";
+import guj from "../transalation/hin.json";
+
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
 
 const SelectLanguage = ({
   selectedLanguage,
@@ -35,8 +40,43 @@ const SelectLanguage = ({
     // }
 
     onSelectLanguage(res.language);
+
+    if (res.language === "hn") {
+      i18n.changeLanguage("hn");
+    } else if (res.language === "gj") {
+      i18n.changeLanguage("gu");
+    } else {
+      i18n.changeLanguage("en");
+    }
+    localStorage.setItem("lang", JSON.stringify(res.language));
+
     onNext();
   };
+
+  i18n
+    .use(initReactI18next) // passes i18n down to react-i18next
+    .init({
+      // the translations
+      // (tip move them in a JSON file and import them,
+      // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
+      resources: {
+        en: {
+          translation: "en",
+        },
+        hn: {
+          translation: hin,
+        },
+        gj: {
+          translation: guj,
+        },
+      },
+      lng: "en", // if you're using a language detector, do not define the lng option
+      fallbackLng: "en",
+
+      interpolation: {
+        escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+      },
+    });
 
   return (
     <div className="data_container">
@@ -76,7 +116,7 @@ const SelectLanguage = ({
             Next
           </button>
         </form>
-          {/* <EmojiSlider /> */}
+        {/* <EmojiSlider /> */}
       </div>
     </div>
   );

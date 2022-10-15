@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import StartRatings from "../Assets/startRatings";
 import EmojiRating from "react-emoji-rating";
 import { questions1, questions2 } from "../constants/questions1";
+import { useTranslation, initReactI18next } from "react-i18next";
 
 const Feedback = ({
   onFinalSubmit,
@@ -46,6 +47,7 @@ const Feedback = ({
     console.log("emo3", emojiRating);
   };
 
+  const { t } = useTranslation();
   const renderCurrentFeedbackForm = (activeStep) => {
     switch (activeStep) {
       case 0:
@@ -53,7 +55,7 @@ const Feedback = ({
           <div class="questions_container">
             {questions1.map((item) => (
               <div class="question_container">
-                <p>{item.q}</p>
+                <p>{t(item.q)}</p>
                 {item.options.map((option) => (
                   <div class="option">
                     <input
@@ -63,7 +65,7 @@ const Feedback = ({
                       value={option.label}
                       {...register(item.name, { required: true })}
                     />
-                    <label htmlFor="ques">{option.label}</label>
+                    <label htmlFor="ques">{t(option.label)}</label>
                   </div>
                 ))}
               </div>
@@ -240,15 +242,15 @@ const Feedback = ({
     <div class="data_container">
       <div class="data_container_wrap">
         <div class="heading_auth">
-          <h2>Feedback Form</h2>
+          <h2>{t("Feedback Form")}</h2>
           <hr />
-          <p>Kindly enter the required fields of the form.</p>
+          <p>{t("Kindly enter the required fields of the form.")}</p>
         </div>
 
         <form onSubmit={handleSubmit(onRBSubmit)}>
           {renderCurrentFeedbackForm(step)}
           <button type="submit" class="next">
-            {step === 2 ? "Final Submit" : "Next"}
+            {step === 2 ? "Final Submit" : t("Next")}
           </button>
         </form>
       </div>
