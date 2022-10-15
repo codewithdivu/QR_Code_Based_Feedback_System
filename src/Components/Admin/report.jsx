@@ -1,5 +1,5 @@
 import React from "react";
-import LineChartConnectNulls from "../../Charts/LineChartConnectNulls";
+import SimpleLineChartReport from "../../Charts/simpleLineChartReport";
 
 const Report = () => {
   return (
@@ -8,7 +8,9 @@ const Report = () => {
         <p>Feedback Management System</p>
         <hr />
       </div>
-      <LineChartConnectNulls />
+      <div className="">
+        <SimpleLineChartReport />
+      </div>
     </div>
   );
 };
