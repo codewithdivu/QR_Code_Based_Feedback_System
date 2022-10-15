@@ -110,48 +110,54 @@ const Feedback = ({
       case 2:
         return (
           <>
-            <div className="containar containar__1">
-              <div className="wrapper">
-                <p className="text">How was the behaviour of the attendee ?</p>
+            <div className="emojis_container_for_css">
+              <div className="containar containar__1">
+                <div className="wrapper">
+                  <p className="text">
+                    How was the behaviour of the attendee ?
+                  </p>
 
-                <div className="emoji">
-                  <EmojiRating variant="classic" onChange={handleRating1} />
+                  <div className="emoji">
+                    <EmojiRating variant="classic" onChange={handleRating1} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="containar containar__1">
-              <div className="wrapper">
-                <p className="text">How would you rate the police station !</p>
-                <div className="emoji">
-                  <EmojiRating variant="classic" onChange={handleRating3} />
+              <div className="containar containar__1">
+                <div className="wrapper">
+                  <p className="text">
+                    How would you rate the police station !
+                  </p>
+                  <div className="emoji">
+                    <EmojiRating variant="classic" onChange={handleRating3} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="containar containar__1">
-              <div className="wrapper">
-                <p className="text">
-                  How would you explain the enviroment of police station ?
-                </p>
+              <div className="containar containar__1">
+                <div className="wrapper">
+                  <p className="text">
+                    How would you explain the enviroment of police station ?
+                  </p>
 
-                <div className="emoji">
-                  <EmojiRating variant="classic" onChange={handleRating3} />
+                  <div className="emoji">
+                    <EmojiRating variant="classic" onChange={handleRating3} />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="textarea">
-              <label htmlFor="">Review : </label>
-              <textarea
-                id=""
-                name="review"
-                rows="8"
-                cols="50"
-                class="textarea-input"
-                // {...register("review", { required: true })}
-                onChange={(e) => setReview(e.target.value)}
-                placeholder="Please review your experience in 300 characters.."
-              ></textarea>
-              {/* <EmojiRating variant="classic" onChange={handleEmoji} /> */}
+              <div className="textarea">
+                <label htmlFor="">Review : </label>
+                <textarea
+                  id=""
+                  name="review"
+                  rows="8"
+                  cols="50"
+                  class="textarea-input"
+                  // {...register("review", { required: true })}
+                  onChange={(e) => setReview(e.target.value)}
+                  placeholder="Please review your experience in 300 characters.."
+                ></textarea>
+                {/* <EmojiRating variant="classic" onChange={handleEmoji} /> */}
+              </div>
             </div>
           </>
         );
@@ -172,9 +178,11 @@ const Feedback = ({
 
         <form onSubmit={handleSubmit(onRBSubmit)}>
           {renderCurrentFeedbackForm(step)}
-          <button type="submit" class="next temp">
-            {step === 2 ? "Final Submit" : "Next"}
-          </button>
+          <div className="temp_btns">
+            <button type="submit" class="next temporary">
+              {step === 2 ? "Final Submit" : "Next"}
+            </button>
+          </div>
         </form>
       </div>
     </div>

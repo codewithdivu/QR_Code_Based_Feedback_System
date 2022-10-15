@@ -125,7 +125,7 @@ const LogIn = ({
             style={{ display: !flag ? "block" : "none" }}
           >
             <div className="mobile_num_label">
-              <label htmlFor="mobile_num" className="mobile_num">
+              <label htmlFor="mobile_num" className="mobile_num mobile_label">
                 {t("Enter mobile no :")}
               </label>
             </div>
