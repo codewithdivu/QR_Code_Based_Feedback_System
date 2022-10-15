@@ -102,42 +102,18 @@ const Feedback = ({
                 placeholder="Kindly explain your conflict in brief .."
               />
             </div>
-            {/* <StartRatings rating={rating} setRating={setRating} /> */}
+            <div className="question_container">
+              <StartRatings rating={rating} setRating={setRating} />
+            </div>
           </div>
         );
       case 2:
         return (
           <>
-            <div className="containar containar__1">
+            {/* <div className="containar containar__1">
               <div className="wrapper">
                 <p className="text">How was the behaviour of the attendee ?</p>
-                {/* <div className="emoji">
-                  <div className="emoji1">
-                    <button className="btn200">
-                      <h1 className="hedemoji">😞</h1>
-                    </button>{" "}
-                  </div>
-                  <div className="emoji2">
-                    <button className="btn200">
-                      <h1 className="hedemoji">☹️</h1>
-                    </button>
-                  </div>
-                  <div className="emoji3">
-                    <button className="btn200">
-                      <h1 className="hedemoji">🙂</h1>
-                    </button>
-                  </div>
-                  <div className="emoji4">
-                    <button className="btn200">
-                      <h1 className="hedemoji">😃</h1>
-                    </button>
-                  </div>
-                  <div className="emoji5">
-                    <button className="btn200">
-                      <h1 className="hedemoji">😍</h1>
-                    </button>
-                  </div>
-                </div> */}
+
                 <div className="emoji">
                   <EmojiRating variant="classic" onChange={handleRating1} />
                 </div>
@@ -146,36 +122,6 @@ const Feedback = ({
             <div className="containar containar__1">
               <div className="wrapper">
                 <p className="text">How would you rate the police station !</p>
-                {/* <div className="emoji">
-                  <div className="emoji1">
-                    <button className="btn200">
-                      <h1 className="hedemoji">😞</h1>
-                    </button>
-                  </div>
-                  <div className="emoji2">
-                    <button className="btn200">
-                      <h1 className="hedemoji">☹️</h1>
-                    </button>
-                  </div>
-                  <div className="emoji3">
-                    <button className="btn200">
-                      <h1 className="hedemoji">🙂</h1>
-                    </button>
-                  </div>
-                  <div className="emoji4">
-                    <button className="btn200">
-                      <h1 className="hedemoji">😃</h1>
-                    </button>
-                  </div>
-                  <div className="emoji5">
-                    <button className="btn200">
-                      <h1 className="hedemoji">😍</h1>
-                    </button>
-                  </div>
-                </div> */}
-                <div className="emoji">
-                  <EmojiRating variant="classic" onChange={handleRating2} />
-                </div>
               </div>
             </div>
             <div className="containar containar__1">
@@ -183,39 +129,13 @@ const Feedback = ({
                 <p className="text">
                   How would you explain the enviroment of police station ?
                 </p>
-                {/* <div className="emoji">
-                  <div className="emoji1">
-                    <button className="btn200">
-                      <h1 className="hedemoji">☹️</h1>
-                    </button>
-                  </div>
-                  <div className="emoji2">
-                    <button className="btn200">
-                      <h1 className="hedemoji">😞</h1>
-                    </button>
-                  </div>
-                  <div className="emoji3">
-                    <button className="btn200">
-                      <h1 className="hedemoji">🙂</h1>
-                    </button>
-                  </div>
-                  <div className="emoji4">
-                    <button className="btn200">
-                      <h1 className="hedemoji">😃</h1>
-                    </button>
-                  </div>
-                  <div className="emoji5">
-                    <button className="btn200">
-                      <h1 className="hedemoji">😍</h1>
-                    </button>
-                  </div>
-                </div> */}
+
                 <div className="emoji">
                   <EmojiRating variant="classic" onChange={handleRating3} />
                 </div>
               </div>
-            </div>
-            <div></div>
+            </div> */}
+
             <div className="textarea">
               <label htmlFor="">Review : </label>
               <textarea
@@ -249,7 +169,7 @@ const Feedback = ({
 
         <form onSubmit={handleSubmit(onRBSubmit)}>
           {renderCurrentFeedbackForm(step)}
-          <button type="submit" class="next">
+          <button type="submit" class="next temp">
             {step === 2 ? "Final Submit" : "Next"}
           </button>
         </form>

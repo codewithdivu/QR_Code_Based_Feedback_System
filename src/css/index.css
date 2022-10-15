@@ -33,7 +33,7 @@ body {
   /* background-color: pink; */
 }
 
-hr{
+hr {
   border-top: 3px solid orange;
   margin: 10px 0;
 }
@@ -59,7 +59,7 @@ hr{
   min-height: 40vh;
   /* max-width: 75vw; */
   display: flex;
-  flex-direction : column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -104,7 +104,7 @@ input::-webkit-inner-spin-button {
   margin-top: 8px;
 }
 
-input{
+input {
   min-width: 72vw;
   /* max-width: 72vw; */
   border: none;
@@ -139,7 +139,7 @@ button {
   margin-top: 20px;
   border-radius: 8px;
   background: orange;
-  background : pink;
+  background: pink;
   /* max-width: 70vw; */
   min-width: 40vw;
 }
@@ -264,13 +264,13 @@ input[type="radio"]#language_input {
   width: 70vw;
   height: 20vh;
 }
-.questions_container{
+.questions_container {
   /* background-color: red; */
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   /* padding-left: 20px; */
-  margin:20px;
+  margin: 20px;
 }
 
 /* ================= */
@@ -750,7 +750,7 @@ nav.close ~ .dashboard {
   justify-content: center;
   align-items: center;
 }
-hr{
+hr {
   border-top: 3px solid orange;
   margin: 10px 0;
   width: 70vw;
@@ -1171,7 +1171,7 @@ input[type="number"] ::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input{
+input {
   min-width: 72vw;
   /* max-width: 72vw; */
   border: none;
@@ -1305,7 +1305,7 @@ input[type="number"] ::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input{
+input {
   min-width: 72vw;
   /* max-width: 72vw; */
   border: none;
@@ -1547,7 +1547,7 @@ nav.close ~ .reports {
   justify-content: center;
   align-items: center;
 }
-hr{
+hr {
   border-top: 3px solid orange;
   margin: 10px 0;
   width: 70vw;
@@ -1603,3 +1603,56 @@ th {
   padding: 0 30px;
   font-size: 12px;
 }
+
+#start {
+  /* display: flex; */
+  max-width: 0;
+  margin: 0px;
+  min-width: 1vw;
+  padding-right: 25px;
+
+  /* border: none;
+  outline: none;
+  padding: 8px;
+  color: white;
+  background-color: orange;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  min-width: 8vw;
+  max-width: 70vw;
+  min-width: 72vw;
+  margin-right: 10px; */
+}
+
+.temp {
+  margin-left: 42px;
+}
+
+/* // THANK YOU PAGE  */
+.thankyou_data_detail{
+  display: flex;
+  height: 20vh;
+  /* background-color: red; */
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+
+}
+.bold{
+  font-weight: 600;
+}
+.thanks_data{
+font-weight: 600;
+font-size: 27px;
+margin-bottom: 20px;
+}
+.minor{
+font-size: 20px;
+padding-bottom: 10px;
+}
+.citizen_app{
+  margin-top: 20px;
+  font-size: 20px;
+ }
