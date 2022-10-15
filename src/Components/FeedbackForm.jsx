@@ -114,7 +114,8 @@ const Feedback = ({
               <div className="containar containar__1">
                 <div className="wrapper">
                   <p className="text">
-                    How was the behaviour of the attendee ?
+                    How would you rate the language tone used by the policemen
+                    with you?
                   </p>
 
                   <div className="emoji">
@@ -125,7 +126,8 @@ const Feedback = ({
               <div className="containar containar__1">
                 <div className="wrapper">
                   <p className="text">
-                    How would you rate the police station !
+                    How would you rate the attentiveness of the policemen
+                    towards your complaints?
                   </p>
                   <div className="emoji">
                     <EmojiRating variant="classic" onChange={handleRating3} />
@@ -135,7 +137,19 @@ const Feedback = ({
               <div className="containar containar__1">
                 <div className="wrapper">
                   <p className="text">
-                    How would you explain the enviroment of police station ?
+                    How would you rate cleanliness of the Police Station?
+                  </p>
+
+                  <div className="emoji">
+                    <EmojiRating variant="classic" onChange={handleRating3} />
+                  </div>
+                </div>
+              </div>
+              <div className="containar containar__1">
+                <div className="wrapper">
+                  <p className="text">
+                    How Would you rate the Overall experience of the police
+                    station?
                   </p>
 
                   <div className="emoji">
