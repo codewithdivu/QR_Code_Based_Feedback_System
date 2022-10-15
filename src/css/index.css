@@ -1537,3 +1537,49 @@ hr {
   font-weight: 500;
   color: var(--text-color);
 }
+
+/* // charts  */
+
+.twocharts {
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  /* background-color: orange; */
+  align-items: center;
+  justify-content: center;
+}
+
+.table {
+  display: flex;
+  align-items: center;
+  height: 40vh;
+  width: 39vw;
+  /* border: 3px solid; */
+  border-radius: 11px;
+}
+
+table {
+  border-collapse: collapse;
+  /* border: solid black; */
+  /* border: 1px solid rgba(255, 166, 0, 0.566); */
+  border-radius: 20px;
+  height: 30vh;
+  width: 33vw;
+}
+
+td {
+  padding: 3px;
+  height: 10px;
+  border: 1px solid rgba(255, 166, 0, 0.566);
+  text-align: center;
+  font-size: 11px;
+  background-color: rgba(255, 166, 0, 0.244);
+}
+
+th {
+  background-color: rgba(255, 166, 0, 0.566);
+  /* background-color: orange; */
+  height: 40px;
+  padding: 0 30px;
+  font-size: 12px;
+}
