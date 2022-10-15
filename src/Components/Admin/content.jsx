@@ -15,7 +15,7 @@ const Content = () => {
 
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-
+  const d = new Date();
   return (
     <>
       <section className="dashboard" id="12">
@@ -39,12 +39,21 @@ const Content = () => {
               <div className="box box2">
                 <i className="fa fa-solid fa-bicycle"></i>
                 <span className="text">Today's Reviews</span>
-                <span className="number">20,120</span>
+                <span className="number">
+                  {data?.filter(
+                    (item) => item?.createdAt?.toDate()?.getDay() === d.getDay()
+                  )?.length || 0}
+                </span>
               </div>
               <div className="box box3">
                 <i className="fa-solid fa-car"></i>
-                <span className="text">Last Month Reviews </span>
-                <span className="number">10,120</span>
+                <span className="text">This Month Reviews </span>
+                <span className="number">
+                  {data?.filter(
+                    (item) =>
+                      item?.createdAt?.toDate()?.getMonth() == d.getMonth()
+                  )?.length || 0}
+                </span>
               </div>
             </div>
           </div>
