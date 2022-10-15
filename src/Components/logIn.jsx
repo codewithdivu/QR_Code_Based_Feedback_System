@@ -53,6 +53,9 @@ const LogIn = ({
       setFlag(true);
       isLoading(false);
     } catch (err) {
+      if (err) {
+        alert("please enter valid Mobile Number");
+      }
       setError(err.message);
       isLoading(false);
     }
@@ -64,10 +67,14 @@ const LogIn = ({
     isLoading(true);
     try {
       await result.confirm(otp);
+
       console.log("bhai tame authenticate thay gaya chho");
       isLoading(false);
       onNext();
     } catch (err) {
+      if (err) {
+        alert("please enter valid OTP");
+      }
       isLoading(false);
       setError(err.message);
     }
@@ -95,7 +102,7 @@ const LogIn = ({
             <div className="mobile_num_input">
               <input
                 type="tel"
-                placeholder="9999999999"
+                placeholder="Enter 10-digit Mobile Number"
                 name="mobile_num"
                 {...register("mobile_num", {
                   required: "Mobile number  is required.",

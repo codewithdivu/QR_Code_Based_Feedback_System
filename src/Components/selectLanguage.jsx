@@ -30,9 +30,9 @@ const SelectLanguage = ({
       police: station,
     });
 
-    if (!district && !taluka && !station) {
-      return alert("please there is issues....");
-    }
+    // if (!district && !taluka && !station) {
+    //   return alert("please there is issues....");
+    // }
 
     onSelectLanguage(res.language);
     onNext();
