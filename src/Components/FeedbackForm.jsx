@@ -110,7 +110,7 @@ const Feedback = ({
       case 2:
         return (
           <>
-            {/* <div className="containar containar__1">
+            <div className="containar containar__1">
               <div className="wrapper">
                 <p className="text">How was the behaviour of the attendee ?</p>
 
@@ -122,6 +122,9 @@ const Feedback = ({
             <div className="containar containar__1">
               <div className="wrapper">
                 <p className="text">How would you rate the police station !</p>
+                <div className="emoji">
+                  <EmojiRating variant="classic" onChange={handleRating3} />
+                </div>
               </div>
             </div>
             <div className="containar containar__1">
@@ -134,7 +137,7 @@ const Feedback = ({
                   <EmojiRating variant="classic" onChange={handleRating3} />
                 </div>
               </div>
-            </div> */}
+            </div>
 
             <div className="textarea">
               <label htmlFor="">Review : </label>
