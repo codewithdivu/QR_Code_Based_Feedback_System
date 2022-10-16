@@ -109,7 +109,96 @@ const Content = () => {
                 </div>
               )}
             </div>
-            <div className="activity-data"></div>
+            <div className="activity-data">
+              {taluka && (
+                <table className="styled-table">
+                  <thead>
+                    <tr>
+                      <th>Mobile Number</th>
+                      <th>Ratings</th>
+                      <th>District</th>
+                      <th>Taluka</th>
+                      <th>Police_Station</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data
+                      ?.filter(
+                        (x) => x?.selectedPoliceStation?.taluka === taluka
+                      )
+                      ?.map((item) => (
+                        <tr>
+                          {/* <tr className="active-row"> */}
+                          <td>{item?.phoneNumber}</td>
+                          <td>{item?.rating}</td>
+                          <td>
+                            {item?.selectedPoliceStation?.district
+                              ?.split("_")
+                              .join(" ")}
+                          </td>
+                          <td>
+                            {item?.selectedPoliceStation?.taluka
+                              ?.split("_")
+                              .join(" ")}
+                          </td>
+                          <td>
+                            {item?.selectedPoliceStation?.police
+                              ?.split("_")
+                              .join(" ")}
+                          </td>
+                          <td>{item?.createdAt?.toDate().toDateString()}</td>
+                          {/* <td>{item?.createdAt?.toDate()?.getDay()}</td> */}
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              )}
+            </div>
+            {taluka && (
+              <div className="extra_data">
+                <div className="boxes">
+                  <div className="box box1">
+                    <i className="fa fa-solid fa-jet-fighter-up  fa1"></i>
+                    <span className="text text1">Positive Reviews</span>
+                    <span className="number number1">
+                      {
+                        data
+                          ?.filter(
+                            (x) => x?.selectedPoliceStation?.taluka === taluka
+                          )
+                          .filter((item) => item?.rating >= 4)?.length
+                      }
+                    </span>
+                  </div>
+                  <div className="box box2">
+                    <i className="fa fa-solid fa-bicycle  fa2"></i>
+                    <span className="text text2">Negative Reviews</span>
+                    <span className="number number2">
+                      {
+                        data
+                          ?.filter(
+                            (x) => x?.selectedPoliceStation?.taluka === taluka
+                          )
+                          .filter((item) => item?.rating <= 3)?.length
+                      }
+                    </span>
+                  </div>
+                  <div className="box box3">
+                    <i className="fa-solid fa-car  fa3 "></i>
+                    <span className="text text3">Total Reviews </span>
+                    <span className="number number3">
+                      {
+                        data?.filter(
+                          (x) => x?.selectedPoliceStation?.taluka === taluka
+                        ).length
+                      }
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* calendar wise  */}
 
             <div className="title">
