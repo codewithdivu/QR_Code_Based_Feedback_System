@@ -51,8 +51,8 @@ const Table = ({ dataFile }) => {
             </td>
             <td>{item?.selectedPoliceStation?.taluka?.split("_").join(" ")}</td>
             <td>{item?.selectedPoliceStation?.police?.split("_").join(" ")}</td>
-            {/* <td>{item?.createdAt?.toDate().toDateString()}</td> */}
-            <td>{item?.createdAt?.toDate()?.getDay()}</td>
+            <td>{item?.createdAt?.toDate().toDateString()}</td>
+            {/* <td>{item?.createdAt?.toDate()?.getDay()}</td> */}
           </tr>
         ))}
       </tbody>
