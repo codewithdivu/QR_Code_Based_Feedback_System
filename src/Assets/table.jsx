@@ -4,42 +4,43 @@ import { collections } from "../firebase/collections";
 import { useFireStore } from "../hooks";
 
 const Table = ({ dataFile }) => {
-  const { data, isLoading } = useFireStore(collections.USERS);
-  const [tableData, setTableData] = useState(data);
+  // const { data, isLoading } = useFireStore(collections.USERS);
+  // const [newData, setNewData] = useState(dataFile.slice(0, 15));
+  const [tableData, setTableData] = useState(dataFile);
+  const [order, setOrder] = useState('ASC');
 
-  const handlePhone = () => {
-    setTableData(data.sort((a, b) => (a.phoneNumber > b.phoneNumber ? 1 : -1)));
-  };
-  const handleRating = () => {
-    setTableData(data.sort((a, b) => (a.rating > b.rating ? 1 : -1)));
-  };
+  const sorting = (col) => {
+    if (order === 'ASC') {
+      const sorted = [...tableData]?.sort((a, b) => a[col]?.toLowerCase() > b[col]?.toLowerCase() ? 1 : -1);
+      setTableData(sorted);
+      setOrder('DSC');
+    }
+    if (order === 'DSC') {
+      const sorted = [...tableData]?.sort((a, b) => a[col]?.toLowerCase() < b[col]?.toLowerCase() ? 1 : -1);
+      setTableData(sorted);
+      setOrder('ASC');
+    }
+  }
 
-  const handleDist = () => {
-    setTableData(data.sort((a, b) => a.district.compare(b.district)));
-  };
-
-  const handleTaluka = () => {
-    setTableData(data.sort((a, b) => a.taluka.compare(b.taluka)));
-  };
-  const handleStation = () => {
-    setTableData(data.sort((a, b) => a.station.compare(b.station)));
-  };
+  const handleSort = () => {
+    console.log('sorted...')
+  }
 
   return (
     <table className="styled-table">
       <thead>
         <tr>
-          <th onClick={handlePhone}>Mobile Number</th>
-          <th onClick={handleRating}>Ratings</th>
-          <th onClick={handleDist}>District</th>
-          <th onClick={handleTaluka}>Taluka</th>
-          <th onClick={handleStation}>Police_Station</th>
+          <th onClick={() => handleSort('phoneNumber')}>Mobile Number</th>
+          <th onClick={() => handleSort("rating")}>Ratings</th>
+          <th onClick={() => handleSort("district")}>District</th>
+          <th onClick={() => handleSort("taluka")}>Taluka</th>
+          <th onClick={() => handleSort("police")}>Police_Station</th>
           <th>Date</th>
         </tr>
       </thead>
       <tbody>
         {tableData?.map((item) => (
-          <tr>
+          <tr >
             {/* <tr className="active-row"> */}
             <td>{item?.phoneNumber}</td>
             <td>{item?.rating}</td>

@@ -321,6 +321,7 @@ input[type="radio"]#language_input {
   min-width: 70vw;
   margin-top: 1rem;
   min-height: 14vh;
+  padding: 10px;
   /* background-color: pink; */
 }
 
@@ -360,12 +361,13 @@ input[type="radio"]#language_input {
   background-color: #ececec;
   border-radius: 1rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
-  min-height: 20vh;
+  min-height: 24vh;
+
   overflow: hidden;
   position: relative;
   max-width: 70vw;
   height: 18vh;
-  padding: 6px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   margin-top: 15px;
