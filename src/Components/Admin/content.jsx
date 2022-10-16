@@ -123,6 +123,11 @@ const Content = () => {
                 </thead>
                 <tbody>
                   {data
+                    .sort(
+                      (a, b) =>
+                        new Date(b.item?.createdAt?.toDate()) -
+                        new Date(a.item?.createdAt?.toDate())
+                    )
                     ?.filter((x) => x?.selectedPoliceStation?.taluka === taluka)
                     ?.map((item) => (
                       <tr>
