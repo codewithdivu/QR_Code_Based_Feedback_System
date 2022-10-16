@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Table from "../../Assets/table";
 import TableStation from "../../Assets/tableStation";
@@ -6,6 +6,7 @@ import { dk, newData } from "../../constants/districts";
 import { collections } from "../../firebase/collections";
 import { useFireStore } from "../../hooks";
 import Navbar from "./adminPortal/navbar";
+import moment from "moment-mini";
 
 const Content = () => {
   const { data, isLoading } = useFireStore(collections.USERS);
@@ -17,8 +18,35 @@ const Content = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const d = new Date();
+  const [extractData, setExtractData] = useState([]);
 
-  const [extractArray, setExtractArray] = useState([]);
+  useEffect(() => {
+    setExtractData(data);
+  }, [data]);
+
+  const handleExtract = () => {
+    // console.log("extracting....");
+    // extractData.sort(function compare(a, b) {
+    //   var dateA = new Date(a.date);
+    //   var dateB = new Date(b.date);
+    //   return dateA - dateB;
+    // });
+    const newData = extractData.filter(
+      (item) =>
+        moment(item.createdAt.toDate()).format("MMM DD YYYY") >
+          moment(startDate).format("MMM DD YYYY") &&
+        moment(item.createdAt.toDate()).format("MMM DD YYYY") <
+          moment(endDate).format("MMM DD YYYY")
+    );
+    setExtractData(newData);
+    console.log("newData", newData);
+    console.log("startDate :>> ", moment(startDate).format("MMM DD YYYY"));
+    console.log("endDate", moment(endDate).format("MMM DD YYYY"));
+    console.log(
+      "extractData :>> ",
+      moment(extractData[0].createdAt.toDate()).format("MMM DD YYYY")
+    );
+  };
 
   return (
     <>
@@ -225,11 +253,13 @@ const Content = () => {
             </div>
 
             <div className="download_btn btn">
-              <button className="extract_data_btn">Extract Data</button>
+              <button onClick={handleExtract} className="extract_data_btn">
+                Extract Data
+              </button>
             </div>
 
             <div className="activity-data">
-              <Table dataFile={data} />
+              {extractData && <Table dataFile={extractData} />}
             </div>
           </div>
         </div>

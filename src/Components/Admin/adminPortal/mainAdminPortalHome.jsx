@@ -1,14 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Table from "../../../Assets/table";
 import { collections } from "../../../firebase/collections";
 import { getAllUsers, getUsers } from "../../../firebase/services";
 import { useFireStore } from "../../../hooks";
 import Navbar from "./navbar";
+import _ from "lodash";
 
 const MainAdminPortalHome = () => {
   const { data, isLoading } = useFireStore(collections.USERS);
   const { negative, setNegative } = useState(0);
+  const [newLoadedData, setNewLoadedData] = useState([]);
+
+  const [order, setOrder] = useState("ASC");
+
+  useEffect(() => {
+    setNewLoadedData(data);
+  }, [data]);
+
+  const handleSort = (col) => {
+    if (order === "ASC") {
+      const sorted = _.orderBy(data, [col], ["asc"]);
+      setNewLoadedData(sorted);
+      console.log("sorted", sorted);
+      setOrder("DSC");
+    }
+    if (order === "DSC") {
+      const sorted = _.orderBy(data, [col], ["dsc"]);
+      setNewLoadedData(sorted);
+      console.log("sorted", sorted);
+      setOrder("ASC");
+    }
+  };
 
   console.log("data,isLoading", data, isLoading);
   return (
@@ -57,7 +80,7 @@ const MainAdminPortalHome = () => {
             </div>
 
             <div className="activity-data">
-              <Table dataFile={data} />
+              <Table handleSort={handleSort} dataFile={newLoadedData} />
             </div>
           </div>
         </div>
