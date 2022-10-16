@@ -41,7 +41,7 @@ const Table = ({ dataFile }) => {
         </tr>
       </thead>
       <tbody>
-        {dataFile?.map((item) => (
+        {dataFile?.slice(0, 10)?.map((item) => (
           <tr>
             {/* <tr className="active-row"> */}
             <td>{item?.phoneNumber}</td>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Table from "../../Assets/table";
+import TableStation from "../../Assets/tableStation";
 import { dk, newData } from "../../constants/districts";
 import { collections } from "../../firebase/collections";
 import { useFireStore } from "../../hooks";
@@ -16,6 +17,9 @@ const Content = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const d = new Date();
+
+  const [extractArray, setExtractArray] = useState([]);
+
   return (
     <>
       <section className="dashboard" id="12">
@@ -36,7 +40,6 @@ const Content = () => {
                 <span className="text">Total Reviews</span>
                 <span className="number">{data?.length}</span>
               </div>
-              
             </div>
           </div>
           <div className="activity">
@@ -106,7 +109,48 @@ const Content = () => {
                 </div>
               )}
             </div>
-
+            <div className="activity-data">
+              <table className="styled-table">
+                <thead>
+                  <tr>
+                    <th>Mobile Number</th>
+                    <th>Ratings</th>
+                    <th>District</th>
+                    <th>Taluka</th>
+                    <th>Police_Station</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data
+                    ?.filter((x) => x?.selectedPoliceStation?.taluka === taluka)
+                    ?.map((item) => (
+                      <tr>
+                        {/* <tr className="active-row"> */}
+                        <td>{item?.phoneNumber}</td>
+                        <td>{item?.rating}</td>
+                        <td>
+                          {item?.selectedPoliceStation?.district
+                            ?.split("_")
+                            .join(" ")}
+                        </td>
+                        <td>
+                          {item?.selectedPoliceStation?.taluka
+                            ?.split("_")
+                            .join(" ")}
+                        </td>
+                        <td>
+                          {item?.selectedPoliceStation?.police
+                            ?.split("_")
+                            .join(" ")}
+                        </td>
+                        <td>{item?.createdAt?.toDate().toDateString()}</td>
+                        {/* <td>{item?.createdAt?.toDate()?.getDay()}</td> */}
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
             {/* calendar wise  */}
 
             <div className="title">
