@@ -5,7 +5,7 @@ import QuestionTable from "../../Charts/questionTable";
 import { questions } from "../../constants/questions";
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from "recharts";
 import PieChartWithCustomizedLabel from "../../Charts/PieChartWithCustomizedLabel";
-import { data1, data2 } from "../../constants/newConstans";
+import { data1, data2, data4, data5 } from "../../constants/newConstans";
 
 const Analysis = () => {
   return (
@@ -20,7 +20,6 @@ const Analysis = () => {
             <i className="fa fa-solid fa-magnifying-glass-chart"></i>
             <span className="text">Analytics</span>
           </div>
-          {/* <div>Graphs</div> */}
           <div className="charts">
             <div className="twocharts">
               <div className="chart" id="Piecharts">
@@ -109,9 +108,10 @@ const Analysis = () => {
                 </table>
               </div>
             </div>
-            {/* <div className="twocharts">
+            <div className="twocharts">
               <div className="chart">
                 <PieChartWithCustomizedLabel
+                  data={data2}
                   questions={
                     "  How would you rate the cleanliness of the Police Station ?"
                   }
@@ -155,6 +155,7 @@ const Analysis = () => {
             <div className="twocharts">
               <div className="chart">
                 <PieChartWithCustomizedLabel
+                  data={data4}
                   questions={
                     "  How would you rate the language tone used by the policemen with you ?"
                   }
@@ -173,11 +174,11 @@ const Analysis = () => {
                   <tbody>
                     <tr>
                       <td>One Star</td>
-                      <td>12</td>
+                      <td>4</td>
                     </tr>
                     <tr>
                       <td>Two Star</td>
-                      <td>10</td>
+                      <td>11</td>
                     </tr>
                     <tr>
                       <td>Three Star</td>
@@ -185,7 +186,7 @@ const Analysis = () => {
                     </tr>
                     <tr>
                       <td>Four Star</td>
-                      <td>8</td>
+                      <td>14</td>
                     </tr>
                     <tr>
                       <td>Five Star</td>
@@ -198,6 +199,7 @@ const Analysis = () => {
             <div className="twocharts">
               <div className="chart">
                 <PieChartWithCustomizedLabel
+                  data={data5}
                   questions={
                     " How would you rate the overall experience at Police Station ?"
                   }
@@ -216,28 +218,28 @@ const Analysis = () => {
                   <tbody>
                     <tr>
                       <td>One Star</td>
-                      <td>12</td>
+                      <td>0</td>
                     </tr>
                     <tr>
                       <td>Two Star</td>
-                      <td>10</td>
+                      <td>2</td>
                     </tr>
                     <tr>
                       <td>Three Star</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>Four Star</td>
                       <td>8</td>
                     </tr>
                     <tr>
+                      <td>Four Star</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
                       <td>Five Star</td>
-                      <td>10</td>
+                      <td>12</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
