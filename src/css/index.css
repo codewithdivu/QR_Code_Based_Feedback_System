@@ -1934,4 +1934,16 @@ input {
   max-width: 18vw;
   margin-top: 10px;
   margin-right: 30px;
+  margin-left: 57px;
+}
+#qr-code{
+  margin-left: 65px;
+}
+.qr_generation{
+  display: flex;
+  flex-direction: column;
+  /* background-color: rebeccapurple; */
+  max-height: 70vh;
+  align-items: center;
+  justify-content: center;
 }

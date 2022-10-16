@@ -77,17 +77,24 @@ const GenerateQRcode = () => {
           <hr />
         </div>
         <div class="dash-content">
-          <div class="qr_image_container">
+        <div className="overview">
+          <div className="title">
+          <i class=" fa fa-solid fa-qrcode"></i>
+                      <span className="text">Generate QR Code</span>
+          </div>
+          
+      </div>
+          {/* <div class="qr_image_container">
             <div class="qr_image">
               <img src="/images/police.jpg" alt="" />
             </div>
-            {/* <div class="download_btn btn">
-              <button>Download QR</button>
-            </div> */}
-          </div>
+            
+          </div> */}
 
           {/* // fetching qr codes  */}
           {/* <Table2 dataFile={data} /> */}
+
+          <div className="qr_generation">
           <form onSubmit={handleSubmit}>
             <div className="district">
               <select
@@ -156,7 +163,7 @@ const GenerateQRcode = () => {
                 >
                   Download QR
                 </button>
-                {qrValue && (
+                {/* {qrValue && (
                   <button
                     className="sendOtp generateQR disable"
                     disabled={isSaving}
@@ -164,7 +171,7 @@ const GenerateQRcode = () => {
                   >
                     {isSaving ? "Saving..." : "Save QR Code"}
                   </button>
-                )}
+                )} */}
               </>
             ) : (
               <button className="sendOtp generateQR" type="submit" disabled={!station}>
@@ -172,6 +179,7 @@ const GenerateQRcode = () => {
               </button>
             )}
           </form>
+        </div>
         </div>
       </section>
     </>

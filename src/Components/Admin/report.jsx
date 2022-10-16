@@ -9,6 +9,16 @@ const Report = () => {
         <hr />
       </div>
       {/* div.dash */}
+       <div className="dash-content">
+        <div className="overview">
+          <div className="title">
+          <i class="fa-solid fa-chart-pie"></i>
+            <span className="text">Monthly Report</span>
+          </div>
+          
+        </div>
+      </div>
+      
       <div className="">
         <SimpleLineChartReport />
       </div>
