@@ -32,7 +32,7 @@ const Table = ({ dataFile, handleSort }) => {
         </tr>
       </thead>
       <tbody>
-        {dataFile?.map((item) => (
+        {dataFile?.slice(0, 15)?.map((item) => (
           <tr>
             {/* <tr className="active-row"> */}
             <td>{item?.phoneNumber}</td>

@@ -31,12 +31,12 @@ export const sideBarMenuItems = [
     icon: "fa fa-solid fa-qrcode",
     path: "/admin/generateQR",
   },
-  // {
-  //   id: 5,
-  //   label: "Add User",
-  //   icon: "fa-solid fa-user",
-  //   path: "/auth/signup",
-  // },
+  {
+    id: 8,
+    label: "Add Police Station",
+    icon: "fa-solid fa-user",
+    path: "/admin/addPoliceStation",
+  },
   // {
   //   id: 6,
   //   label: "Change Password",

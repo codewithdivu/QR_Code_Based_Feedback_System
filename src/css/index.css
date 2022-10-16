@@ -849,13 +849,13 @@ hr {
   color: var(--text-color);
 }
 .boxes .box.box1{
-  background-color: pink;
+  background-color: #a3e09c
 }
 .boxes .box.box2 {
-  background-color: var(--theme-color);
+  background-color: #f59696;
 }
 .boxes .box.box3 {
-  background-color: turquoise;
+  background-color: #f0e079;
 }
 .box {
   box-shadow: rgba(0, 0, 0, 0.01) 0px 54px 55px,
@@ -1389,19 +1389,19 @@ input {
 .text1,
 .number1,
 .fa1 {
-  background: pink;
+  background: #a3e09c
 }
 
 .text2,
 .number2,
 .fa2 {
-  background: var(--theme-color);
+  background: #f59696;
 }
 
 .text3,
 .number3,
 .fa3 {
-  background: turquoise;
+  background: #f0e079;
 }
 
 .star-rating {
@@ -1946,4 +1946,19 @@ input {
   max-height: 70vh;
   align-items: center;
   justify-content: center;
+}
+.addPoliceStationn{
+  min-width: 25vw;
+  margin-top: 10px;
+}
+.work{
+  height: 60vh;
+  width: 70vw;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.work_btn{
+  max-width: 25vw;
 }

@@ -16,6 +16,7 @@ import { useAuth } from "./hooks";
 import { AdminDashboardLayout, AuthLayout } from "./layouts";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
+import AddPoliceStation from "./Components/Admin/AddPoliceStation";
 
 const App = () => {
   const { user, isLoading } = useAuth();
@@ -65,6 +66,7 @@ const App = () => {
           <Route path="changePassword" element={<ChangePassword />} />
           <Route path="content" element={<Content />} />
           <Route path="generateQR" element={<GenerateQRcode />} />
+          <Route path="addPoliceStation" element={<AddPoliceStation />} />
           <Route path="report" element={<Report />} />
         </Route>
         <Route
