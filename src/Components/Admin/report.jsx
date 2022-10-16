@@ -8,7 +8,7 @@ const Report = () => {
         <p>Feedback Management System</p>
         <hr />
       </div>
-      div.dash
+      {/* div.dash */}
       <div className="">
         <SimpleLineChartReport />
       </div>
