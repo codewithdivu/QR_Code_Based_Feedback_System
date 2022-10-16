@@ -5,6 +5,7 @@ import QuestionTable from "../../Charts/questionTable";
 import { questions } from "../../constants/questions";
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from "recharts";
 import PieChartWithCustomizedLabel from "../../Charts/PieChartWithCustomizedLabel";
+import { data1, data2 } from "../../constants/newConstans";
 
 const Analysis = () => {
   return (
@@ -24,6 +25,7 @@ const Analysis = () => {
             <div className="twocharts">
               <div className="chart" id="Piecharts">
                 <PieChartWithCustomizedLabel
+                  data={data1}
                   questions={
                     "After how much time you were heard in Police Station ?"
                   }
@@ -66,6 +68,7 @@ const Analysis = () => {
             <div className="twocharts">
               <div className="chart">
                 <PieChartWithCustomizedLabel
+                  data={data2}
                   questions={
                     " How would you rate the attentiveness of the policemen towards your complaints?"
                   }
@@ -106,7 +109,7 @@ const Analysis = () => {
                 </table>
               </div>
             </div>
-            <div className="twocharts">
+            {/* <div className="twocharts">
               <div className="chart">
                 <PieChartWithCustomizedLabel
                   questions={
@@ -234,7 +237,7 @@ const Analysis = () => {
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
