@@ -25,7 +25,10 @@ const FeedBackSystem = () => {
   const [rating, setRating] = useState(0);
   //textReview
   const [review, setReview] = useState("");
-  console.log("weigtht_review", review);
+  // EMOJI REVIEW
+  const [emojis, setEmojis] = useState("");
+
+  console.log("final emojis", emojis);
 
   //selected police station object
   const [selectedPoliceStation, setSelectedPoliceStation] = useState({
@@ -119,6 +122,8 @@ const FeedBackSystem = () => {
             setRating={setRating}
             review={review}
             setReview={setReview}
+            emojis={emojis}
+            setEmojis={setEmojis}
           />
         );
       case 3:

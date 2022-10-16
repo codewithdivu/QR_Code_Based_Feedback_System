@@ -321,6 +321,7 @@ input[type="radio"]#language_input {
   min-width: 70vw;
   margin-top: 1rem;
   min-height: 14vh;
+  padding: 10px;
   /* background-color: pink; */
 }
 
@@ -360,12 +361,13 @@ input[type="radio"]#language_input {
   background-color: #ececec;
   border-radius: 1rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
-  min-height: 20vh;
+  min-height: 24vh;
+
   overflow: hidden;
   position: relative;
   max-width: 70vw;
   height: 18vh;
-  padding: 6px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   margin-top: 15px;
@@ -845,6 +847,9 @@ hr {
   font-size: 40px;
   font-weight: 500;
   color: var(--text-color);
+}
+.boxes .box.box1{
+  background-color: pink;
 }
 .boxes .box.box2 {
   background-color: var(--theme-color);
@@ -1885,4 +1890,48 @@ input {
   font-weight: bold;
   /* color: #009879; */
   color: orange;
+}
+.styled-table{
+  min-width: 75vw;
+  margin-top: 0px;
+}
+.title.margin_title{
+  padding: 15px 0;
+}
+.boxes.boxes_content{
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+.extract_data_btn{
+  border: none;
+  outline: none;
+  padding: 8px;
+  color: white;
+  background-color: orange;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  min-width: 8vw;
+  max-width: 18vw;
+  margin-right: 10px;
+
+}
+.sendOtp.generateQR{
+  border: none;
+  outline: none;
+  padding: 8px;
+  color: white;
+  background-color: orange;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  min-width: 8vw;
+  max-width: 18vw;
+  margin-top: 10px;
+  margin-right: 30px;
 }

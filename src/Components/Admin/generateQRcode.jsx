@@ -150,7 +150,7 @@ const GenerateQRcode = () => {
             {qrValue ? (
               <>
                 <button
-                  className="sendOtp"
+                  className="sendOtp generateQR disable"
                   disabled={!qrValue}
                   onClick={downloadQR}
                 >
@@ -158,7 +158,7 @@ const GenerateQRcode = () => {
                 </button>
                 {qrValue && (
                   <button
-                    className="sendOtp"
+                    className="sendOtp generateQR disable"
                     disabled={isSaving}
                     onClick={saveQrCode}
                   >
@@ -167,7 +167,7 @@ const GenerateQRcode = () => {
                 )}
               </>
             ) : (
-              <button className="sendOtp" type="submit" disabled={!station}>
+              <button className="sendOtp generateQR" type="submit" disabled={!station}>
                 Generate QR
               </button>
             )}

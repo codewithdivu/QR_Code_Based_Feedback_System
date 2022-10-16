@@ -14,8 +14,11 @@ const Feedback = ({
   setRating,
   review,
   setReview,
+  emojis,
+  setEmojis
 }) => {
   const [step, setStep] = useState(0);
+  const [emojiArray, setEmojisArray] = useState([]);
   const {
     register,
     handleSubmit,
@@ -33,18 +36,27 @@ const Feedback = ({
 
   const onRBSubmit = (res) => {
     // console.log("dropdown bhai", res);
+    setEmojis(emojiArray);
     setQuestions({ res });
     handleNext();
   };
 
   const handleRating1 = (emojiRating) => {
-    console.log("emo1", emojiRating);
+    // console.log("emo1", emojiRating);
+    setEmojisArray(...emojiArray, emojiRating);
+
   };
   const handleRating2 = (emojiRating) => {
     console.log("emo2", emojiRating);
+    setEmojisArray(...emojiArray, emojiRating);
   };
   const handleRating3 = (emojiRating) => {
+    setEmojisArray(...emojiArray, emojiRating);
     console.log("emo3", emojiRating);
+  };
+  const handleRating4 = (emojiRating) => {
+    setEmojisArray(...emojiArray, emojiRating);
+    console.log("emo4", emojiRating);
   };
 
   const { t } = useTranslation();

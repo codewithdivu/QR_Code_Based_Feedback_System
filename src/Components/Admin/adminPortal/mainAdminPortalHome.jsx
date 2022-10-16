@@ -51,7 +51,7 @@ const MainAdminPortalHome = () => {
           </div>
 
           <div className="activity">
-            <div className="title">
+            <div className="title margin_title">
               <i className="fa fa-solid fa-clock"></i>
               <span className="text">Recent Activity</span>
             </div>

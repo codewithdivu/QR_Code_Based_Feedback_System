@@ -30,31 +30,13 @@ const Content = () => {
               <span className="text">Content Overview</span>
             </div>
 
-            <div className="boxes">
+            <div className="boxes boxes_content">
               <div className="box box1">
                 <i className="fa fa-solid fa-jet-fighter-up"></i>
                 <span className="text">Total Reviews</span>
                 <span className="number">{data?.length}</span>
               </div>
-              <div className="box box2">
-                <i className="fa fa-solid fa-bicycle"></i>
-                <span className="text">Today's Reviews</span>
-                <span className="number">
-                  {data?.filter(
-                    (item) => item?.createdAt?.toDate()?.getDay() === d.getDay()
-                  )?.length || 0}
-                </span>
-              </div>
-              <div className="box box3">
-                <i className="fa-solid fa-car"></i>
-                <span className="text">This Month Reviews </span>
-                <span className="number">
-                  {data?.filter(
-                    (item) =>
-                      item?.createdAt?.toDate()?.getMonth() == d.getMonth()
-                  )?.length || 0}
-                </span>
-              </div>
+              
             </div>
           </div>
           <div className="activity">
@@ -151,7 +133,7 @@ const Content = () => {
             </div>
 
             <div className="download_btn btn">
-              <button>Extract Data</button>
+              <button className="extract_data_btn">Extract Data</button>
             </div>
 
             <div className="activity-data">

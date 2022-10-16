@@ -26,7 +26,7 @@ const Analysis = () => {
                 <PieChartWithCustomizedLabel questions={"                        After how much time you were heard in Police Station ?"}/>
               </div>
               <div class="table">
-                <table className="styled-table">
+                <table className="">
                   <thead>
                     <tr>
                       <th colspan="2">
@@ -66,7 +66,7 @@ const Analysis = () => {
                 />
               </div>
               <div class="table">
-                <table className="styled-table">
+                <table className="">
                   <thead>
                     <tr>
                       <th colspan="2">
@@ -110,7 +110,7 @@ const Analysis = () => {
                 />
               </div>
               <div class="table">
-                <table className="styled-table">
+                <table className="">
                   <thead>
                     <tr>
                       <th colspan="2">
@@ -152,7 +152,7 @@ const Analysis = () => {
                 />
               </div>
               <div class="table">
-                <table className="styled-table">
+                <table className="">
                   <thead>
                     <tr>
                       <th colspan="2">
@@ -194,7 +194,7 @@ const Analysis = () => {
                 />
               </div>
               <div class="table">
-                <table className="styled-table">
+                <table className="">
                   <thead>
                     <tr>
                       <th colspan="2">
