@@ -89,6 +89,20 @@ export const addQrCode = async (payLoad) =>
       });
   });
 
+// request
 
-
-  
+export const addRequest = async (payLoad) =>
+  new Promise((resolve) => {
+    // console.log("userData", userData);
+    const documentReference = doc(collection(db, "request"));
+    setDoc(documentReference, {
+      ...payLoad,
+      createdBy: auth?.currentUser?.uid,
+      createdAt: new Date(),
+      id: documentReference.id,
+    })
+      .then(() => resolve(true))
+      .catch(() => {
+        resolve(false);
+      });
+  });

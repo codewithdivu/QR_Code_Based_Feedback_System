@@ -77,13 +77,12 @@ const GenerateQRcode = () => {
           <hr />
         </div>
         <div class="dash-content">
-        <div className="overview">
-          <div className="title">
-          <i class=" fa fa-solid fa-qrcode"></i>
-                      <span className="text">Generate QR Code</span>
+          <div className="overview">
+            <div className="title">
+              <i class=" fa fa-solid fa-qrcode"></i>
+              <span className="text">Generate QR Code</span>
+            </div>
           </div>
-          
-      </div>
           {/* <div class="qr_image_container">
             <div class="qr_image">
               <img src="/images/police.jpg" alt="" />
@@ -95,75 +94,95 @@ const GenerateQRcode = () => {
           {/* <Table2 dataFile={data} /> */}
 
           <div className="qr_generation">
-          <form onSubmit={handleSubmit}>
-            <div className="district">
-              <select
-                className="district__1"
-                value={district}
-                onChange={(e) => setDistrict(e.target.value)}
-              >
-                <option value="">Select District</option>
-                {dk.map((dist) => (
-                  <option value={dist.value} className="option__forform">
-                    {dist.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {district && (
-              <div className="district__taluko">
+            <form onSubmit={handleSubmit}>
+              <div className="district">
                 <select
-                  className="district__taluko1"
-                  onChange={(e) => setTaluka(e.target.value)}
+                  className="district__1"
+                  value={district}
+                  onChange={(e) => setDistrict(e.target.value)}
                 >
-                  <option value="">Select Taluka</option>
-                  {dk
-                    ?.find((obj) => obj?.value === district)
-                    ?.talukas?.map((taluko) => (
-                      <option value={taluko.value} className="option__forform">
-                        {taluko.label}
-                      </option>
-                    ))}
+                  <option value="">Select District</option>
+                  {dk.map((dist) => (
+                    <option value={dist.value} className="option__forform">
+                      {dist.label}
+                    </option>
+                  ))}
                 </select>
               </div>
-            )}
-            {district && taluka && (
-              <div className="district__police">
+              {/* <div className="district">
                 <select
-                  className="district__police1"
-                  onChange={({ target }) => setStation(target.value)}
+                  className="district__1"
+                  value={district}
+                  onChange={(e) => setDistrict(e.target.value)}
                 >
-                  <option value="">Select Station</option>x
-                  {dk
-                    ?.find((obj) => obj?.value === district)
-                    ?.talukas?.find((obj) => obj?.value === taluka)
-                    ?.stations?.map((police) => (
-                      <option value={police.value} className="option__forform">
-                        {police.label}
-                      </option>
-                    ))}
+                  <option value="">Select District</option>
+                  {dk.map((dist) => (
+                    <option value={dist.value} className="option__forform">
+                      {dist.label}
+                    </option>
+                  ))}
                 </select>
-              </div>
-            )}
-            {qrValue && (
-              <QRCode
-                id="qr-code"
-                value={qrValue}
-                size={290}
-                level={"H"}
-                includeMargin={true}
-              />
-            )}
-            {qrValue ? (
-              <>
-                <button
-                  className="sendOtp generateQR disable"
-                  disabled={!qrValue}
-                  onClick={downloadQR}
-                >
-                  Download QR
-                </button>
-                {/* {qrValue && (
+              </div> */}
+              {district && (
+                <div className="district__taluko">
+                  <select
+                    className="district__taluko1"
+                    onChange={(e) => setTaluka(e.target.value)}
+                  >
+                    <option value="">Select Taluka</option>
+                    {dk
+                      ?.find((obj) => obj?.value === district)
+                      ?.talukas?.map((taluko) => (
+                        <option
+                          value={taluko.value}
+                          className="option__forform"
+                        >
+                          {taluko.label}
+                        </option>
+                      ))}
+                  </select>
+                </div>
+              )}
+              {district && taluka && (
+                <div className="district__police">
+                  <select
+                    className="district__police1"
+                    onChange={({ target }) => setStation(target.value)}
+                  >
+                    <option value="">Select Station</option>x
+                    {dk
+                      ?.find((obj) => obj?.value === district)
+                      ?.talukas?.find((obj) => obj?.value === taluka)
+                      ?.stations?.map((police) => (
+                        <option
+                          value={police.value}
+                          className="option__forform"
+                        >
+                          {police.label}
+                        </option>
+                      ))}
+                  </select>
+                </div>
+              )}
+              {qrValue && (
+                <QRCode
+                  id="qr-code"
+                  value={qrValue}
+                  size={290}
+                  level={"H"}
+                  includeMargin={true}
+                />
+              )}
+              {qrValue ? (
+                <>
+                  <button
+                    className="sendOtp generateQR disable"
+                    disabled={!qrValue}
+                    onClick={downloadQR}
+                  >
+                    Download QR
+                  </button>
+                  {/* {qrValue && (
                   <button
                     className="sendOtp generateQR disable"
                     disabled={isSaving}
@@ -172,14 +191,18 @@ const GenerateQRcode = () => {
                     {isSaving ? "Saving..." : "Save QR Code"}
                   </button>
                 )} */}
-              </>
-            ) : (
-              <button className="sendOtp generateQR" type="submit" disabled={!station}>
-                Generate QR
-              </button>
-            )}
-          </form>
-        </div>
+                </>
+              ) : (
+                <button
+                  className="sendOtp generateQR"
+                  type="submit"
+                  disabled={!station}
+                >
+                  Generate QR
+                </button>
+              )}
+            </form>
+          </div>
         </div>
       </section>
     </>
