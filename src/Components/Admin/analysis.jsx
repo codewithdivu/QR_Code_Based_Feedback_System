@@ -15,17 +15,21 @@ const Analysis = () => {
       </div>
       <div className="dash-content">
         <div className="overview">
-          <div class="title">
-            <i class="fa fa-solid fa-magnifying-glass-chart"></i>
-            <span class="text">Analytics</span>
+          <div className="title">
+            <i className="fa fa-solid fa-magnifying-glass-chart"></i>
+            <span className="text">Analytics</span>
           </div>
           {/* <div>Graphs</div> */}
           <div className="charts">
-            <div class="twocharts">
-              <div class="chart" id="Piecharts">
-                <PieChartWithCustomizedLabel questions={"                        After how much time you were heard in Police Station ?"}/>
+            <div className="twocharts">
+              <div className="chart" id="Piecharts">
+                <PieChartWithCustomizedLabel
+                  questions={
+                    "After how much time you were heard in Police Station ?"
+                  }
+                />
               </div>
-              <div class="table">
+              <div className="table">
                 <table className="">
                   <thead>
                     <tr>
@@ -59,18 +63,21 @@ const Analysis = () => {
                 </table>
               </div>
             </div>
-            <div class="twocharts">
-              <div class="chart">
+            <div className="twocharts">
+              <div className="chart">
                 <PieChartWithCustomizedLabel
-                 questions={" How would you rate the attentiveness of the policemen towards your complaints?"}
+                  questions={
+                    " How would you rate the attentiveness of the policemen towards your complaints?"
+                  }
                 />
               </div>
-              <div class="table">
+              <div className="table">
                 <table className="">
                   <thead>
                     <tr>
                       <th colspan="2">
-                      How would you rate the attentiveness of the policemen towards your complaints?
+                        How would you rate the attentiveness of the policemen
+                        towards your complaints?
                       </th>
                     </tr>
                   </thead>
@@ -99,22 +106,21 @@ const Analysis = () => {
                 </table>
               </div>
             </div>
-           
-            
-            <div class="twocharts">
-              <div class="chart">
+            <div className="twocharts">
+              <div className="chart">
                 <PieChartWithCustomizedLabel
                   questions={
                     "  How would you rate the cleanliness of the Police Station ?"
                   }
                 />
               </div>
-              <div class="table">
+              <div className="table">
                 <table className="">
                   <thead>
                     <tr>
                       <th colspan="2">
-                        How would you rate the cleanliness of the Police Station ?
+                        How would you rate the cleanliness of the Police Station
+                        ?
                       </th>
                     </tr>
                   </thead>
@@ -143,20 +149,21 @@ const Analysis = () => {
                 </table>
               </div>
             </div>
-            <div class="twocharts">
-              <div class="chart">
+            <div className="twocharts">
+              <div className="chart">
                 <PieChartWithCustomizedLabel
                   questions={
                     "  How would you rate the language tone used by the policemen with you ?"
                   }
                 />
               </div>
-              <div class="table">
+              <div className="table">
                 <table className="">
                   <thead>
                     <tr>
                       <th colspan="2">
-                      How would you rate the language tone used by the policemen with you ?
+                        How would you rate the language tone used by the
+                        policemen with you ?
                       </th>
                     </tr>
                   </thead>
@@ -185,20 +192,21 @@ const Analysis = () => {
                 </table>
               </div>
             </div>
-            <div class="twocharts">
-              <div class="chart">
+            <div className="twocharts">
+              <div className="chart">
                 <PieChartWithCustomizedLabel
                   questions={
                     " How would you rate the overall experience at Police Station ?"
                   }
                 />
               </div>
-              <div class="table">
+              <div className="table">
                 <table className="">
                   <thead>
                     <tr>
                       <th colspan="2">
-                        How would you rate the overall experience at Police Station ?
+                        How would you rate the overall experience at Police
+                        Station ?
                       </th>
                     </tr>
                   </thead>
@@ -227,8 +235,6 @@ const Analysis = () => {
                 </table>
               </div>
             </div>
-            
-            
           </div>
         </div>
       </div>

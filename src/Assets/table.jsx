@@ -7,30 +7,32 @@ const Table = ({ dataFile }) => {
   // const { data, isLoading } = useFireStore(collections.USERS);
   // const [newData, setNewData] = useState(dataFile.slice(0, 15));
   const [tableData, setTableData] = useState(dataFile);
-  const [order, setOrder] = useState('ASC');
+  const [order, setOrder] = useState("ASC");
 
   const sorting = (col) => {
-    if (order === 'ASC') {
-      const sorted = [...tableData]?.sort((a, b) => a[col]?.toLowerCase() > b[col]?.toLowerCase() ? 1 : -1);
+    if (order === "ASC") {
+      const sorted = [...tableData]?.sort((a, b) =>
+        a[col]?.toLowerCase() > b[col]?.toLowerCase() ? 1 : -1
+      );
       setTableData(sorted);
-      setOrder('DSC');
+      setOrder("DSC");
     }
-    if (order === 'DSC') {
-      const sorted = [...tableData]?.sort((a, b) => a[col]?.toLowerCase() < b[col]?.toLowerCase() ? 1 : -1);
+    if (order === "DSC") {
+      const sorted = [...tableData]?.sort((a, b) => (a[col] < b[col] ? 1 : -1));
       setTableData(sorted);
-      setOrder('ASC');
+      setOrder("ASC");
     }
-  }
+  };
 
   const handleSort = () => {
-    console.log('sorted...')
-  }
+    console.log("sorted...");
+  };
 
   return (
     <table className="styled-table">
       <thead>
         <tr>
-          <th onClick={() => handleSort('phoneNumber')}>Mobile Number</th>
+          <th onClick={() => handleSort("phoneNumber")}>Mobile Number</th>
           <th onClick={() => handleSort("rating")}>Ratings</th>
           <th onClick={() => handleSort("district")}>District</th>
           <th onClick={() => handleSort("taluka")}>Taluka</th>
@@ -39,8 +41,8 @@ const Table = ({ dataFile }) => {
         </tr>
       </thead>
       <tbody>
-        {tableData?.map((item) => (
-          <tr >
+        {dataFile?.map((item) => (
+          <tr>
             {/* <tr className="active-row"> */}
             <td>{item?.phoneNumber}</td>
             <td>{item?.rating}</td>

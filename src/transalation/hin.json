@@ -11,7 +11,7 @@
   "Verify OTP": "ओटीपी सत्यापित करें",
   "FEEDBACK FORM": "प्रतिपुष्टी फ़ार्म",
   "KINDLY ENTER THE REQUIRED FIELDS OF THE FORM": "कृपया फ़ॉर्म के आवश्यक फ़ील्ड दर्ज करें",
-  "KINDLY ENTER THE REQUIRED FIELDS OF THE FORMHow did you come to the police station?": "कृपया फॉर्म के आवश्यक फ़ील्ड दर्ज करें आप पुलिस स्टेशन में कैसे आए?",
+  "How did you come to the police station?": "कृपया फॉर्म के आवश्यक फ़ील्ड दर्ज करें आप पुलिस स्टेशन में कैसे आए?",
   "Neighbour / local leader": "पड़ोसी/स्थानीय नेता",
   "Parent/Guardian/Sibling": "माता-पिता/अभिभावक/भाई बहन",
   "On your own": "स्वयं के बल पर",
@@ -29,7 +29,7 @@
   "Mobile": "मोबाइल फोन",
   "Vehicle": "वाहन",
   "Electronic Device / Gadget": "इलेक्ट्रॉनिक उपकरण / गैजेट",
-  "Q2. By whom you has been harrassed or humilated": "प्रश्न 2. किसके द्वारा आपको प्रताड़ित या अपमानित किया गया है?",
+  "Q2. By whom you has been harrassed or humilated ?": "प्रश्न 2. किसके द्वारा आपको प्रताड़ित या अपमानित किया गया है?",
   "From blood realtion": "खून की हकीकत से",
   "Someone from locality": "इलाके से कोई",
   "Stranger at public place": "सार्वजनिक स्थान पर अजनबी",
@@ -37,12 +37,11 @@
   "NA": "ना",
   "Q. What was your conflict ?": "आपका संघर्ष क्या था?",
   "Next": "अगला",
-  "How would you rate the language tone used by the policemen with you?":"आप अपने साथ पुलिसकर्मियों द्वारा इस्तेमाल की जाने वाली भाषा के स्वर को कैसे आंकेंगे?",
-"How would you rate the attentiveness of the policemen towards your complaints?":"आप अपनी शिकायतों के प्रति पुलिसकर्मियों की चौकसी को कैसे आंकेंगे?",
-"How would you rate cleanliness of the Police Station":"आप पुलिस थाने की सफाई को कैसे आंकेंगे?",
-"How Would you rate the Overall experience of the police station?":"आप पुलिस स्टेशन के समग्र अनुभव को कैसे आंकेंगे?",
-"Review :":"समीक्षा :",
-"Final Submit":"अंतिम सबमिट",
-"THANK YOU":"धन्यवाद"
-
+  "How would you rate the language tone used by the policemen with you?": "आप अपने साथ पुलिसकर्मियों द्वारा इस्तेमाल की जाने वाली भाषा के स्वर को कैसे आंकेंगे?",
+  "How would you rate the attentiveness of the policemen towards your complaints?": "आप अपनी शिकायतों के प्रति पुलिसकर्मियों की चौकसी को कैसे आंकेंगे?",
+  "How would you rate cleanliness of the Police Station?": "आप पुलिस थाने की सफाई को कैसे आंकेंगे?",
+  "How Would you rate the Overall experience of the police station?": "आप पुलिस स्टेशन के समग्र अनुभव को कैसे आंकेंगे?",
+  "Review :": "समीक्षा :",
+  "Final Submit": "अंतिम सबमिट",
+  "THANK YOU": "धन्यवाद"
 }

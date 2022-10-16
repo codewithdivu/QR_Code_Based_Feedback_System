@@ -15,7 +15,7 @@ const Feedback = ({
   review,
   setReview,
   emojis,
-  setEmojis
+  setEmojis,
 }) => {
   const [step, setStep] = useState(0);
   const [emojiArray, setEmojisArray] = useState([]);
@@ -44,7 +44,6 @@ const Feedback = ({
   const handleRating1 = (emojiRating) => {
     // console.log("emo1", emojiRating);
     setEmojisArray(...emojiArray, emojiRating);
-
   };
   const handleRating2 = (emojiRating) => {
     console.log("emo2", emojiRating);
@@ -89,7 +88,7 @@ const Feedback = ({
           <div className="questions_container">
             {questions2.map((item) => (
               <div class="question_container">
-                <p>{item.q}</p>
+                <p>{t(item.q)}</p>
                 {item.options.map((option) => (
                   <div class="option">
                     <input
@@ -99,13 +98,13 @@ const Feedback = ({
                       value={option.label}
                       {...register(item.name, { required: true })}
                     />
-                    <label htmlFor="ques">{option.label}</label>
+                    <label htmlFor="ques">{t(option.label)}</label>
                   </div>
                 ))}
               </div>
             ))}
             <div className="question_container">
-              <p className="special">Q. What was your conflict ?</p>
+              <p className="special">{t("Q. What was your conflict ?")}</p>
               <input
                 type="text"
                 name="conflicts"
@@ -126,8 +125,9 @@ const Feedback = ({
               <div className="containar containar__1">
                 <div className="wrapper">
                   <p className="text">
-                    How would you rate the language tone used by the policemen
-                    with you?
+                    {t(
+                      "How would you rate the language tone used by the policemen with you?"
+                    )}
                   </p>
 
                   <div className="emoji">
@@ -138,8 +138,9 @@ const Feedback = ({
               <div className="containar containar__1">
                 <div className="wrapper">
                   <p className="text">
-                    How would you rate the attentiveness of the policemen
-                    towards your complaints?
+                    {t(
+                      "How would you rate the attentiveness of the policemen towards your complaints?"
+                    )}
                   </p>
                   <div className="emoji">
                     <EmojiRating variant="classic" onChange={handleRating3} />
@@ -149,7 +150,7 @@ const Feedback = ({
               <div className="containar containar__1">
                 <div className="wrapper">
                   <p className="text">
-                    How would you rate cleanliness of the Police Station?
+                    {t("How would you rate cleanliness of the Police Station?")}
                   </p>
 
                   <div className="emoji">
@@ -160,8 +161,9 @@ const Feedback = ({
               <div className="containar containar__1">
                 <div className="wrapper">
                   <p className="text">
-                    How Would you rate the Overall experience of the police
-                    station?
+                    {t(
+                      "How Would you rate the Overall experience of the police station?"
+                    )}
                   </p>
 
                   <div className="emoji">
@@ -206,7 +208,7 @@ const Feedback = ({
           {renderCurrentFeedbackForm(step)}
           <div className="temp_btns">
             <button type="submit" class="next temporary">
-              {step === 2 ? "Final Submit" : "Next"}
+              {step === 2 ? t("Final Submit") : t("Next")}
             </button>
           </div>
         </form>

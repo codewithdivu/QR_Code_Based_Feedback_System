@@ -14,27 +14,27 @@ const SimpleLineChartReport = () => {
   const data = [
     {
       name: "Week 1",
-      positive: 4000,
-      negative: 2400,
-      average: 2400,
+      positive: 40,
+      negative: 24,
+      average: 24,
     },
     {
       name: "Week 2",
-      positive: 3000,
-      negative: 1398,
-      average: 2210,
+      positive: 30,
+      negative: 13,
+      average: 22,
     },
     {
       name: "Week 3",
-      positive: 2000,
-      negative: 9800,
-      average: 2290,
+      positive: 20,
+      negative: 98,
+      average: 22,
     },
     {
       name: "Week 4",
-      positive: 2780,
-      negative: 3908,
-      average: 2000,
+      positive: 27,
+      negative: 39,
+      average: 20,
     },
   ];
 
