@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useSearchParams } from "react-router-dom";
 import EmojiSlider from "../Assets/emojiSlider";
 import hin from "../transalation/hin.json";
-import guj from "../transalation/hin.json";
+import guj from "../transalation/guj.json";
 
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
@@ -35,16 +35,16 @@ const SelectLanguage = ({
       police: station,
     });
 
-    if (!district && !taluka && !station) {
-      return alert("please there is issues....");
-    }
+    // if (!district && !taluka && !station) {
+    //   return alert("please there is issues....");
+    // }
 
     onSelectLanguage(res.language);
 
     if (res.language === "hn") {
       i18n.changeLanguage("hn");
     } else if (res.language === "gj") {
-      i18n.changeLanguage("gu");
+      i18n.changeLanguage("du");
     } else {
       i18n.changeLanguage("en");
     }
@@ -66,7 +66,7 @@ const SelectLanguage = ({
         hn: {
           translation: hin,
         },
-        gj: {
+        du: {
           translation: guj,
         },
       },

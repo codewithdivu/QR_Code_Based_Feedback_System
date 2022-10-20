@@ -11,19 +11,19 @@ const AddPoliceStation = () => {
   const navigate = useNavigate();
 
   const handleStationValuee = (e) => {
-    console.log("newSattion", e.target.value);
+    // console.log("newSattion", e.target.value);
     setStation(e.target.value);
   };
 
   const handleRequest = async () => {
-    console.log("hello");
+    // console.log("hello");
     const requested = await addRequest({ district, taluka, station });
     navigate("/admin");
-    console.log("bhai request is done....");
+    // console.log("bhai request is done....");
   };
 
-  console.log("district :>> ", district);
-  console.log("taluka", taluka);
+  // console.log("district :>> ", district);
+  // console.log("taluka", taluka);
 
   return (
     <>

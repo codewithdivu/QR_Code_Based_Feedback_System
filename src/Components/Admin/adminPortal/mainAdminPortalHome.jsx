@@ -22,18 +22,18 @@ const MainAdminPortalHome = () => {
     if (order === "ASC") {
       const sorted = _.orderBy(data, [col], ["asc"]);
       setNewLoadedData(sorted);
-      console.log("sorted", sorted);
+      // console.log("sorted", sorted);
       setOrder("DSC");
     }
     if (order === "DSC") {
       const sorted = _.orderBy(data, [col], ["dsc"]);
       setNewLoadedData(sorted);
-      console.log("sorted", sorted);
+      // console.log("sorted", sorted);
       setOrder("ASC");
     }
   };
 
-  console.log("data,isLoading", data, isLoading);
+  // console.log("data,isLoading", data, isLoading);
   return (
     <>
       <section className="dashboard" id="12">
