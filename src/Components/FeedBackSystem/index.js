@@ -12,6 +12,7 @@ import { useSearchParams } from "react-router-dom";
 
 const FeedBackSystem = () => {
   const [step, setStep] = useState(0);
+  const [loader, setLoader] = useState(false);
 
   // language
   const [selectedLanguage, setSelectedLanguage] = useState("en");
@@ -26,9 +27,9 @@ const FeedBackSystem = () => {
   //textReview
   const [review, setReview] = useState("");
   // EMOJI REVIEW
-  const [emojis, setEmojis] = useState("");
+  const [emojis, setEmojis] = useState([]);
 
-  console.log("final emojis", emojis);
+  // console.log("final emojis", emojis);
 
   //selected police station object
   const [selectedPoliceStation, setSelectedPoliceStation] = useState({
@@ -53,7 +54,7 @@ const FeedBackSystem = () => {
       });
   }, [searchParams]);
 
-  console.log("selectedPoliceStation", selectedPoliceStation);
+  // console.log("selectedPoliceStation", selectedPoliceStation);
 
   const handleNext = () => setStep(step + 1);
 
@@ -66,7 +67,9 @@ const FeedBackSystem = () => {
       Questions,
       rating,
       review,
+      emojis,
     });
+    setLoader(true);
     const dudu = await addData({
       selectedLanguage,
       phoneNumber,
@@ -75,6 +78,7 @@ const FeedBackSystem = () => {
       rating,
       review,
     });
+    setLoader(false);
     console.log("dudu", dudu);
     handleNext();
     auth.signOut();
@@ -124,6 +128,8 @@ const FeedBackSystem = () => {
             setReview={setReview}
             emojis={emojis}
             setEmojis={setEmojis}
+            loader={loader}
+            setLoader={setLoader}
           />
         );
       case 3:

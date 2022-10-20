@@ -38,7 +38,7 @@ const SimpleLineChartReport = () => {
     },
   ];
 
-  console.log("charts....slsd");
+  // console.log("charts....slsd");
 
   return (
     <LineChart

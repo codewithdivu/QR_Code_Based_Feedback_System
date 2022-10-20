@@ -18,7 +18,7 @@ const AdminLogIn = () => {
 
   const onLogin = async ({ email, password }) => {
     setIsLogging(true);
-    console.log("email,password :>> ", email, password);
+    // console.log("email,password :>> ", email, password);
     await logIn(email, password);
     setIsLogging(false);
     navigate("/admin");

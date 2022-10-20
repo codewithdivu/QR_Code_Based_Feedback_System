@@ -35,7 +35,7 @@ export const getAllUsers = async () =>
     getDocs(collection(db, "user"))
       .then((response) => {
         const arr = [];
-        console.log("hello");
+        // console.log("hello");
         response.docs.forEach((doc) => {
           arr.push({
             ...doc.data(),

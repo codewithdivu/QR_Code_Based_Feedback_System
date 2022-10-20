@@ -16,9 +16,10 @@ const Feedback = ({
   setReview,
   emojis,
   setEmojis,
+  loader,
+  setLoader,
 }) => {
   const [step, setStep] = useState(0);
-  const [emojiArray, setEmojisArray] = useState([]);
   const {
     register,
     handleSubmit,
@@ -36,26 +37,25 @@ const Feedback = ({
 
   const onRBSubmit = (res) => {
     // console.log("dropdown bhai", res);
-    setEmojis(emojiArray);
     setQuestions({ res });
     handleNext();
   };
 
   const handleRating1 = (emojiRating) => {
-    // console.log("emo1", emojiRating);
-    setEmojisArray(...emojiArray, emojiRating);
+    // console.log("emoj", emojiRating);
+    setEmojis([...emojis, emojiRating]);
   };
   const handleRating2 = (emojiRating) => {
-    console.log("emo2", emojiRating);
-    setEmojisArray(...emojiArray, emojiRating);
+    setEmojis([...emojis, emojiRating]);
+    // console.log("emoj", emojiRating);
   };
   const handleRating3 = (emojiRating) => {
-    setEmojisArray(...emojiArray, emojiRating);
-    console.log("emo3", emojiRating);
+    setEmojis([...emojis, emojiRating]);
+    // console.log("emoj", emojiRating);
   };
   const handleRating4 = (emojiRating) => {
-    setEmojisArray(...emojiArray, emojiRating);
-    console.log("emo4", emojiRating);
+    setEmojis([...emojis, emojiRating]);
+    // console.log("emoj", emojiRating);
   };
 
   const { t } = useTranslation();
@@ -208,7 +208,11 @@ const Feedback = ({
           {renderCurrentFeedbackForm(step)}
           <div className="temp_btns">
             <button type="submit" class="next temporary">
-              {step === 2 ? t("Final Submit") : t("Next")}
+              {step === 2
+                ? loader
+                  ? t("Submitting........")
+                  : t("Final Submit")
+                : t("Next")}
             </button>
           </div>
         </form>

@@ -39,13 +39,13 @@ const Content = () => {
           moment(endDate).format("MMM DD YYYY")
     );
     setExtractData(newData);
-    console.log("newData", newData);
-    console.log("startDate :>> ", moment(startDate).format("MMM DD YYYY"));
-    console.log("endDate", moment(endDate).format("MMM DD YYYY"));
-    console.log(
-      "extractData :>> ",
-      moment(extractData[0].createdAt.toDate()).format("MMM DD YYYY")
-    );
+    // console.log("newData", newData);
+    // console.log("startDate :>> ", moment(startDate).format("MMM DD YYYY"));
+    // console.log("endDate", moment(endDate).format("MMM DD YYYY"));
+    // console.log(
+    //   "extractData :>> ",
+    //   moment(extractData[0].createdAt.toDate()).format("MMM DD YYYY")
+    // );
   };
 
   return (
