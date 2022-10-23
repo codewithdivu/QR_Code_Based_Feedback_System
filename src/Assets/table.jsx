@@ -5,14 +5,6 @@ import { useFireStore } from "../hooks";
 import _ from "lodash";
 
 const Table = ({ dataFile, handleSort }) => {
-  // const { data, isLoading } = useFireStore(collections.USERS);
-  // const [newData, setNewData] = useState(dataFile.slice(0, 15));
-  // const [tableData, setTableData] = useState([]);
-
-  // useEffect(() => {
-  //   setTableData(dataFile);
-  // }, [dataFile]);
-
   return (
     <table className="styled-table">
       <thead>
