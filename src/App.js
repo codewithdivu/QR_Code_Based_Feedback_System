@@ -9,13 +9,10 @@ import Content from "./Components/Admin/content";
 import GenerateQRcode from "./Components/Admin/generateQRcode";
 import Report from "./Components/Admin/report";
 import FeedBackSystem from "./Components/FeedBackSystem";
-import LandingPage from "./Components/LandingPage";
 import { ADMIN_EMAIL } from "./constants/staticData";
 import { UserAuthContextProvider } from "./Contexts/UserAuthContext";
 import { useAuth } from "./hooks";
 import { AdminDashboardLayout, AuthLayout } from "./layouts";
-import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
 import AddPoliceStation from "./Components/Admin/AddPoliceStation";
 
 const App = () => {
@@ -25,7 +22,7 @@ const App = () => {
   return (
     <UserAuthContextProvider>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Navigate to="/user/feedback" />} />
         <Route
           path="/user/feedback"
           element={<FeedBackSystem />}
@@ -60,6 +57,3 @@ const App = () => {
 };
 
 export default App;
-
-
-// addEventListener
