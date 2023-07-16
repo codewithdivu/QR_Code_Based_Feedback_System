@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* ----------Common---------- */
+
+.input {
+  min-width: 70vw;
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid gray;
+}
+
+.button {
+  border: none;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  background: orange;
+  /* max-width: 70vw; */
+  min-width: 70vw;
+}
+
+.select {
+  min-width: 74vw;
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid gray;
+  margin: 15px 0px;
+}
+
+.hr {
+  border-top: 3px solid orange;
+  margin: 10px 0;
+}
+
+/* ----------main container---------- */
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.police_logo_details_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 25vh;
+  width: 100vw;
+}
+
+.police_logo img {
+  margin-top: 10px;
+  object-fit: contain;
+  max-height: 15vh;
+  max-width: 25vw;
+}
+
+/* ----------main content---------- */
+
+.data_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 60vh;
+}
+
+.data_container_wrap {
+  min-height: 60vh;
+  max-width: 75vw;
+}
+
+.heading_auth {
+  display: flex;
+  height: 15vh;
+  flex-direction: column;
+  margin: 20px;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.heading_auth p {
+  margin-top: 7px;
+  font-size: 11px;
+}
+
+/* ----------3index.html---------- */
+
+.form_data {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile_num,
+.otp_label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px;
+  margin-top: 8px;
+}
+
+.mobile_num ::-webkit-outer-spin-button,
+.mobile_num ::-webkit-inner-spin-button {
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* ----------5_question1-5.html && 6_questions2.html---------- */
+
+#ques {
+  min-width: 4vw;
+  border: none;
+  outline: none;
+  padding-right: 10px;
+}
+#ques:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+input[type="radio"]#ques {
+  accent-color: #ffa500;
+  border: 3px solid black;
+}
+
+#ques:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ffa500;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+.special {
+  padding-bottom: 20px;
+}
+
+.question_container p {
+  font-size: 16px;
+  font-weight: 550;
+  padding-top: 20px;
+}
+.option {
+  font-size: 13px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.option label {
+  padding-left: 11px;
+}
+
+/* ----------language.html---------- */
+
+.language_input {
+  min-width: 3vw;
+  height: 3vh;
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid gray;
+}
+.language_data label {
+  font-size: 26px;
+  padding-left: 11px;
+}
+.language_data {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 40vw;
+  margin-top: 10px;
+}
+.language_ops_wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 70vw;
+  height: 20vh;
+}
+
+input[type="radio"]#language_input {
+  accent-color: #ffa500;
+  border: 3px solid black;
+}
+
+/* ----------emoji_final.html---------- */
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  min-width: 70vw;
+  border: none;
+  outline: none;
+  padding: 8px;
+  margin: 10px 0;
+}
+.textarea-input {
+  min-width: 70vw;
+  border: none;
+  outline: none;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 9px;
+  border: 1px solid gray;
+}
+
+.emoji-chooser {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 0px 0px 0px;
+}
+
+.question-emoji {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.question-emoji p {
+  margin-top: 0;
+}
+
+.emojis {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.emoji {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.emoji:hover {
+  transform: scale(1.2);
+}
+
+.selected {
+  transform: scale(1.5);
+}
+
+@media (max-width: 470px) {
+  .emojis {
+    justify-content: center;
+  }
+}
+
+/* ----------mewthankyou.html---------- */
+
+.thankyou_data {
+  /* min-width: 72vw; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 40vh;
+}
+.number_feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 72vw;
+  min-height: 30vh;
+}
+.number_feedback span {
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+.citizen_app {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.citizen_app a {
+  text-align: center;
+}
+
+.thanks {
+  text-align: center;
+}
+
+/* ---------------------star rating------------ */
+#start {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  width: 19px;
+  cursor: pointer;
+}
+.on {
+  color: #000;
+}
+.off {
+  color: #ccc;
+}
+
+.star-rating {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

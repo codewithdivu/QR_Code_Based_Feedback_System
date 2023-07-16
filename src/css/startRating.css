@@ -11,7 +11,7 @@
   color: #ccc;
 }
 
-.star-rating{
-  /* display: flex; */
+.star-rating {
+  display: flex;
   flex-direction: row;
 }
