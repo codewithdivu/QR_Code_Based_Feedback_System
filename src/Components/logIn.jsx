@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useUserAuth } from "../Contexts/UserAuthContext";
-import "../css/newLoader.css";
 import hin from "../transalation/hin.json";
 import guj from "../transalation/hin.json";
 
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
+import "../../src/css/loader.css";
 
 const LogIn = ({
   onNext,
@@ -113,19 +113,21 @@ const LogIn = ({
       <div className="data_container_wrap">
         <div className="heading_auth">
           <h2>{t("Authentication")}</h2>
-          <hr/>
+          <hr className="hr" />
           <p>
             {t("Kindly enter your mobile number to authenticate yourself.")}
           </p>
         </div>
         <div className="form_data">
           {/* Get Otp */}
+
           <form
             onSubmit={handleSubmit(getOtp)}
             style={{ display: !flag ? "block" : "none" }}
           >
+           
             <div className="mobile_num_label">
-              <label htmlFor="mobile_num" className="mobile_num mobile_label">
+              <label htmlFor="mobile_num" className="mobile_num">
                 {t("Enter mobile no :")}
               </label>
             </div>
@@ -145,8 +147,8 @@ const LogIn = ({
                     message: "Phone number must be 10 digit only",
                   },
                 })}
-                id="mobile_num"
-                className={`mobile_num ${
+                id=""
+                className={`mobile_num input ${
                   errors?.mobile_num?.message ? "error-outline" : ""
                 }`}
               />
@@ -156,8 +158,9 @@ const LogIn = ({
                 ""
               )}
             </div>
-            <div id="recaptcha-container" />
-            <button type="submit" className="sendOtp" disabled={loader}>
+          
+            <div id="recaptcha-container" style={{ marginTop: "15px" }} />
+            <button type="submit" className="sendOtp button" disabled={loader}>
               {loader ? t("Sending....") : t("Send OTP")}
             </button>
           </form>
@@ -171,7 +174,7 @@ const LogIn = ({
             <div className="otp_input">
               <input
                 type="number"
-                className={`otp ${
+                className={`otp input ${
                   errors2?.mobile_num?.message ? "error-outline" : ""
                 }`}
                 name="otp"
@@ -195,7 +198,11 @@ const LogIn = ({
               )}
             </div>
 
-            <button type="submit" className="submit_btn" disabled={loader}>
+            <button
+              type="submit"
+              className="submit_btn button"
+              disabled={loader}
+            >
               {loader ? t("Checking....") : t("Verify OTP")}
             </button>
           </form>

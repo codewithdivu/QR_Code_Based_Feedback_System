@@ -83,7 +83,7 @@ const SelectLanguage = ({
       <div className="data_container_wrap">
         <div className="heading_auth">
           <h2>Select language</h2>
-          <hr />
+          <hr className="hr" />
           <p>Kindly select your preferred language</p>
         </div>
         <form onSubmit={handleSubmit(onRBSubmit)}>
@@ -96,27 +96,28 @@ const SelectLanguage = ({
                 <div key={lang.id} className="language_data">
                   <input
                     type="radio"
-                    className="options language_input"
+                    className="options language_input input"
                     name="language"
                     id="language_input"
                     {...register("language", { required: true })}
                     value={lang.value}
                   />
-                  <label htmlFor="language_data">{lang.label}</label>
+                  <label htmlFor="language">{lang.label}</label>
                 </div>
               ))}
               {errors.language && alert("Language selection is required")}
             </div>
           </div>
-          <button
-            type="submit"
-            className="sendOtp"
-            // onClick={handleSaveSelectedLanguage}
-          >
-            Next
-          </button>
+          <a href="#">
+            <button
+              type="submit"
+              className="sendOtp button"
+              // onClick={handleSaveSelectedLanguage}
+            >
+              Next
+            </button>
+          </a>
         </form>
-        {/* <EmojiSlider /> */}
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import SelectStation from "../selectStation";
 import { addData, getAllUsers, getNumberData } from "../../firebase/services";
 import { auth } from "../../firebase/config";
 import { useSearchParams } from "react-router-dom";
+import "../../css/userPanel.css";
 
 const FeedBackSystem = () => {
   const [step, setStep] = useState(0);
@@ -142,7 +143,17 @@ const FeedBackSystem = () => {
   return (
     <div className="main_container">
       <GpLogo />
-      {renderCurrentComponent(step)}
+      {loader ? (
+        <div class="waterfall">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      ) : (
+        <>{renderCurrentComponent(step)}</>
+      )}
     </div>
   );
 };
