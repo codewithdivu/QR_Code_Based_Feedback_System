@@ -9,7 +9,6 @@ import SelectStation from "../selectStation";
 import { addData, getAllUsers, getNumberData } from "../../firebase/services";
 import { auth } from "../../firebase/config";
 import { useSearchParams } from "react-router-dom";
-import "../../css/userPanel.css";
 
 const FeedBackSystem = () => {
   const [step, setStep] = useState(0);

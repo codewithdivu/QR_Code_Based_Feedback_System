@@ -125,7 +125,6 @@ const LogIn = ({
             onSubmit={handleSubmit(getOtp)}
             style={{ display: !flag ? "block" : "none" }}
           >
-           
             <div className="mobile_num_label">
               <label htmlFor="mobile_num" className="mobile_num">
                 {t("Enter mobile no :")}
@@ -158,7 +157,7 @@ const LogIn = ({
                 ""
               )}
             </div>
-          
+
             <div id="recaptcha-container" style={{ marginTop: "15px" }} />
             <button type="submit" className="sendOtp button" disabled={loader}>
               {loader ? t("Sending....") : t("Send OTP")}

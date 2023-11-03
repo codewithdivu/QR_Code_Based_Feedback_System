@@ -35,7 +35,6 @@ body {
   margin-top: 20px;
   border-radius: 8px;
   background: orange;
-  /* max-width: 70vw; */
   min-width: 70vw;
 }
 
@@ -60,7 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .police_logo_details_container {
@@ -69,7 +68,7 @@ body {
   justify-content: flex-start;
   flex-direction: column;
   height: 25vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .police_logo img {
@@ -86,7 +85,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  /* width: 100vw; */
   height: 60vh;
 }
 
@@ -259,7 +258,6 @@ input[type="radio"]#language_input {
   background-color: #ffffff;
   border-radius: 5px;
   padding: 20px;
-  /* margin-bottom: 20px; */
 }
 
 .question-emoji p {
@@ -296,7 +294,6 @@ input[type="radio"]#language_input {
 /* ----------mewthankyou.html---------- */
 
 .thankyou_data {
-  /* min-width: 72vw; */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const ChangePassword = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const ChangePassword = () => {
             </div>
             <div className="heading">
               <p>Admin Portal</p>
-              <hr className="hr" />
+              <hr className="hrr" />
               <div className="details">
                 <p>Kindly enter your old passcode and set new passcode</p>
               </div>

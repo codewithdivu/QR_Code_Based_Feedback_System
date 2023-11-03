@@ -33,7 +33,7 @@ const AdminLogIn = () => {
             </div>
             <div class="heading">
               <p>Admin LogIn</p>
-              <hr class="hr" />
+              <hr class="hrr" />
               <div class="details">
                 <p>
                   Hey , Enter your credentials to get sign in to your account
@@ -49,7 +49,9 @@ const AdminLogIn = () => {
                   {...register("email", {
                     required: "Email is required",
                   })}
-                  className={errors?.email?.message ? "error-outline" : "input_sex"}
+                  className={
+                    errors?.email?.message ? "error-outline" : "input_sex"
+                  }
                 />
                 {errors?.email?.message && (
                   <p className="error-message">{errors?.email?.message}</p>
