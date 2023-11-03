@@ -33,7 +33,7 @@ const AdminLogIn = () => {
             </div>
             <div class="heading">
               <p>Admin LogIn</p>
-              <hr class="hr" />
+              <hr class="hrr" />
               <div class="details">
                 <p>
                   Hey , Enter your credentials to get sign in to your account

@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background: #ececec; */
 }
 
 body {
@@ -14,20 +13,7 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-/*
--------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------
-------------------------------------------------ADMIN CSS----------------------------------------------------
--------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------
-*/
-
 :root {
-  /* ===== Colors ===== */
   --primary-color: #0e4bf1;
   --panel-color: #fff;
   --text-color: #000;
@@ -45,7 +31,6 @@ body {
   --box3-color: #fff;
   --title-icon-color: #fff;
 
-  /* ====== Transition ====== */
   --tran-05: all 0.5s ease;
   --tran-03: all 0.3s ease;
   --tran-03: all 0.2s ease;
@@ -87,7 +72,6 @@ body.dark {
 ::-webkit-scrollbar-thumb:hover {
   background: #0b3cc1;
   background: var(--theme-color);
-  /* background: pink; */
 }
 
 body.dark::-webkit-scrollbar-thumb:hover,
@@ -102,7 +86,6 @@ nav {
   top: 0;
   left: 0;
   height: 100%;
-  /* width: 25vw; */
   max-width: 18vw;
   padding: 10px 14px;
   background-color: var(--panel-color);
@@ -110,12 +93,10 @@ nav {
   transition: var(--tran-05);
   background-color: var(--panel-color);
   background-color: rgba(227, 226, 226, 0.224);
-  /* border: solid black 2px; */
 }
 
 nav.close {
   width: 73px;
-  /* width: 25vw; */
 }
 nav .logo-name {
   display: flex;
@@ -125,15 +106,12 @@ nav .logo-name {
   padding: 0;
 }
 nav .logo-image {
-  /* display: flex;
-  justify-content: center; */
   min-width: 65px;
 }
 nav .logo-image img {
   width: 60px;
   object-fit: cover;
   margin-left: 4rem;
-  /* border-radius: 50%; */
 }
 
 nav .logo-name .logo_name {
@@ -283,7 +261,6 @@ nav.close ~ .dashboard {
   color: var(--text-color);
 }
 .dashboard .dash-content {
-  /* height: 100vh; */
   min-height: 85vh;
   max-width: 78vw;
 }
@@ -327,7 +304,6 @@ nav.close ~ .dashboard {
   border-radius: 12px;
   width: calc(100% / 3 - 15px);
   padding: 15px 20px;
-  /* background-color: pink; */
   transition: var(--tran-05);
 }
 .boxes .box i {
@@ -390,16 +366,12 @@ nav.close ~ .dashboard {
 }
 .activity-data .data .data-list {
   word-wrap: normal;
-  /* height: 10vh; */
 }
 .dash-content {
   background-color: red;
   background-color: var(--panel-color);
 }
-/* ===================================================================
-=================================================================================
-========================================================================
-================================================================================= */
+
 /* 🔥🔥🔥🔥 Generate QR Code page  🔥🔥🔥🔥 */
 
 .qr_image_container {
@@ -426,10 +398,6 @@ nav.close ~ .dashboard {
   margin-right: 10px;
 }
 
-/* ===================================================================
-=================================================================================
-========================================================================
-================================================================================= */
 /* 🔥🔥🔥🔥 responisive code  🔥🔥🔥🔥 */
 
 @media (max-width: 1000px) {
@@ -539,7 +507,6 @@ hemant's push
 .select__police {
   display: flex;
   justify-content: space-around;
-  /* margin-bottom: 100px; */
   padding-bottom: 100px;
 }
 
@@ -551,7 +518,6 @@ select {
   border-radius: 9px;
   border: 1px solid gray;
   margin: 15px 0px;
-  /* padding-bottom: /px; */
 }
 
 .btn {
@@ -592,10 +558,6 @@ select {
   min-height: 5vh;
   border-radius: 9px;
   border: 1px solid gray;
-  /* margin: 15px 0px; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 .fordatep {
@@ -613,16 +575,12 @@ select {
   justify-content: center;
   align-items: center;
   padding-top: 10vh;
-  /* background-image: url(./police.jpg); */
-  /* background-repeat: no-repeat; */
-  /* position: relative; */
 }
 
 .container {
   display: flex;
   height: 80vh;
   width: 100vw;
-  /* background-color: pink; */
   justify-content: center;
   align-items: center;
 }
@@ -633,24 +591,20 @@ select {
   height: 75vh;
   width: 27vw;
   border-radius: 30px;
-  /* background-color: red; */
   background-color: bisque;
   padding: 10px;
   align-items: center;
 }
 .logos {
   height: 13vh;
-  /* background-color: red; */
 }
 .logos img {
   width: 65px;
 }
 .heading {
   height: 18vh;
-  /* background-color: aliceblue; */
   display: flex;
   flex-direction: column;
-  /* margin-bottom: 20px;  */
 }
 
 .heading > p {
@@ -698,7 +652,6 @@ input[type="number"] ::-webkit-inner-spin-button {
 
 input {
   min-width: 72vw;
-  /* max-width: 72vw; */
   border: none;
   outline: none;
   padding: 8px;
@@ -709,7 +662,6 @@ input {
 .login_details {
   display: flex;
   height: 5vh;
-  /* background-color: black; */
   min-width: 21vw;
   justify-content: flex-start;
   font-size: 13px;
@@ -726,7 +678,6 @@ input {
   display: flex;
   font-size: 13px;
   width: 21vw;
-  /* background-color: blue; */
   margin-left: 25px;
 }
 
@@ -746,16 +697,12 @@ input {
   justify-content: center;
   align-items: center;
   padding-top: 10vh;
-  /* background-image: url(./police.jpg); */
-  /* background-repeat: no-repeat; */
-  /* position: relative; */
 }
 
 .container {
   display: flex;
   height: 80vh;
   width: 100vw;
-  /* background-color: pink; */
   justify-content: center;
   align-items: center;
 }
@@ -766,14 +713,12 @@ input {
   height: 78vh;
   width: 27vw;
   border-radius: 30px;
-  /* background-color: red; */
   background-color: rgb(242, 231, 218);
   padding: 10px;
   align-items: center;
 }
 .logos {
   height: 13vh;
-  /* background-color: red; */
 }
 .logos img {
   width: 65px;
@@ -832,7 +777,6 @@ input[type="number"] ::-webkit-inner-spin-button {
 
 input {
   min-width: 20vw;
-  /* max-width: 72vw; */
   border: none;
   outline: none;
   padding: 8px;
@@ -843,7 +787,6 @@ input {
 .login_details {
   display: flex;
   height: 5vh;
-  /* background-color: black; */
   min-width: 21vw;
   justify-content: flex-start;
   font-size: 13px;
@@ -860,7 +803,6 @@ input {
   display: flex;
   font-size: 13px;
   width: 21vw;
-  /* background-color: blue; */
   margin-left: 25px;
 }
 
@@ -873,7 +815,7 @@ input {
   display: flex;
   align-items: center;
 }
-.hr {
+.hrr {
   border-top: 3px solid orange;
   margin: 10px 20px;
   width: 20vw;
@@ -912,22 +854,6 @@ input {
   height: 100vh;
 }
 
-/* .police_logo_details_container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  height: 28vh;
-  width: 100vw;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.police_logo img {
-  margin-top: 10px;
-  object-fit: contain;
-  max-height: 15vh;
-  max-width: 25vw;
-} */
-
 .thanku__span {
   font-size: 40px;
   display: flex;
@@ -957,12 +883,11 @@ input {
   padding-top: 3rem;
 }
 
-/* // thankyou page 
-   */
+/*  thankyou page  */
+
 .poppers {
   height: 40vh;
   width: 60vw;
-  /* background-color: cadetblue; */
   display: flex;
   justify-content: space-between;
 }
@@ -1046,7 +971,6 @@ hr {
 /* // charts  */
 .charts {
   margin-top: 20px;
-  /* background-color: red; */
 }
 .Piecharts {
   width: 39vw;
@@ -1058,7 +982,6 @@ hr {
   height: 42vh;
   align-items: center;
   justify-content: space-between;
-  /* background-color: rebeccapurple; */
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -1099,25 +1022,10 @@ th {
 }
 
 #start {
-  /* display: flex; */
   max-width: 0;
   margin: 0px;
   min-width: 1vw;
   padding-right: 25px;
-
-  /* border: none;
-  outline: none;
-  padding: 8px;
-  color: white;
-  background-color: orange;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  border-radius: 8px;
-  min-width: 8vw;
-  max-width: 70vw;
-  min-width: 72vw;
-  margin-right: 10px; */
 }
 
 .temp {
@@ -1128,14 +1036,12 @@ th {
   width: 100vw;
   align-items: center;
   justify-content: center;
-  /* background-color: pink; */
 }
 
 /* // THANK YOU PAGE  */
 .thankyou_data_detail {
   display: flex;
   height: 20vh;
-  /* background-color: red; */
   flex-direction: column;
   align-items: center;
   margin-bottom: 10vh;
@@ -1175,16 +1081,12 @@ th {
   justify-content: center;
   align-items: center;
   padding-top: 10vh;
-  /* background-image: url(./police.jpg); */
-  /* background-repeat: no-repeat; */
-  /* position: relative; */
 }
 
 .container {
   display: flex;
   height: 80vh;
   width: 100vw;
-  /* background-color: pink; */
   justify-content: center;
   align-items: center;
 }
@@ -1195,14 +1097,12 @@ th {
   height: 78vh;
   width: 27vw;
   border-radius: 30px;
-  /* background-color: red; */
   background-color: rgb(242, 231, 218);
   padding: 10px;
   align-items: center;
 }
 .logos {
   height: 13vh;
-  /* background-color: red; */
 }
 .logos img {
   width: 65px;
@@ -1304,7 +1204,6 @@ input {
 .login_details {
   display: flex;
   height: 5vh;
-  /* background-color: black; */
   min-width: 21vw;
   justify-content: flex-start;
   font-size: 13px;
@@ -1321,7 +1220,6 @@ input {
   display: flex;
   font-size: 13px;
   width: 21vw;
-  /* background-color: blue; */
   margin-left: 25px;
 }
 
@@ -1334,12 +1232,13 @@ input {
   display: flex;
   align-items: center;
 }
-.hr {
+.hrr {
   border-top: 3px solid orange;
   margin: 10px 20px;
   width: 20vw;
   border-radius: 1px;
 }
+
 .login_details {
   margin-right: 10px;
 }
@@ -1352,12 +1251,10 @@ input {
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
-  /* background-color: red; */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .styled-table thead tr {
-  /* background-color: #009879; */
   background-color: orange;
   color: #ffffff;
   text-align: left;
@@ -1378,13 +1275,11 @@ input {
 }
 
 .styled-table tbody tr:last-of-type {
-  /* border-bottom: 2px solid #009879; */
   border-bottom: 2px solid orange;
 }
 
 .styled-table tbody tr.active-row {
   font-weight: bold;
-  /* color: #009879; */
   color: orange;
 }
 .styled-table {
@@ -1399,7 +1294,6 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
 }
 .extract_data_btn {
   border: none;
@@ -1437,7 +1331,6 @@ input {
 .qr_generation {
   display: flex;
   flex-direction: column;
-  /* background-color: rebeccapurple; */
   max-height: 70vh;
   align-items: center;
   justify-content: center;
@@ -1449,7 +1342,6 @@ input {
 .work {
   height: 60vh;
   width: 70vw;
-  /* background-color: rebeccapurple; */
   display: flex;
   align-items: center;
   flex-direction: column;

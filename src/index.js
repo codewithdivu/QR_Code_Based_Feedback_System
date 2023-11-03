@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import "./css/userPanel.css";
-// import "./css/adminPanel.css";
+import "./css/adminPanel.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

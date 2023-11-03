@@ -12,7 +12,7 @@ const AdminSignUp = () => {
             </div>
             <div class="heading">
               <p>Admin SignUp</p>
-              <hr class="hr" />
+              <hr class="hrr" />
               <div class="details">
                 <p>
                   Hey , Enter your credentials to get sign up to your account
