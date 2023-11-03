@@ -60,15 +60,15 @@ const FeedBackSystem = () => {
 
   const onFinalSubmit = async (feedBackData) => {
     // Store in fb
-    console.log("whole data", {
-      selectedLanguage,
-      phoneNumber,
-      selectedPoliceStation,
-      Questions,
-      rating,
-      review,
-      emojis,
-    });
+    // console.log("whole data", {
+    //   selectedLanguage,
+    //   phoneNumber,
+    //   selectedPoliceStation,
+    //   Questions,
+    //   rating,
+    //   review,
+    //   emojis,
+    // });
     setLoader(true);
     const dudu = await addData({
       selectedLanguage,
@@ -79,7 +79,7 @@ const FeedBackSystem = () => {
       review,
     });
     setLoader(false);
-    console.log("dudu", dudu);
+    // console.log("dudu", dudu);
     handleNext();
     auth.signOut();
     localStorage.clear();

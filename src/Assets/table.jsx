@@ -9,24 +9,42 @@ const Table = ({ dataFile, handleSort }) => {
     <table className="styled-table">
       <thead>
         <tr>
-          <th onClick={() => handleSort("phoneNumber")}>Mobile Number</th>
-          <th onClick={() => handleSort("rating")}>Ratings</th>
-          <th onClick={() => handleSort("selectedPoliceStation.district")}>
+          <th
+            onClick={() => handleSort("phoneNumber")}
+            style={{ cursor: "pointer" }}
+          >
+            Mobile Number
+          </th>
+          <th
+            onClick={() => handleSort("rating")}
+            style={{ cursor: "pointer" }}
+          >
+            Ratings
+          </th>
+          <th
+            onClick={() => handleSort("selectedPoliceStation.district")}
+            style={{ cursor: "pointer" }}
+          >
             District
           </th>
-          <th onClick={() => handleSort("selectedPoliceStation.taluka")}>
+          <th
+            onClick={() => handleSort("selectedPoliceStation.taluka")}
+            style={{ cursor: "pointer" }}
+          >
             Taluka
           </th>
-          <th onClick={() => handleSort("selectedPoliceStation.police")}>
+          <th
+            onClick={() => handleSort("selectedPoliceStation.police")}
+            style={{ cursor: "pointer" }}
+          >
             Police_Station
           </th>
-          <th>Date</th>
+          <th style={{ cursor: "pointer" }}>Date</th>
         </tr>
       </thead>
       <tbody>
         {dataFile?.slice(0, 15)?.map((item) => (
           <tr>
-            {/* <tr className="active-row"> */}
             <td>{item?.phoneNumber}</td>
             <td>{item?.rating}</td>
             <td>
@@ -35,7 +53,6 @@ const Table = ({ dataFile, handleSort }) => {
             <td>{item?.selectedPoliceStation?.taluka?.split("_").join(" ")}</td>
             <td>{item?.selectedPoliceStation?.police?.split("_").join(" ")}</td>
             <td>{item?.createdAt?.toDate().toDateString()}</td>
-            {/* <td>{item?.createdAt?.toDate()?.getDay()}</td> */}
           </tr>
         ))}
       </tbody>

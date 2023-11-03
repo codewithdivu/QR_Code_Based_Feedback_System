@@ -35,7 +35,7 @@ const LogIn = ({
     formState: { errors: errors2 },
   } = useForm();
 
-  console.log("errors", errors);
+  // console.log("errors", errors);
   // Hooks
   const { setUpRecaptha } = useUserAuth();
 
@@ -75,7 +75,7 @@ const LogIn = ({
     try {
       await result.confirm(otp);
 
-      console.log("bhai tame authenticate thay gaya chho");
+      // console.log("bhai tame authenticate thay gaya chho");
       isLoading(false);
       onNext();
     } catch (err) {
