@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const GreetingPage = () => {
   return (
     <div className="data_container">

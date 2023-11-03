@@ -49,7 +49,9 @@ const AdminLogIn = () => {
                   {...register("email", {
                     required: "Email is required",
                   })}
-                  className={errors?.email?.message ? "error-outline" : "input_sex"}
+                  className={
+                    errors?.email?.message ? "error-outline" : "input_sex"
+                  }
                 />
                 {errors?.email?.message && (
                   <p className="error-message">{errors?.email?.message}</p>

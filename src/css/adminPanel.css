@@ -272,11 +272,11 @@ nav.close ~ .dashboard {
   justify-content: center;
   align-items: center;
 }
-hr {
+/* hr {
   border-top: 3px solid orange;
   margin: 10px 0;
   width: 70vw;
-}
+} */
 .dashboard .dash-title p {
   font-size: 24px;
   font-weight: 500;
@@ -912,14 +912,13 @@ input {
   height: 100vh;
 }
 
-.police_logo_details_container {
+/* .police_logo_details_container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   height: 28vh;
   width: 100vw;
-  /* padding-top: 1rem; */
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .police_logo img {
@@ -927,7 +926,7 @@ input {
   object-fit: contain;
   max-height: 15vh;
   max-width: 25vw;
-}
+} */
 
 .thanku__span {
   font-size: 40px;
