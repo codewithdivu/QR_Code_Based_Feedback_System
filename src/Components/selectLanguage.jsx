@@ -87,7 +87,7 @@ const SelectLanguage = ({
           <p>Kindly select your preferred language</p>
         </div>
         <form onSubmit={handleSubmit(onRBSubmit)}>
-          <div className="language_ops_wrap">
+          <div className="language_ops_wrap" style={{ marginTop: "4rem" }}>
             <div
               className="language_opts"
               // onChange={handleChange}

@@ -96,7 +96,7 @@ body {
 
 .heading_auth {
   display: flex;
-  height: 15vh;
+  height: 8vh;
   flex-direction: column;
   margin: 20px;
   text-align: center;
@@ -262,12 +262,14 @@ input[type="radio"]#language_input {
 
 .question-emoji p {
   margin-top: 0;
+  /* text-align: justify; */
+  font-weight: bold;
 }
 
 .emojis {
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-top: 10px;
 }
 
@@ -349,4 +351,62 @@ input[type="radio"]#language_input {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+/* ------------image uploader */
+/* src/ImageUploader.css */
+
+.image-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.image-item {
+  position: relative;
+  margin: 10px;
+  flex: 1;
+  max-width: calc(
+    33.33% - 20px
+  ); /* Set maximum width for a maximum of 3 images in a row */
+  text-align: center;
+}
+
+.close-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1;
+  height: 2rem;
+  width: 2rem;
+}
+
+.imm {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .close-icon {
+    font-size: 12px;
+    top: 3px;
+    padding: 0px;
+    height: 1rem;
+    width: 1rem;
+  }
 }

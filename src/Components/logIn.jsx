@@ -118,7 +118,7 @@ const LogIn = ({
             {t("Kindly enter your mobile number to authenticate yourself.")}
           </p>
         </div>
-        <div className="form_data">
+        <div className="form_data" style={{ marginTop: "5rem" }}>
           {/* Get Otp */}
 
           <form

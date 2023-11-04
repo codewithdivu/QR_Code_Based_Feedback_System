@@ -1,67 +1,73 @@
 export const questions1 = [
   {
-    q: "How did you come to the police station?",
+    q: "Q1. Reason of visiting police station.",
     name: "ques1_1",
     options: [
       {
         id: 1,
-        label: "Neighbour / local leader",
+        label: "Theft",
       },
       {
         id: 2,
-        label: "Parent/Guardian/Sibling",
+        label: "Harassment",
       },
       {
         id: 3,
-        label: "On your own",
+        label: "Legal issue(Passport verification / Document related)",
       },
       {
         id: 4,
-        label: "Through a person known to a police officer",
+        label: "Other",
       },
     ],
   },
   {
-    q: "After how much time you were heard in PS ?",
+    q: "Q2. After how much time you were heard in police station?",
     name: "ques1_2",
     options: [
       {
         id: 1,
-        label: "15 minutes",
+        label: "Immediately",
       },
       {
         id: 2,
-        label: "More than 15 minutes",
+        label: "0-10 minutes",
       },
       {
         id: 3,
-        label: "10 minutes",
+        label: "10-20 minutes",
       },
       {
         id: 4,
-        label: "Immediately",
+        label: "More than 20 minutes",
       },
     ],
   },
   {
-    q: "What was your problem ?",
+    q: "Q3. Was a police officer readily available at the station when you visited or contacted it?",
     name: "ques1_3",
     options: [
       {
         id: 1,
-        label: "Harassment/Humiliation",
+        label: "Yes",
       },
       {
         id: 2,
-        label: "Theft (mobile/vechile/electronic devices)",
+        label: "No",
+      },
+    ],
+  },
+  {
+    q: "Q4. Were your concerns or issues resolved to your satisfaction by the police station?",
+    name: "ques1_4",
+    options: [
+      {
+        id: 1,
+        label: "Yes",
       },
       {
-        id: 3,
-        label: "Internal/External Conflict",
-      },
-      {
-        id: 4,
-        label: "other",
+        id: 2,
+        label: "No",
       },
     ],
   },
