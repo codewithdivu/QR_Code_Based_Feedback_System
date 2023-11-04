@@ -2,16 +2,28 @@ import React, { useState } from "react";
 
 const questions = [
   {
-    question: "Q1. How do you feeel today ?",
-    emojis: ["😄", "😊", "😐", "😞", "😢"],
+    question: "Q1. How safe do you feel when visiting the police station?",
+    emojis: ["😃", "😊", "😐", "😞", "😡"],
   },
   {
-    question: "Q2. What's your favorite food ?",
-    emojis: ["🍕", "🍔", "🌮", "🍣", "🍦"],
+    question:
+      "Q2. Were your interactions with the police officers respectful and courteous?",
+    emojis: ["😇", "😊", "😐", "😡", "😠"],
   },
   {
-    question: "Q3. How do you like Police Station ?",
-    emojis: ["😄", "😊", "😐", "😞", "😢"],
+    question:
+      "Q3. How would you rate the overall service and assistance provided at the police station?",
+    emojis: ["⭐", "✨", "😐", "💥", "💔"],
+  },
+  {
+    question:
+      "Q4. Did you experience any issues or delays when seeking assistance or information?",
+    emojis: ["🕰️", "⌛", "😐", "⏳", "🕐"],
+  },
+  {
+    question:
+      "Q5. Were the facilities at the police station well-maintained and equipped?",
+    emojis: ["🏢", "🏗️", "😐", "🚮", "🏚️"],
   },
 ];
 

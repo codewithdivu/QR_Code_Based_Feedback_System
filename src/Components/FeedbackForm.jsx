@@ -165,7 +165,11 @@ const Feedback = ({
             {renderCurrentFeedbackForm(step)}
           </div>
           <a href="#">
-            <button type="submit" className="next button">
+            <button
+              type="submit"
+              className="next button"
+              style={{ marginBottom: "1.5rem" }}
+            >
               {step === 2
                 ? loader
                   ? t("Submitting........")
