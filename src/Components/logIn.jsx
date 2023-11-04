@@ -133,17 +133,17 @@ const LogIn = ({
             <div className="mobile_num_input">
               <input
                 type="tel"
-                placeholder="Enter 10-digit Mobile Number"
+                placeholder={t("Enter 10-digit Mobile Number")}
                 name="mobile_num"
                 {...register("mobile_num", {
-                  required: "Mobile number  is required.",
+                  required: t("Mobile number is required."),
                   minLength: {
                     value: 10,
-                    message: "Phone number must be 10 digit only",
+                    message: t("Phone number must be 10 digit only"),
                   },
                   maxLength: {
                     value: 10,
-                    message: "Phone number must be 10 digit only",
+                    message: t("Phone number must be 10 digit only"),
                   },
                 })}
                 id=""
@@ -179,14 +179,14 @@ const LogIn = ({
                 name="otp"
                 id="otp"
                 {...register2("otp", {
-                  required: "otp is required.",
+                  required: t("otp is required."),
                   minLength: {
                     value: 6,
-                    message: "otp must be 6 digit only",
+                    message: t("otp must be 6 digit only"),
                   },
                   maxLength: {
                     value: 6,
-                    message: "otp must be 6 digit only",
+                    message: t("otp must be 6 digit only"),
                   },
                 })}
               />

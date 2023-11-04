@@ -160,7 +160,7 @@ const Feedback = ({
               />
             </div> */}
             <div className="textarea" style={{ marginTop: "2rem" }}>
-              <label htmlFor="">Please review your experience</label>
+              <label htmlFor="">{t("Please review your experience")}</label>
               <textarea
                 id=""
                 name="review"
@@ -168,11 +168,11 @@ const Feedback = ({
                 cols="50"
                 className="textarea-input"
                 onChange={(e) => setReview(e.target.value)}
-                placeholder="Write Your Review/Feedback Here..."
+                placeholder={t("Write Your Review/Feedback Here...")}
               ></textarea>
             </div>
             <div className="question_container">
-              <label htmlFor="">Upload Images : </label>
+              <label htmlFor="">{t("Upload Images : ")}</label>
               <input
                 type="file"
                 accept="image/*"
@@ -195,8 +195,7 @@ const Feedback = ({
             </div>
             <div className="question_container stars">
               <p>
-                How would you rate your overall experience with the police
-                station?
+                {t("How would you rate your overall experience with the police station?")}
               </p>
 
               <StartRatings rating={rating} setRating={setRating} />
@@ -215,7 +214,7 @@ const Feedback = ({
         <div className="heading_auth">
           <h2>{t("Feedback Form")}</h2>
           <hr className="hr" />
-          <p>{t("Kindly enter the required fields of the form.")}</p>
+          <p>{t("KINDLY ENTER THE REQUIRED FIELDS OF THE FORM.")}</p>
         </div>
 
         <form onSubmit={handleSubmit(onRBSubmit)}>
