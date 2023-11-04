@@ -38,10 +38,10 @@ const Analysis = () => {
               <select name="option" className="selectClass" id="i">
                 Charts
                 <option className="optionClass" value="">
-                  Charts and pie{" "}
+                  Pie Charts
                 </option>
                 <option className="optionClass" value="">
-                  Bar and analytics{" "}
+                  Bar Charts
                 </option>
               </select>
             </div>
