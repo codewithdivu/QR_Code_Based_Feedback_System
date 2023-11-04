@@ -2,28 +2,28 @@ import React, { useState } from "react";
 
 const questions = [
   {
-    question: "Q1. How safe do you feel when visiting the police station?",
-    emojis: ["😃", "😊", "😐", "😞", "😡"],
+    question:
+      "Q1.  How satisfied are you with the responsiveness, lanugage and communication of the police station staff?",
+    emojis: ["😢", "☹️", "😐", "😊", "😄"],
   },
   {
     question:
-      "Q2. Were your interactions with the police officers respectful and courteous?",
-    emojis: ["😇", "😊", "😐", "😡", "😠"],
+      "Q2.  How would you rate the fairness and respectfulness of your treatment during your interactions with the police station?",
+    emojis: ["😢", "☹️", "😐", "😊", "😄"],
   },
   {
     question:
-      "Q3. How would you rate the overall service and assistance provided at the police station?",
-    emojis: ["⭐", "✨", "😐", "💥", "💔"],
+      "Q3.  Were you satisfied with the cleanliness and organization of the police station?",
+    emojis: ["😢", "☹️", "😐", "😊", "😄"],
   },
   {
     question:
-      "Q4. Did you experience any issues or delays when seeking assistance or information?",
-    emojis: ["🕰️", "⌛", "😐", "⏳", "🕐"],
+      "Q4.  How would you rate the effectiveness of problem resolution by the police station?",
+    emojis: ["😢", "☹️", "😐", "😊", "😄"],
   },
   {
-    question:
-      "Q5. Were the facilities at the police station well-maintained and equipped?",
-    emojis: ["🏢", "🏗️", "😐", "🚮", "🏚️"],
+    question: "Q5.  How safe do you feel when visiting the police station?",
+    emojis: ["😢", "☹️", "😐", "😊", "😄"],
   },
 ];
 

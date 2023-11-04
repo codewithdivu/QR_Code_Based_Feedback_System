@@ -20,6 +20,29 @@ const Feedback = ({
   loader,
   setLoader,
 }) => {
+  const [selectedImages, setSelectedImages] = useState([]);
+
+  const handleImageChange = (e) => {
+    const files = e.target.files;
+    const newImages = [...selectedImages];
+
+    if (newImages.length + files.length <= 3) {
+      for (let i = 0; i < files.length; i++) {
+        newImages.push(URL.createObjectURL(files[i]));
+      }
+    } else {
+      alert("You can upload a maximum of 3 photos.");
+    }
+
+    setSelectedImages(newImages);
+  };
+
+  const handleDeleteImage = (index) => {
+    const newImages = [...selectedImages];
+    newImages.splice(index, 1);
+    setSelectedImages(newImages);
+  };
+
   const [step, setStep] = useState(0);
   const {
     register,
@@ -88,7 +111,25 @@ const Feedback = ({
       case 1:
         return (
           <>
-            {questions2.map((item) => (
+            <EmojiChooser />
+            {/* <div className="textarea">
+              <label htmlFor="">Review : </label>
+              <textarea
+                id=""
+                name="review"
+                rows="5"
+                cols="50"
+                className="textarea-input"
+                onChange={(e) => setReview(e.target.value)}
+                placeholder="Please review your experience in 300 characters.."
+              ></textarea>
+            </div> */}
+          </>
+        );
+      case 2:
+        return (
+          <>
+            {/* {questions2.map((item) => (
               <div className="question_container">
                 <p>{t(item.q)}</p>
                 {item.options.map((option) => (
@@ -105,9 +146,9 @@ const Feedback = ({
                   </div>
                 ))}
               </div>
-            ))}
+            ))} */}
 
-            <div className="question_container">
+            {/* <div className="question_container">
               <p className="special">{t("Q. What was your conflict ?")}</p>
               <input
                 type="text"
@@ -117,31 +158,48 @@ const Feedback = ({
                 {...register("conflicts", { required: true })}
                 placeholder="Kindly explain your conflict in brief .."
               />
-            </div>
-            <div className="question_container stars">
-              <p>Give Us a Rating.</p>
-
-              <StartRatings rating={rating} setRating={setRating} />
-            </div>
-          </>
-        );
-      case 2:
-        return (
-          <>
-            <EmojiChooser />
+            </div> */}
             <div className="textarea">
-              <label htmlFor="">Review : </label>
+              <label htmlFor="">Please review your experience</label>
               <textarea
                 id=""
                 name="review"
-                rows="5"
+                rows="8"
                 cols="50"
                 className="textarea-input"
-                // {...register("review", { required: true })}
                 onChange={(e) => setReview(e.target.value)}
-                placeholder="Please review your experience in 300 characters.."
+                placeholder="Write Your Review/Feedback Here..."
               ></textarea>
-              {/* <EmojiRating variant="classic" onChange={handleEmoji} /> */}
+            </div>
+            <div className="question_container">
+              <label htmlFor="">Upload Images : </label>
+              <input
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={handleImageChange}
+              />
+            </div>
+            <div className="image-preview">
+              {selectedImages.map((image, index) => (
+                <div key={index} className="image-item">
+                  <img src={image} alt={`Image ${index}`} className="imm" />
+                  <span
+                    className="close-icon"
+                    onClick={() => handleDeleteImage(index)}
+                  >
+                    &times;
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="question_container stars">
+              <p>
+                How would you rate your overall experience with the police
+                station?
+              </p>
+
+              <StartRatings rating={rating} setRating={setRating} />
             </div>
           </>
         );
