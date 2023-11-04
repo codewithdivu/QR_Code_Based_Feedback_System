@@ -1,6 +1,6 @@
 export const questions1 = [
   {
-    q: "Q1. What was your problem? (Reason of going to police station)",
+    q: "Q1. Reason of visiting police station.",
     name: "ques1_1",
     options: [
       {
