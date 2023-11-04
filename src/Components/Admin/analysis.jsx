@@ -5,7 +5,15 @@ import QuestionTable from "../../Charts/questionTable";
 import { questions } from "../../constants/questions";
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from "recharts";
 import PieChartWithCustomizedLabel from "../../Charts/PieChartWithCustomizedLabel";
-import { data1, data2, data4, data5 } from "../../constants/newConstans";
+import {
+  data1,
+  data2,
+  data4,
+  data5,
+  dataEmoji,
+  dataYesNo1,
+  dataYesNo2,
+} from "../../constants/newConstans";
 
 const Analysis = () => {
   return (
@@ -17,16 +25,66 @@ const Analysis = () => {
       <div className="dash-content">
         <div className="overview">
           <div className="title">
-            <i className="fa fa-solid fa-magnifying-glass-chart"></i>
-            <span className="text">Analytics</span>
+            <div>
+              <i className="fa fa-solid fa-magnifying-glass-chart"></i>
+              <span className="text">Analytics</span>
+            </div>
+            <div>
+              <select name="option" className="selectClass" id="i">
+                Charts
+                <option className="optionClass" value="">
+                  Charts and pie{" "}
+                </option>
+                <option className="optionClass" value="">
+                  Bar and analytics{" "}
+                </option>
+              </select>
+            </div>
           </div>
           <div className="charts">
             <div className="twocharts">
               <div className="chart" id="Piecharts">
                 <PieChartWithCustomizedLabel
                   data={data1}
+                  questions={"Q1. Reason of visiting police station ?"}
+                />
+              </div>
+              <div className="table">
+                <table className="">
+                  <thead>
+                    <tr>
+                      <th colSpan="3">
+                        Q1. Reason of visiting police station ?
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Theft</td>
+                      <td> 12 </td>
+                    </tr>
+                    <tr>
+                      <td>Harrasement</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>Legal issue...</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <td>Others</td>
+                      <td>8</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="twocharts">
+              <div className="chart">
+                <PieChartWithCustomizedLabel
+                  data={data2}
                   questions={
-                    "After how much time you were heard in Police Station ?"
+                    " Q.2 After how much time you were heard in police station?"
                   }
                 />
               </div>
@@ -34,8 +92,9 @@ const Analysis = () => {
                 <table className="">
                   <thead>
                     <tr>
-                      <th colspan="2">
-                        After how much time you were heard in Police Station ?
+                      <th colSpan="2">
+                        Q.2 After how much time you were heard in police
+                        station?
                       </th>
                     </tr>
                   </thead>
@@ -45,20 +104,16 @@ const Analysis = () => {
                       <td>12</td>
                     </tr>
                     <tr>
-                      <td>In 5 mins</td>
+                      <td>0-10 minutes</td>
                       <td>10</td>
                     </tr>
                     <tr>
-                      <td>In 10 mins</td>
+                      <td>10-20 minutes</td>
                       <td>9</td>
                     </tr>
                     <tr>
-                      <td>In 15 mins</td>
+                      <td>More than 20 minutes</td>
                       <td>8</td>
-                    </tr>
-                    <tr>
-                      <td>More than 15 mins</td>
-                      <td>10</td>
                     </tr>
                   </tbody>
                 </table>
@@ -67,9 +122,9 @@ const Analysis = () => {
             <div className="twocharts">
               <div className="chart">
                 <PieChartWithCustomizedLabel
-                  data={data2}
+                  data={dataYesNo1}
                   questions={
-                    " How would you rate the attentiveness of the policemen towards your complaints?"
+                    "  Q3. Was a police officer readily available at the station when you visited or contacted it?"
                   }
                 />
               </div>
@@ -77,31 +132,19 @@ const Analysis = () => {
                 <table className="">
                   <thead>
                     <tr>
-                      <th colspan="2">
-                        How would you rate the attentiveness of the policemen
-                        towards your complaints?
+                      <th colSpan="2">
+                        Q3. Was a police officer readily available at the
+                        station when you visited or contacted it?
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>One Star</td>
+                      <td>Yes</td>
                       <td>12</td>
                     </tr>
                     <tr>
-                      <td>Two Star</td>
-                      <td>10</td>
-                    </tr>
-                    <tr>
-                      <td>Three Star</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>Four Star</td>
-                      <td>8</td>
-                    </tr>
-                    <tr>
-                      <td>Five Star</td>
+                      <td>No</td>
                       <td>10</td>
                     </tr>
                   </tbody>
@@ -111,9 +154,9 @@ const Analysis = () => {
             <div className="twocharts">
               <div className="chart">
                 <PieChartWithCustomizedLabel
-                  data={data2}
+                  data={dataYesNo2}
                   questions={
-                    "  How would you rate the cleanliness of the Police Station ?"
+                    "  Q4. Were your concerns or issues resolved to your satisfaction by the police station?"
                   }
                 />
               </div>
@@ -121,43 +164,32 @@ const Analysis = () => {
                 <table className="">
                   <thead>
                     <tr>
-                      <th colspan="2">
-                        How would you rate the cleanliness of the Police Station
-                        ?
+                      <th colSpan="2">
+                        Q4. Were your concerns or issues resolved to your
+                        satisfaction by the police station?
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>One Star</td>
+                      <td>Yes</td>
                       <td>12</td>
                     </tr>
                     <tr>
-                      <td>Two Star</td>
-                      <td>10</td>
-                    </tr>
-                    <tr>
-                      <td>Three Star</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>Four Star</td>
-                      <td>8</td>
-                    </tr>
-                    <tr>
-                      <td>Five Star</td>
+                      <td>No</td>
                       <td>10</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
+
             <div className="twocharts">
               <div className="chart">
                 <PieChartWithCustomizedLabel
-                  data={data4}
+                  data={dataEmoji}
                   questions={
-                    "  How would you rate the language tone used by the policemen with you ?"
+                    " Q5. How satisfied are you with the responsiveness, lanugage and communication of the police station staff?"
                   }
                 />
               </div>
@@ -165,75 +197,208 @@ const Analysis = () => {
                 <table className="">
                   <thead>
                     <tr>
-                      <th colspan="2">
-                        How would you rate the language tone used by the
-                        policemen with you ?
+                      <th colSpan="2">
+                        Q5. How satisfied are you with the responsiveness,
+                        lanugage and communication of the police station staff?
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>One Star</td>
-                      <td>4</td>
-                    </tr>
-                    <tr>
-                      <td>Two Star</td>
-                      <td>11</td>
-                    </tr>
-                    <tr>
-                      <td>Three Star</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>Four Star</td>
-                      <td>14</td>
-                    </tr>
-                    <tr>
-                      <td>Five Star</td>
-                      <td>10</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div className="twocharts">
-              <div className="chart">
-                <PieChartWithCustomizedLabel
-                  data={data5}
-                  questions={
-                    " How would you rate the overall experience at Police Station ?"
-                  }
-                />
-              </div>
-              <div className="table">
-                <table className="">
-                  <thead>
-                    <tr>
-                      <th colspan="2">
-                        How would you rate the overall experience at Police
-                        Station ?
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>One Star</td>
+                      <td>Very Bad</td>
                       <td>0</td>
                     </tr>
                     <tr>
-                      <td>Two Star</td>
+                      <td>Bad</td>
                       <td>2</td>
                     </tr>
                     <tr>
-                      <td>Three Star</td>
+                      <td>Good</td>
                       <td>8</td>
                     </tr>
                     <tr>
-                      <td>Four Star</td>
+                      <td>Very Good</td>
                       <td>4</td>
                     </tr>
                     <tr>
-                      <td>Five Star</td>
+                      <td>Excellent</td>
+                      <td>12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="twocharts">
+              <div className="chart">
+                <PieChartWithCustomizedLabel
+                  data={dataEmoji}
+                  questions={
+                    " Q6. How would you rate the fairness and respectfulness of your treatment during your interactions with the police station?"
+                  }
+                />
+              </div>
+              <div className="table">
+                <table className="">
+                  <thead>
+                    <tr>
+                      <th colSpan="2">
+                        Q6. How would you rate the fairness and respectfulness
+                        of your treatment during your interactions with the
+                        police station?{" "}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Very Bad</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Bad</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Good</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Very Good</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Excellent</td>
+                      <td>12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="twocharts">
+              <div className="chart">
+                <PieChartWithCustomizedLabel
+                  data={dataEmoji}
+                  questions={
+                    "Q7. Were you satisfied with the cleanliness and organization of the police station?"
+                  }
+                />
+              </div>
+              <div className="table">
+                <table className="">
+                  <thead>
+                    <tr>
+                      <th colSpan="2">
+                        Q7. Were you satisfied with the cleanliness and
+                        organization of the police station?
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Very Bad</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Bad</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Good</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Very Good</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Excellent</td>
+                      <td>12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="twocharts">
+              <div className="chart">
+                <PieChartWithCustomizedLabel
+                  data={dataEmoji}
+                  questions={
+                    "Q8.  How would you rate the effectiveness of problem resolution by the police station?"
+                  }
+                />
+              </div>
+              <div className="table">
+                <table className="">
+                  <thead>
+                    <tr>
+                      <th colSpan="2">
+                        Q8. How would you rate the effectiveness of problem
+                        resolution by the police station?
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Very Bad</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Bad</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Good</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Very Good</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Excellent</td>
+                      <td>12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="twocharts">
+              <div className="chart">
+                <PieChartWithCustomizedLabel
+                  data={dataEmoji}
+                  questions={
+                    "Q9. How safe do you feel when visiting the police station?"
+                  }
+                />
+              </div>
+              <div className="table">
+                <table className="">
+                  <thead>
+                    <tr>
+                      <th colSpan="2">
+                        Q9. How safe do you feel when visiting the police
+                        station?
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Very Bad</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Bad</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Good</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Very Good</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Excellent</td>
                       <td>12</td>
                     </tr>
                   </tbody>

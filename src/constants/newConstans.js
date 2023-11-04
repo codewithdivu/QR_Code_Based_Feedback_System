@@ -1,18 +1,16 @@
 export const data1 = [
   ["Questions", "Stars"],
-  ["Immediately", 12],
-  ["In 5 mins", 10],
-  ["In 10 mins", 9],
-  ["In 15 mins", 8],
-  ["More than 15 mins", 10],
+  ["Theft", 12],
+  ["Harrasement	", 10],
+  ["Legal issue(Passport verification / Document related)", 9],
+  ["Others", 8],
 ];
 export const data2 = [
   ["Questions", "Stars"],
-  ["one star", 11],
-  ["two star", 12],
-  ["three star", 8],
-  ["four star", 9],
-  ["five star", 10],
+  ["Immediately", 11],
+  ["0-10 minutes", 12],
+  ["10-20 minutes", 8],
+  ["More than 20 minutes", 9],
 ];
 
 export const data3 = [
@@ -40,4 +38,26 @@ export const data5 = [
   ["three star", 9],
   ["four star", 14],
   ["five star", 9],
+];
+export const dataEmoji = [
+  ["Questions", "Stars"],
+  ["Very Bad", 4],
+  ["Bad", 11],
+  ["Good", 9],
+  ["Very Good", 14],
+  ["Excellent", 9],
+];
+
+export const dataYesNo1 = [
+  ["Questions", "Stars"],
+
+  ["Yes", 9],
+  ["No", 11],
+];
+
+export const dataYesNo2 = [
+  ["Questions", "Stars"],
+
+  ["Yes", 29],
+  ["No", 11],
 ];

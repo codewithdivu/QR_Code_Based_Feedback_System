@@ -270,8 +270,18 @@ nav.close ~ .dashboard {
 }
 .dash-content .title {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin: 20px 0 30px 0;
+}
+
+.selectClass{
+  padding: 10px 10px;
+  max-width: 50px;
+}
+
+.dash-content .title div{
+  display: flex;
 }
 .dash-content .title i {
   position: relative;
