@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import LineChartConnectNulls from "../../Charts/LineChartConnectNulls";
 import NewChartsTable from "../../Charts/newChartsTable";
 import QuestionTable from "../../Charts/questionTable";
 import { questions } from "../../constants/questions";
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from "recharts";
 import PieChartWithCustomizedLabel from "../../Charts/PieChartWithCustomizedLabel";
+import BarChart from "../../Charts/BarChart";
 import {
   data1,
   data2,
@@ -16,6 +17,15 @@ import {
 } from "../../constants/newConstans";
 
 const Analysis = () => {
+  const [flag, setFlag] = useState(true);
+
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+
   return (
     <div className="analytics">
       <div className="dash-title">
@@ -30,24 +40,36 @@ const Analysis = () => {
               <span className="text">Analytics</span>
             </div>
             <div>
-              <select name="option" className="selectClass" id="i">
-                Charts
-                <option className="optionClass" value="">
-                  Charts and pie{" "}
-                </option>
-                <option className="optionClass" value="">
-                  Bar and analytics{" "}
-                </option>
+              <select
+                id="dropdown"
+                value={selectedOption}
+                onChange={handleOptionChange}
+              >
+                <option value="charts-pie">Charts and Pie</option>
+                <option value="bars-analytics">Bars and Analytics</option>
               </select>
             </div>
           </div>
           <div className="charts">
             <div className="twocharts">
               <div className="chart" id="Piecharts">
-                <PieChartWithCustomizedLabel
-                  data={data1}
-                  questions={"Q1. Reason of visiting police station ?"}
-                />
+                {selectedOption === "charts-pie" ? (
+                  <PieChartWithCustomizedLabel
+                    data={data1}
+                    questions={"Q1. Reason of visiting police station ?"}
+                  />
+                ) : (
+                  <BarChart
+                    data={[
+                      ["Q1. Reason of visiting police station ?", "Options"],
+                      ["A.", 12],
+                      ["B.", 10],
+                      ["C.", 9],
+                      ["D. ", 8],
+                    ]}
+                    questions={"Q1. Reason of visiiting police station "}
+                  />
+                )}
               </div>
               <div className="table">
                 <table className="">
