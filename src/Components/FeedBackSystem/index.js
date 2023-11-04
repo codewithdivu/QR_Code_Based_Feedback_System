@@ -22,6 +22,7 @@ const FeedBackSystem = () => {
   const [capthaResponse, setCapthaResponse] = useState("");
   // Questions
   const [Questions, setQuestions] = useState([]);
+  console.log("Que", Questions);
   // rating;
   const [rating, setRating] = useState(0);
   //textReview
