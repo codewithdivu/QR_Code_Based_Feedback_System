@@ -159,7 +159,7 @@ const Feedback = ({
                 placeholder="Kindly explain your conflict in brief .."
               />
             </div> */}
-            <div className="textarea">
+            <div className="textarea" style={{ marginTop: "2rem" }}>
               <label htmlFor="">Please review your experience</label>
               <textarea
                 id=""
